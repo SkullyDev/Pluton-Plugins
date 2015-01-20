@@ -12,9 +12,6 @@ import UnityEngine
 import Pluton
 import System
 
-encode = ["%20", "%21", "%2A", "%27", "%28", "%29", "%3B", "%3A", "%40", "%26", "%3D", "%2B", "%24", "%2C", "%2F", "%3F", "%25", "%23", "%5B", "%5D"]
-decode = [" ", "!", "*", "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]"]
-
 class Mappy:
     def ConfigurationFile(self):
         if not Plugin.IniExists("ConfigurationFile"):
@@ -56,8 +53,5 @@ class Mappy:
         Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Nick = Name
-        for symb in Nick:
-            if symbol in decode:
-                Nick = Nick.replace(symbol, encode[decode.index(symbol)])
-        return Nick
+        Name = re.sub('[\/\%\:\;\?\=\+\&]+', '', Name)
+        return str(Name)
