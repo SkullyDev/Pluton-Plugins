@@ -26,6 +26,6 @@ class GodMode:
                 Player.Message("God mode turned on")
 
     def On_PlayerHurt(self, PlayerHurtEvent):
-        if DataStore.Get("godhelp", Pluton.Player.Find(PlayerHurtEvent.Victim.Name).SteamID) == 1:
+        if DataStore.Get("godhelp", PlayerHurtEvent.Victim.SteamID) == 1:
             for dmg in range(0, len(PlayerHurtEvent.DamageAmounts)):
                 PlayerHurtEvent.DamageAmounts[dmg] = float(0)
