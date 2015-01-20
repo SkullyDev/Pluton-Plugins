@@ -1,3 +1,3 @@
-# Pluton-Plugins
+# Plugins for Pluton the mod
 Completed and in progress plugins for Pluton the mod
 BY SKULLY...
