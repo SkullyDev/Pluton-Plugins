@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '1.0'
+__version__ = '1.3'
 
 import clr
 import sys
@@ -53,5 +53,5 @@ class Mappy:
         Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Name = re.sub('[\/\%\:\;\?\=\+\&]+', '', Name)
+        Name = re.sub('[^0-9a-zA-Z\-\,\.\*\_\#\!\$\(\)]+', '', Name)
         return str(Name)
