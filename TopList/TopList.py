@@ -116,10 +116,10 @@ class TopList:
 
     def PlayerData(self, id):
         if not (Plugin.IniExists("Data-" + str(id))):
-            Player = Pluton.Player.FindBySteamID(id)
-            PlayersName = str(Player.Name)
+            player = Pluton.Player.FindBySteamID(id)
+            playersname = player.Name
             ini = Plugin.CreateIni("Data-" + str(id))
-            ini.AddSetting("Data", "name", PlayersName)
+            ini.AddSetting("Data", "name", playersname)
             ini.AddSetting("Data", "kills", "0")
             ini.AddSetting("Data", "deaths", "0")
             ini.AddSetting("Data", "suicides", "0")
@@ -224,8 +224,8 @@ class TopList:
             return
         if DataStore.Get("TopList", "enabled") == 1:
             victim = NPCDeathEvent.Victim
-            Entity = self.IsEntity(victim.Name)
-            if Entity == "":
+            victimname = self.IsEntity(victim.Name)
+            if victimname == "":
                 return
             attacker = Pluton.Player.Find(NPCDeathEvent.Attacker.Name)
             attackerID = attacker.GameID
