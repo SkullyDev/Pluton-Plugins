@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '1.3'
+__version__ = '1.6'
 
 import clr
 import sys
@@ -8,6 +8,8 @@ import re
 
 clr.AddReferenceByPartialName("UnityEngine")
 clr.AddReferenceByPartialName("Pluton")
+clr.AddReference("Assembly-CSharp")
+import World as globalWorld
 import UnityEngine
 import Pluton
 import System
@@ -17,8 +19,9 @@ class Mappy:
         if not Plugin.IniExists("ConfigurationFile"):
             ini = Plugin.CreateIni("ConfigurationFile")
             ini.AddSetting("Settings", "enabled", "1")
+            ini.AddSetting("Settings", "SendChat", "1")
             ini.AddSetting("Settings", "Timer", "60000")
-            ini.AddSetting("Settings", "url", "http://www.example.com/mappy/server.php")
+            ini.AddSetting("Settings", "url", "http://www.example.com/mappy/")
             ini.Save()
         return Plugin.GetIni("ConfigurationFile")
 
@@ -27,14 +30,22 @@ class Mappy:
         ini = self.ConfigurationFile()
         if ini.GetSetting("Settings", "enabled") == "1":
             link = ini.GetSetting("Settings", "url")
-            DataStore.Add("Mappy", "Link", link)
+            WorldSize = "&worldsize=" + str(globalWorld.Size)
+            Plugin.POST(link + "size.php", WorldSize)
+            if ini.GetSetting("Settings", "SendChat") == "1":
+                DataStore.Add("Mappy", "SendChat", 1)
+                DataStore.Add("Mappy", "LinkChat", link + "chat.php")
+            DataStore.Add("Mappy", "Link", link + "server.php")
             mseconds = ini.GetSetting("Settings", "Timer")
             msec = int(mseconds)
             Plugin.CreateTimer("Send", msec).Start()
 
     def SendCallback(self, timer):
         ServersTime = str(World.Time)
-        post = "&time=" + ServersTime + "&players=::"
+        post = "&time=" + ServersTime
+        if DataStore.Get("Mappy", "SendChat") == 1:
+            post = post + "&showchat=true"
+        post = post + "&players=::"
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
@@ -53,5 +64,19 @@ class Mappy:
         Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Name = re.sub('[^0-9a-zA-Z\-\,\.\*\_\#\!\$\(\)]+', '', Name)
+        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)
         return str(Name)
+
+    def FormatChatLine(self, Line):
+        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)
+        return str(Line)
+
+    def On_Chat(self, Chat):
+        if DataStore.Get("Mappy", "SendChat") == 1:
+            Message = self.FormatChatLine(Chat.OriginalText)
+            Sender = self.FormatName(Chat.User.Name)
+            if len(Sender) < 3:
+                Sender = "Player"
+            link = DataStore.Get("Mappy", "LinkChat")
+            post = "&chat=" + Sender + ": " + Message
+            Plugin.POST(link, post)
