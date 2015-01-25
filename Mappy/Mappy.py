@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '1.6'
+__version__ = '1.8'
 
 import clr
 import sys
@@ -30,15 +30,24 @@ class Mappy:
         ini = self.ConfigurationFile()
         if ini.GetSetting("Settings", "enabled") == "1":
             link = ini.GetSetting("Settings", "url")
-            WorldSize = "&worldsize=" + str(globalWorld.Size)
-            Plugin.POST(link + "size.php", WorldSize)
             if ini.GetSetting("Settings", "SendChat") == "1":
                 DataStore.Add("Mappy", "SendChat", 1)
                 DataStore.Add("Mappy", "LinkChat", link + "chat.php")
             DataStore.Add("Mappy", "Link", link + "server.php")
+            DataStore.Add("Mappy", "LinkSize", link + "size.php")
             mseconds = ini.GetSetting("Settings", "Timer")
             msec = int(mseconds)
+            Plugin.CreateTimer("SendSizeTwice", 15000).Start()
             Plugin.CreateTimer("Send", msec).Start()
+
+    def SendSizeTwiceCallback(self, timer):
+        if DataStore.Get("Mappy", "SizeSent") == 1:
+            timer.Kill()
+            return
+        DataStore.Add("Mappy", "SizeSent", 1)
+        link = DataStore.Get("Mappy", "LinkSize")
+        WorldSize = "&worldsize=" + str(globalWorld.Size)
+        Plugin.POST(link, WorldSize)
 
     def SendCallback(self, timer):
         ServersTime = str(World.Time)
@@ -64,11 +73,11 @@ class Mappy:
         Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)
+        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)
         return str(Name)
 
     def FormatChatLine(self, Line):
-        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)
+        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)
         return str(Line)
 
     def On_Chat(self, Chat):
