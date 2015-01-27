@@ -38,7 +38,7 @@ class Mappy:
             DataStore.Add("Mappy", "LinkSize", link + "size.php")
             mseconds = ini.GetSetting("Settings", "Timer")
             msec = int(mseconds)
-            Plugin.CreateTimer("TimerTwice", 15000).Start()
+            Plugin.CreateTimer("SendSizeOnce", 15000).Start()
             Plugin.CreateTimer("Send", msec).Start()
 
     def ReceiveCommand(self, args):
