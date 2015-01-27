@@ -29,6 +29,7 @@ class Mappy:
         DataStore.Flush("Mappy")
         ini = self.ConfigurationFile()
         if ini.GetSetting("Settings", "enabled") == "1":
+            ServerConsoleCommands.Register("mappy").setCallback("ReceiveCommand")
             link = ini.GetSetting("Settings", "url")
             if ini.GetSetting("Settings", "SendChat") == "1":
                 DataStore.Add("Mappy", "SendChat", 1)
@@ -37,13 +38,34 @@ class Mappy:
             DataStore.Add("Mappy", "LinkSize", link + "size.php")
             mseconds = ini.GetSetting("Settings", "Timer")
             msec = int(mseconds)
-            Plugin.CreateTimer("SendSizeTwice", 15000).Start()
+            Plugin.CreateTimer("TimerTwice", 15000).Start()
             Plugin.CreateTimer("Send", msec).Start()
 
-    def SendSizeTwiceCallback(self, timer):
-        if DataStore.Get("Mappy", "SizeSent") == 1:
-            timer.Kill()
-            return
+    def ReceiveCommand(self, args):
+        job = args[0].split(":")
+        if job[0] == "airdrop":
+            x = job[1]
+            z = job[2]
+            World.AirDropAt(float(x), 0, float(z))
+        elif job[0] == "kick":
+            steamid = job[1]
+        elif job[0] == "teleport":
+            x = job[1]
+            z = job[2]
+            steamid = job[3]
+            palyer = Pluton.Player.Find(steamid)
+            player.Teleport(float(x), World.GetGround(float(x), float(z)) + 1, float(z))
+        elif job[0] == "animal":
+            x = job[1]
+            z = job[2]
+            animalname = job[1]
+            World.SpawnAnimal(animalname, float(x), float(z))
+        elif job[0] == "broadcast":
+            message = job[1]
+            Server.Broadcast(message)
+
+    def SendSizeOnceCallback(self, timer):
+        timer.Kill()
         DataStore.Add("Mappy", "SizeSent", 1)
         link = DataStore.Get("Mappy", "LinkSize")
         WorldSize = "&worldsize=" + str(globalWorld.Size)
@@ -58,7 +80,7 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = self.FormatName(player.Name)
+                Name = self.FormatName(player.Name + " TEST !@#$%^&*()_+|?><:{}[]")
                 if len(Name) < 3:
                     Name = "Player - " + str(i)
                     i = i+1
@@ -68,17 +90,38 @@ class Mappy:
                 splitted = sripped.split(" ")
                 coordx = splitted[0]
                 coordz = splitted[2]
-                post = post + ";" + Name + ":" + coordx + ":" + coordz
+                steamid = player.SteamID
+                post = post + ";" + Name + ":" + coordx + ":" + coordz + ":" + steamid
         link = DataStore.Get("Mappy", "Link")
         Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)
+        for symb in Name:
+            if symb == "&":
+                Name = Name.replace(symb, "%26")
+            elif symb == ":":
+                Name = Name.replace(symb, "¦")
+            elif symb == "%":
+                Name = Name.replace(symb, "%25")
+            elif symb == ";":
+                Name = Name.replace(symb, "¦")
+            elif symb == "+":
+                Name = Name.replace(symb, "%2B")
         return str(Name)
 
     def FormatChatLine(self, Line):
-        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)
-        return str(Line)
+        for symb in Line:
+            if symb == "&":
+                Line = Line.replace(symb, "%26")
+            elif symb == ":":
+                Line = Line.replace(symb, "¦")
+            elif symb == "%":
+                Line = Line.replace(symb, "%25")
+            elif symb == ";":
+                Line = Line.replace(symb, "¦")
+            elif symb == "+":
+                Line = Line.replace(symb, "%2B")
+        return Line
 
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
@@ -89,3 +132,12 @@ class Mappy:
             link = DataStore.Get("Mappy", "LinkChat")
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)
+"""
+    def FormatName(self, Name):
+        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)#&:;
+        return str(Name)
+
+    def FormatChatLine(self, Line):
+        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)#&:
+        return str(Line)
+"""
