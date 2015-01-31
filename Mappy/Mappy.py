@@ -80,7 +80,7 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = self.FormatName(player.Name + " TEST !@#$%^&*()_+|?><:{}[]")
+                Name = self.FormatName(player.Name)
                 if len(Name) < 3:
                     Name = "Player - " + str(i)
                     i = i+1
@@ -94,6 +94,16 @@ class Mappy:
                 post = post + ";" + Name + ":" + coordx + ":" + coordz + ":" + steamid
         link = DataStore.Get("Mappy", "Link")
         Plugin.POST(link, post)
+
+    def On_Chat(self, Chat):
+        if DataStore.Get("Mappy", "SendChat") == 1:
+            Message = self.FormatChatLine(Chat.OriginalText)
+            Sender = self.FormatName(Chat.User.Name)
+            if len(Sender) < 3:
+                Sender = "Player"
+            link = DataStore.Get("Mappy", "LinkChat")
+            post = "&chat=" + Sender + ": " + Message
+            Plugin.POST(link, post)
 
     def FormatName(self, Name):
         for symb in Name:
@@ -122,17 +132,9 @@ class Mappy:
             elif symb == "+":
                 Line = Line.replace(symb, "%2B")
         return Line
-
-    def On_Chat(self, Chat):
-        if DataStore.Get("Mappy", "SendChat") == 1:
-            Message = self.FormatChatLine(Chat.OriginalText)
-            Sender = self.FormatName(Chat.User.Name)
-            if len(Sender) < 3:
-                Sender = "Player"
-            link = DataStore.Get("Mappy", "LinkChat")
-            post = "&chat=" + Sender + ": " + Message
-            Plugin.POST(link, post)
 """
+OLD CODE FOR SAFETY!
+
     def FormatName(self, Name):
         Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)#&:;
         return str(Name)
