@@ -57,6 +57,9 @@ autospawn/decor/icesheet/icesheets4
 autospawn/decor/icesheet/icesheets5
 autospawn/decor/icesheet/icesheets6
 autospawn/decor/icesheet/icesheets7
+autospawn/decor/mushrooms/clutter_mushroom_redtop1
+autospawn/decor/mushrooms/clutter_mushroom_redtop2
+autospawn/decor/mushrooms/clutter_mushroom_redtop3
 autospawn/decor/rock/rock_01
 autospawn/decor/rock/rock_02
 autospawn/decor/rock/rock_03
@@ -222,9 +225,6 @@ autospawn/resource/forestedge6/tree-g-222
 autospawn/resource/forestedge7/tree-g-snow-1
 autospawn/resource/loot/loot_barrel_01
 autospawn/resource/loot/loot_barrel_02
-autospawn/resource/mushrooms/clutter_mushroom_redtop1
-autospawn/resource/mushrooms/clutter_mushroom_redtop2
-autospawn/resource/mushrooms/clutter_mushroom_redtop3
 autospawn/resource/ores/resource_ore_metal
 autospawn/resource/ores/resource_ore_stone
 autospawn/resource/ores/resource_ore_sulfur
@@ -267,33 +267,46 @@ build/lock.key
 build/lock.key.guide
 build/pillar
 build/skins/block.halfheight.slanted/block.halfheight.slanted.stone
+build/skins/block.halfheight.slanted/block.halfheight.slanted.thatched
 build/skins/block.halfheight.slanted/block.halfheight.slanted.wood
 build/skins/block.halfheight/block.halfheight.stone
+build/skins/block.halfheight/block.halfheight.thatched
 build/skins/block.halfheight/block.halfheight.wood
 build/skins/floor.triangle/floor.triangle.stone
+build/skins/floor.triangle/floor.triangle.thatched
 build/skins/floor.triangle/floor.triangle.wood
 build/skins/floor/floor.metal
 build/skins/floor/floor.stone
+build/skins/floor/floor.thatched
 build/skins/floor/floor.wood
 build/skins/foundation.steps/foundation.steps.stone
+build/skins/foundation.steps/foundation.steps.thatched
 build/skins/foundation.steps/foundation.steps.wood
 build/skins/foundation.triangle/foundation.triangle.stone
+build/skins/foundation.triangle/foundation.triangle.thatched
 build/skins/foundation.triangle/foundation.triangle.wood
 build/skins/foundation/foundation.stone
+build/skins/foundation/foundation.thatched
 build/skins/foundation/foundation.wood
+build/skins/pillar/pillar.thatched
 build/skins/pillar/pillar.wood
 build/skins/roof/roof.stone
+build/skins/roof/roof.thatched
 build/skins/roof/roof.wood
 build/skins/wall.doorway.door/wall.doorway.door.metal
 build/skins/wall.doorway.door/wall.doorway.door.wood
 build/skins/wall.doorway/wall.doorway.stone
+build/skins/wall.doorway/wall.doorway.thatched
 build/skins/wall.doorway/wall.doorway.wood
 build/skins/wall.low/wall.low.stone
+build/skins/wall.low/wall.low.thatched
 build/skins/wall.low/wall.low.wood
 build/skins/wall.window.bars/wall.window.bars.wood
 build/skins/wall.window/wall.window.stone
+build/skins/wall.window/wall.window.thatched
 build/skins/wall.window/wall.window.wood
 build/skins/wall/wall.stone
+build/skins/wall/wall.thatched
 build/skins/wall/wall.wood
 build/wall
 build/wall.doorway
@@ -620,6 +633,7 @@ fx/weapons/rock/strike
 fx/weapons/vm_ak47u/attack
 fx/weapons/vm_ak47u/attack_shake
 fx/weapons/vm_ak47u/deploy
+fx/weapons/vm_ak47u/dryfire
 fx/weapons/vm_ak47u/eject_rifle_shell
 fx/weapons/vm_ak47u/grab_magazine
 fx/weapons/vm_ak47u/holster
@@ -699,6 +713,7 @@ fx/weapons/vm_pickaxe/strike
 fx/weapons/vm_revolver/attack
 fx/weapons/vm_revolver/attack_shake
 fx/weapons/vm_revolver/deploy
+fx/weapons/vm_revolver/dryfire
 fx/weapons/vm_revolver/eject_shells
 fx/weapons/vm_revolver/insert_shells
 fx/weapons/vm_revolver/open_cylinder
@@ -724,6 +739,16 @@ fx/weapons/vm_salvaged_icepick/attack
 fx/weapons/vm_salvaged_icepick/deploy
 fx/weapons/vm_salvaged_icepick/holster
 fx/weapons/vm_salvaged_icepick/strike
+fx/weapons/vm_sawnoff_shotgun/attack
+fx/weapons/vm_sawnoff_shotgun/attack_pumpaction
+fx/weapons/vm_sawnoff_shotgun/attack_shake
+fx/weapons/vm_sawnoff_shotgun/deploy
+fx/weapons/vm_sawnoff_shotgun/deploy2
+fx/weapons/vm_sawnoff_shotgun/dryfire
+fx/weapons/vm_sawnoff_shotgun/flipover
+fx/weapons/vm_sawnoff_shotgun/insert_shell
+fx/weapons/vm_sawnoff_shotgun/pump_forward
+fx/weapons/vm_sawnoff_shotgun/reload_start
 fx/weapons/vm_spear/2hand_deploy
 fx/weapons/vm_spear/attack
 fx/weapons/vm_spear/deploy
@@ -736,6 +761,7 @@ fx/weapons/vm_thompson/attack
 fx/weapons/vm_thompson/attack_shake
 fx/weapons/vm_thompson/bolt_action
 fx/weapons/vm_thompson/deploy
+fx/weapons/vm_thompson/dryfire
 fx/weapons/vm_thompson/eject_pistol_shell
 fx/weapons/vm_thompson/holster
 fx/weapons/vm_thompson/idle_finger_taps
@@ -768,6 +794,7 @@ fx/weapons/vm_waterpipe_shotgun/attack
 fx/weapons/vm_waterpipe_shotgun/attack_shake
 fx/weapons/vm_waterpipe_shotgun/close_pipe
 fx/weapons/vm_waterpipe_shotgun/deploy
+fx/weapons/vm_waterpipe_shotgun/dryfire
 fx/weapons/vm_waterpipe_shotgun/holster
 fx/weapons/vm_waterpipe_shotgun/insert_shell
 fx/weapons/vm_waterpipe_shotgun/reload_start
@@ -787,6 +814,7 @@ head2_end
 ignite
 injectedother
 injectedself
+itemcmd
 items/arrow
 items/beartrap
 items/beartrap_guide
@@ -946,6 +974,7 @@ max friction
 metal
 metalore
 model
+moveitem
 neck
 neck_ctrl
 neck_fatend
@@ -976,6 +1005,7 @@ npc/animals/wolf_corpse
 npc/animals/wolf_ragdoll
 npc/animals/wolf_skin
 onhammered
+onrespawninformation
 parachute
 parachute_attach
 path
@@ -1058,6 +1088,7 @@ radtown/crate_normal
 radtown/crate_normal_2
 radtown/loot_trash
 removeselfauthorize
+rename
 righ_arm_upvector
 right_arm_polevector
 right_calf
@@ -1187,9 +1218,9 @@ tail5
 trylock
 tryunlock
 tundra
-ui/dialogs/enterlockcode
 ui/dialogs/piemenu
-ui/hudcanvas
+ui/dialogs/ui.dialog.lock.code
+ui/dialogs/ui.dialog.sleepingbag.rename
 unlockedblueprint
 unlockwithcode
 updateconditionalmodels
@@ -1251,6 +1282,8 @@ weapons/rifle/ak47u_vm
 weapons/rifle/ak47u_wm
 weapons/rifle/bolt_vm
 weapons/rifle/bolt_wm
+weapons/shotgun/sawnoffshotgun_vm
+weapons/shotgun/sawnoffshotgun_wm
 weapons/shotgun/waterpipe_vm
 weapons/shotgun/waterpipe_wm
 weapons/smg/thompson_vm
@@ -1278,4 +1311,3 @@ weapons/vm_rocketlauncher
 wood
 wooden box
 zero friction
-
