@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '1.8'
+__version__ = '2.0'
 
 import clr
 import sys
@@ -49,20 +49,39 @@ class Mappy:
             World.AirDropAt(float(x), 0, float(z))
         elif job[0] == "kick":
             steamid = job[1]
+            palyer = Pluton.Player.Find(steamid)
+            player.Kick("Mappy control panel kick")
+        elif job[0] == "message":
+            steamid = job[1]
+            palyer = Pluton.Player.Find(steamid)
+            message = self.MessageMake(args, job[2])
+            player.Message(message)
         elif job[0] == "teleport":
             x = job[1]
             z = job[2]
             steamid = job[3]
             palyer = Pluton.Player.Find(steamid)
             player.Teleport(float(x), World.GetGround(float(x), float(z)) + 1, float(z))
+        elif job[0] == "give":
+            steamid = job[1]
+            palyer = Pluton.Player.Find(steamid)
+            count = job[2]
+            # GIVE CODE USED FROM "Give" balu92's plugin
+            item = Pluton.InvItem.GetItemID(job[3])
+            player.Inventory.Add(item, int(count))
         elif job[0] == "animal":
             x = job[1]
             z = job[2]
-            animalname = job[1]
+            animalname = job[3]
             World.SpawnAnimal(animalname, float(x), float(z))
         elif job[0] == "broadcast":
-            message = job[1]
+            message = self.MessageMake(args, job[1])
             Server.Broadcast(message)
+
+    def MessageMake(self, args, FirstW):
+        message = str.Join(" ", args)
+        message = message.replace(args[0], FirstW)
+        return message
 
     def SendSizeOnceCallback(self, timer):
         timer.Kill()
@@ -80,7 +99,7 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = self.FormatName(player.Name)
+                Name = self.FormatName(player.Name + " TEST !@#$%^&*()_+|?><:{}[]")
                 if len(Name) < 3:
                     Name = "Player - " + str(i)
                     i = i+1
@@ -105,6 +124,14 @@ class Mappy:
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)
 
+    def FormatName(self, Name):
+        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)#&:;
+        return str(Name)
+
+    def FormatChatLine(self, Line):
+        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)#&:
+        return str(Line)
+"""
     def FormatName(self, Name):
         for symb in Name:
             if symb == "&":
@@ -132,14 +159,4 @@ class Mappy:
             elif symb == "+":
                 Line = Line.replace(symb, "%2B")
         return Line
-"""
-OLD CODE FOR SAFETY!
-
-    def FormatName(self, Name):
-        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)#&:;
-        return str(Name)
-
-    def FormatChatLine(self, Line):
-        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)#&:
-        return str(Line)
 """
