@@ -4,7 +4,6 @@ __version__ = '2.0'
 import clr
 import sys
 import math
-import re
 
 clr.AddReferenceByPartialName("UnityEngine")
 clr.AddReferenceByPartialName("Pluton")
@@ -13,6 +12,7 @@ import World as globalWorld
 import UnityEngine
 import Pluton
 import System
+from System import Uri
 
 class Mappy:
     def ConfigurationFile(self):
@@ -99,7 +99,7 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = self.FormatName(player.Name + " TEST !@#$%^&*()_+|?><:{}[]")
+                Name = self.FormatName(player.Name)
                 if len(Name) < 3:
                     Name = "Player - " + str(i)
                     i = i+1
@@ -125,38 +125,9 @@ class Mappy:
             Plugin.POST(link, post)
 
     def FormatName(self, Name):
-        Name = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]]+', '', Name)#&:;
+        Name = Uri.EscapeDataString(Name)
         return str(Name)
 
     def FormatChatLine(self, Line):
-        Line = re.sub('[^0-9a-zA-Z\-\ \,\.\*\_\(\)\?\!\@\#\$\%\^\"\'\<\>\\\~\`\=\|\{\}\[\]\;]+', '', Line)#&:
+        Line = Uri.EscapeDataString(Line)
         return str(Line)
-"""
-    def FormatName(self, Name):
-        for symb in Name:
-            if symb == "&":
-                Name = Name.replace(symb, "%26")
-            elif symb == ":":
-                Name = Name.replace(symb, "¦")
-            elif symb == "%":
-                Name = Name.replace(symb, "%25")
-            elif symb == ";":
-                Name = Name.replace(symb, "¦")
-            elif symb == "+":
-                Name = Name.replace(symb, "%2B")
-        return str(Name)
-
-    def FormatChatLine(self, Line):
-        for symb in Line:
-            if symb == "&":
-                Line = Line.replace(symb, "%26")
-            elif symb == ":":
-                Line = Line.replace(symb, "¦")
-            elif symb == "%":
-                Line = Line.replace(symb, "%25")
-            elif symb == ";":
-                Line = Line.replace(symb, "¦")
-            elif symb == "+":
-                Line = Line.replace(symb, "%2B")
-        return Line
-"""
