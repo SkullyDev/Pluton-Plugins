@@ -77,6 +77,9 @@ class HomeSystem:
                     if not cmd.User.Admin:
                         cmd.User.Message("You aren't an admin!")
                         return
+                    if len(cmd.args) == 1:
+                        cmd.User.Message("USAGE: /home admin PlayerName")
+                        return
                     pl = self.CheckV(cmd.User, cmd.quotedArgs[1])
                     if pl is not None:
                         ini = self.HomeIni()
@@ -99,5 +102,5 @@ class HomeSystem:
         HLoc = HomeSystem["HomeLocation"]
         HLoc = re.sub('[)\(\[\'\]]', '', str(HLoc))
         HLoc = HLoc.split(',')
-        Player.Teleport(float(HLoc[0]), float(HLoc[1]) + 0.5, float(HLoc[2]))
+        Player.Teleport(float(HLoc[0]), float(HLoc[1]) + 0.1, float(HLoc[2]))
         return
