@@ -42,6 +42,8 @@ class Mappy:
             Plugin.CreateTimer("Send", msec).Start()
 
     def ReceiveCommand(self, args):
+        if len(args) == 0:
+            return
         job = args[0].split(":")
         if job[0] == "airdrop":
             x = job[1]
