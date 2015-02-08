@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '2.0'
+__version__ = '2.5'
 
 import clr
 import sys
@@ -105,7 +105,7 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = self.FormatName(player.Name)
+                Name = Uri.EscapeDataString(player.Name)
                 if len(Name) < 3:
                     Name = "Player - " + str(i)
                     i = i+1
@@ -122,18 +122,10 @@ class Mappy:
 
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
-            Message = self.FormatChatLine(Chat.OriginalText)
+            Message = Uri.EscapeDataString(Chat.OriginalText)
             Sender = self.FormatName(Chat.User.Name)
             if len(Sender) < 3:
                 Sender = "Player"
             link = DataStore.Get("Mappy", "LinkChat")
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)
-
-    def FormatName(self, Name):
-        Name = Uri.EscapeDataString(Name)
-        return str(Name)
-
-    def FormatChatLine(self, Line):
-        Line = Uri.EscapeDataString(Line)
-        return str(Line)
