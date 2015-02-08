@@ -44,45 +44,49 @@ class Mappy:
     def ReceiveCommand(self, args):
         if len(args) == 0:
             return
-        job = args[0].split(":")
-        if job[0] == "airdrop":
-            x = job[1]
-            z = job[2]
+        if args[0] == "airdrop":
+            x = args[1]
+            z = args[2]
             World.AirDropAt(float(x), 0, float(z))
-        elif job[0] == "kick":
-            steamid = job[1]
+        elif args[0] == "kick":
+            steamid = args[1]
             palyer = Pluton.Player.Find(steamid)
             player.Kick("Mappy control panel kick")
-        elif job[0] == "message":
-            steamid = job[1]
+        elif args[0] == "message":
+            steamid = args[1]
             palyer = Pluton.Player.Find(steamid)
-            message = self.MessageMake(args, job[2])
+            message = self.MessageMake(args)
             player.Message(message)
-        elif job[0] == "teleport":
-            x = job[1]
-            z = job[2]
-            steamid = job[3]
+        elif args[0] == "teleport":
+            x = args[1]
+            z = args[2]
+            steamid = args[3]
             palyer = Pluton.Player.Find(steamid)
             player.Teleport(float(x), World.GetGround(float(x), float(z)) + 1, float(z))
-        elif job[0] == "give":
-            steamid = job[1]
+        elif args[0] == "give":
+            steamid = args[1]
             palyer = Pluton.Player.Find(steamid)
-            count = job[2]
-            # GIVE CODE USED FROM "Give" balu92's plugin
-            item = Pluton.InvItem.GetItemID(job[3])
+            count = args[2]
+            # GIVE CODE USED FROM "Give" balu92's PLUGIN
+            item = Pluton.InvItem.GetItemID(args[3])
             player.Inventory.Add(item, int(count))
-        elif job[0] == "animal":
-            x = job[1]
-            z = job[2]
-            animalname = job[3]
+        elif args[0] == "animal":
+            x = args[1]
+            z = args[2]
+            animalname = args[3]
             World.SpawnAnimal(animalname, float(x), float(z))
-        elif job[0] == "broadcast":
-            message = self.MessageMake(args, job[1])
+        elif args[0] == "broadcast":
+            message = self.MessageMakeBroadcast(args)
             Server.Broadcast(message)
 
-    def MessageMake(self, args, FirstW):
+    def MessageMake(self, args):
         message = str.Join(" ", args)
-        message = message.replace(args[0], FirstW)
+        message = message.replace(args[0] + " " + args[1] + " ", "")
+        return message
+
+    def MessageMakeBroadcast(self, args):
+        message = str.Join(" ", args)
+        message = message.replace(args[0] + " ", "")
         return message
 
     def SendSizeOnceCallback(self, timer):
@@ -94,7 +98,7 @@ class Mappy:
 
     def SendCallback(self, timer):
         ServersTime = str(World.Time)
-        post = "&time=" + ServersTime
+        post = "&time=" + ServersTime + "&sleepers=" + str(Server.SleepingPlayers.Count)
         if DataStore.Get("Mappy", "SendChat") == 1:
             post = post + "&showchat=true"
         post = post + "&players=::"
