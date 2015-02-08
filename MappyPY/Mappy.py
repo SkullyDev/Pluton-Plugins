@@ -123,7 +123,7 @@ class Mappy:
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
             Message = Uri.EscapeDataString(Chat.OriginalText)
-            Sender = self.FormatName(Chat.User.Name)
+            Sender = Uri.EscapeDataString(Chat.User.Name)
             if len(Sender) < 3:
                 Sender = "Player"
             link = DataStore.Get("Mappy", "LinkChat")
