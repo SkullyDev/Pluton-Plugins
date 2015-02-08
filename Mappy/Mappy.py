@@ -50,22 +50,22 @@ class Mappy:
             World.AirDropAt(float(x), 0, float(z))
         elif args[0] == "kick":
             steamid = args[1]
-            palyer = Pluton.Player.Find(steamid)
+            player = Pluton.Player.Find(steamid)
             player.Kick("Mappy control panel kick")
         elif args[0] == "message":
             steamid = args[1]
-            palyer = Pluton.Player.Find(steamid)
+            player = Pluton.Player.Find(steamid)
             message = self.MessageMake(args)
             player.Message(message)
         elif args[0] == "teleport":
             x = args[1]
             z = args[2]
             steamid = args[3]
-            palyer = Pluton.Player.Find(steamid)
+            player = Pluton.Player.Find(steamid)
             player.Teleport(float(x), World.GetGround(float(x), float(z)) + 1, float(z))
         elif args[0] == "give":
             steamid = args[1]
-            palyer = Pluton.Player.Find(steamid)
+            player = Pluton.Player.Find(steamid)
             count = args[2]
             # GIVE CODE USED FROM "Give" balu92's PLUGIN
             item = Pluton.InvItem.GetItemID(args[3])
