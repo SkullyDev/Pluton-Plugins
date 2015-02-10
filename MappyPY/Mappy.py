@@ -55,7 +55,8 @@ class Mappy:
         elif args[0] == "message":
             steamid = args[1]
             player = Pluton.Player.Find(steamid)
-            message = self.MessageMake(args)
+            message = str.Join(" ", args)
+            message = message.replace(args[0] + " " + args[1] + " ", "")
             player.Message(message)
         elif args[0] == "teleport":
             x = args[1]
@@ -76,18 +77,9 @@ class Mappy:
             animalname = args[3]
             World.SpawnAnimal(animalname, float(x), float(z))
         elif args[0] == "broadcast":
-            message = self.MessageMakeBroadcast(args)
+            message = str.Join(" ", args)
+            message = message.replace(args[0] + " ", "")
             Server.Broadcast(message)
-
-    def MessageMake(self, args):
-        message = str.Join(" ", args)
-        message = message.replace(args[0] + " " + args[1] + " ", "")
-        return message
-
-    def MessageMakeBroadcast(self, args):
-        message = str.Join(" ", args)
-        message = message.replace(args[0] + " ", "")
-        return message
 
     def SendSizeOnceCallback(self, timer):
         timer.Kill()
@@ -105,10 +97,12 @@ class Mappy:
         i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = Uri.EscapeDataString(player.Name)
-                if len(Name) < 3:
+                Name = player.Name
+                if len(Name) < 2:
                     Name = "Player - " + str(i)
                     i = i+1
+                else:
+                    Name = Uri.EscapeDataString(Name)
                 coords = str(player.Location)
                 stripit = str.strip(coords, "()")
                 sripped = str.strip(stripit, ",")
@@ -123,9 +117,11 @@ class Mappy:
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
             Message = Uri.EscapeDataString(Chat.OriginalText)
-            Sender = Uri.EscapeDataString(Chat.User.Name)
-            if len(Sender) < 3:
+            Sender = player.Name;
+            if (Sender.Length < 2):
                 Sender = "Player"
+            else:
+                Sender = Uri.EscapeDataString(Sender)
             link = DataStore.Get("Mappy", "LinkChat")
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)

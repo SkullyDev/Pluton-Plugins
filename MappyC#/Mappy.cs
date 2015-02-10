@@ -188,7 +188,7 @@ namespace Mappy
             {
                 Pluton.Player  player = Chat.User;
                 string Message = Uri.EscapeDataString(Chat.OriginalText);
-                string Sender = Uri.EscapeDataString(player.Name);
+                string Sender = player.Name;
                 if (Sender.Length < 2)
                 {
                     Sender = "Player";
