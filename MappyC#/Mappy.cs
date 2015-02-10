@@ -37,61 +37,82 @@ namespace Mappy
             {
                 if (args[0] == "airdrop")
                 {
-                    string x = args[1];
-                    string z = args[2];
-                    World.AirDropAt(float.Parse(x), 0, float.Parse(z));
+                    if (args.Length == 3)
+                    {
+                        string x = args[1];
+                        string z = args[2];
+                        World.AirDropAt(float.Parse(x), 0, float.Parse(z));
+                    }
                 }
                 
                 else if (args[0] == "kick")
                 {
-                    string steamid = args[1];
-                    Pluton.Player player = Pluton.Player.Find(steamid);
-                    if (player != null)
+                    if (args.Length == 2)
                     {
-                    player.Kick("Mappy control panel kick");
+                        string steamid = args[1];
+                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        if (player != null)
+                        {
+                            player.Kick("Mappy control panel kick");
+                        }
                     }
                 }
                 
                 else if (args[0] == "message")
                 {
-                    string steamid = args[1];
-                    Pluton.Player player = Pluton.Player.Find(steamid);
-                    string message = string.Join(" ", args);
-                    message = message.Replace(args[0] + " " + args[1] + " ", "");
-                    player.Message(message);
+                    if (args.Length == 3)
+                    {
+                        string steamid = args[1];
+                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        string message = string.Join(" ", args);
+                        message = message.Replace(args[0] + " " + args[1] + " ", "");
+                        player.Message(message);
+                    }
                 }
                 
                 else if (args[0] == "give")
                 {
-                    string steamid = args[1];
-                    Pluton.Player player = Pluton.Player.Find(steamid);
-                    int count = args[2].ToInt();
-                    int item = Pluton.InvItem.GetItemID(args[3]);
-                    player.Inventory.Add(item, count);
+                    if (args.Length == 4)
+                    {
+                        string steamid = args[1];
+                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        int count = args[2].ToInt();
+                        int item = Pluton.InvItem.GetItemID(args[3]);
+                        player.Inventory.Add(item, count);
+                    }
                 }
                 
                 else if (args[0] == "teleport")
                 {
-                    string x = args[1];
-                    string z = args[2];
-                    string steamid = args[3];
-                    Pluton.Player player = Pluton.Player.Find(steamid);
-                    player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
+                    if (args.Length == 4)
+                    {
+                        string x = args[1];
+                        string z = args[2];
+                        string steamid = args[3];
+                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
+                    }
                 }
                 
                 else if (args[0] == "animal")
                 {
-                    string x = args[1];
-                    string z = args[2];
-                    string animalname = args[3];
-                    World.SpawnAnimal(animalname, float.Parse(x), float.Parse(z));
+                    if (args.Length == 4)
+                    {
+                        string x = args[1];
+                        string z = args[2];
+                        string animalname = args[3];
+                        World.SpawnAnimal(animalname, float.Parse(x), float.Parse(z));
+                    }
                 }
                 
                 else if (args[0] == "broadcast")
                 {
-                    string message = string.Join(" ", args);
-                    message = message.Replace(args[0] + " ", "");
-                    Server.Broadcast(message);
+                    if (args.Length == 2)
+                    {
+                        string message = string.Join(" ", args);
+                        message = message.Replace(args[0] + " ", "");
+                        Server.Broadcast(message);
+                    }
                 }
             }
             else
