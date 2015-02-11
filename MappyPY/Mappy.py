@@ -59,11 +59,11 @@ class Mappy:
             message = message.replace(args[0] + " " + args[1] + " ", "")
             player.Message(message)
         elif args[0] == "teleport":
-            x = args[1]
-            z = args[2]
-            steamid = args[3]
+            x = args[2]
+            z = args[3]
+            steamid = args[1]
             player = Pluton.Player.Find(steamid)
-            player.Teleport(float(x), World.GetGround(float(x), float(z)) + 1, float(z))
+            player.Teleport(float(x), World.GetGround(float(x), float(z)), float(z))
         elif args[0] == "give":
             steamid = args[1]
             player = Pluton.Player.Find(steamid)
