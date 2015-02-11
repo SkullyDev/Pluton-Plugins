@@ -37,7 +37,7 @@ namespace Mappy
             {
                 if (args[0] == "airdrop")
                 {
-                    if (args.Length == 3)
+                    if (args.Length >= 3)
                     {
                         string x = args[1];
                         string z = args[2];
@@ -47,10 +47,9 @@ namespace Mappy
                 
                 else if (args[0] == "kick")
                 {
-                    if (args.Length == 2)
+                    if (args.Length >= 2)
                     {
-                        string steamid = args[1];
-                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        Pluton.Player player = Pluton.Player.Find(args[1]);
                         if (player != null)
                         {
                             player.Kick("Mappy control panel kick");
@@ -60,22 +59,19 @@ namespace Mappy
                 
                 else if (args[0] == "message")
                 {
-                    if (args.Length == 3)
+                    if (args.Length >= 3)
                     {
-                        string steamid = args[1];
-                        Pluton.Player player = Pluton.Player.Find(steamid);
-                        string message = string.Join(" ", args);
-                        message = message.Replace(args[0] + " " + args[1] + " ", "");
+                        Pluton.Player player = Pluton.Player.Find(args[1]);
+                        string message = System.String.Format("MAPPY ADMIN: {0}", string.Join(" ", args).Replace(args[0] + " " + args[1] + " ", ""));
                         player.Message(message);
                     }
                 }
                 
                 else if (args[0] == "give")
                 {
-                    if (args.Length == 4)
+                    if (args.Length >= 4)
                     {
-                        string steamid = args[1];
-                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        Pluton.Player player = Pluton.Player.Find(args[1]);
                         int count = args[2].ToInt();
                         int item = Pluton.InvItem.GetItemID(args[3]);
                         player.Inventory.Add(item, count);
@@ -84,19 +80,18 @@ namespace Mappy
                 
                 else if (args[0] == "teleport")
                 {
-                    if (args.Length == 4)
+                    if (args.Length >= 4)
                     {
-                        string x = args[1];
-                        string z = args[2];
-                        string steamid = args[3];
-                        Pluton.Player player = Pluton.Player.Find(steamid);
+                        string x = args[2];
+                        string z = args[3];
+                        Pluton.Player player = Pluton.Player.Find(args[1]);
                         player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
                     }
                 }
                 
                 else if (args[0] == "animal")
                 {
-                    if (args.Length == 4)
+                    if (args.Length >= 4)
                     {
                         string x = args[1];
                         string z = args[2];
@@ -107,10 +102,9 @@ namespace Mappy
                 
                 else if (args[0] == "broadcast")
                 {
-                    if (args.Length == 2)
+                    if (args.Length >= 2)
                     {
-                        string message = string.Join(" ", args);
-                        message = message.Replace(args[0] + " ", "");
+                        string message = System.String.Format("MAPPY ADMIN: {0}", string.Join(" ", args).Replace(args[0] + " ", ""));
                         Server.Broadcast(message);
                     }
                 }
@@ -168,15 +162,7 @@ namespace Mappy
                 {
                     Name = Uri.EscapeDataString(Name);
                 }
-                string coords = player.Location.ToString();
-                string stripit = coords.Replace(")", "");
-                string stripit2 = coords.Replace("(", "");
-                string stripit3 = coords.Replace(",", "");
-                string[] splitted = stripit3.Split(' ');
-                string coordx = splitted[0];
-                string coordz = splitted[2];
-                string steamid = player.SteamID;
-                post = post + ";" + Name + ":" + coordx + ":" + coordz + ":" + steamid;
+                post = System.String.Format("{0};{1}:{2}:{3}:{4}", post, Name, player.X, player.Z, player.SteamID);
             }
             string link = (string)DataStore.Get("Mappy", "Link");
             Plugin.POST(link, post);
@@ -198,7 +184,7 @@ namespace Mappy
                     Sender = Uri.EscapeDataString(Sender);
                 }
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
-                string post = "&chat=" + Sender + ": " + Message;
+                string post = System.String.Format("&chat={0}:{1}", Sender, Message);
                 Plugin.POST(link, post);
             }
         }

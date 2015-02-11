@@ -35,9 +35,6 @@
     <Reference Include="Pluton">
       <HintPath>ref\Pluton.dll</HintPath>
     </Reference>
-    <Reference Include="System.Reactive">
-      <HintPath>ref\System.Reactive.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>ref\UnityEngine.dll</HintPath>
     </Reference>
