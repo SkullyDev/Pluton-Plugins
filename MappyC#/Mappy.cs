@@ -49,9 +49,10 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        Pluton.Player player = Pluton.Player.Find(args[1]);
-                        if (player != null)
+                        ulong sid = System.UInt64.Parse(args[1]);
+                        if (Server.Players.ContainsKey(sid))
                         {
+                            Pluton.Player player = Server.Players[sid];
                             player.Kick("Mappy control panel kick");
                         }
                     }
@@ -61,9 +62,14 @@ namespace Mappy
                 {
                     if (args.Length >= 3)
                     {
-                        Pluton.Player player = Pluton.Player.Find(args[1]);
-                        string message = System.String.Format("MAPPY ADMIN: {0}", string.Join(" ", args).Replace(args[0] + " " + args[1] + " ", ""));
-                        player.Message(message);
+                        ulong sid = System.UInt64.Parse(args[1]);
+                        if (Server.Players.ContainsKey(sid))
+                        {
+                            Pluton.Player player = Server.Players[sid];
+                            string message = string.Join(" ", args);
+                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            player.Message(message);
+                        }
                     }
                 }
                 
@@ -71,10 +77,16 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        Pluton.Player player = Pluton.Player.Find(args[1]);
-                        int count = args[2].ToInt();
-                        int item = Pluton.InvItem.GetItemID(args[3]);
-                        player.Inventory.Add(item, count);
+                        ulong sid = System.UInt64.Parse(args[1]);
+                        if (Server.Players.ContainsKey(sid))
+                        {
+                            Pluton.Player player = Server.Players[sid];
+                            int count = args[2].ToInt();
+                            int item = Pluton.InvItem.GetItemID(args[3]);
+                            if (item == null)
+                                return;
+                            player.Inventory.Add(item, count);
+                        }
                     }
                 }
                 
@@ -82,10 +94,14 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        string x = args[2];
-                        string z = args[3];
-                        Pluton.Player player = Pluton.Player.Find(args[1]);
-                        player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
+                        ulong sid = System.UInt64.Parse(args[1]);
+                        if (Server.Players.ContainsKey(sid))
+                        {
+                            Pluton.Player player = Server.Players[sid];
+                            string x = args[2];
+                            string z = args[3];
+                            player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
+                        }
                     }
                 }
                 
@@ -104,7 +120,8 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        string message = System.String.Format("MAPPY ADMIN: {0}", string.Join(" ", args).Replace(args[0] + " ", ""));
+                        string message = string.Join(" ", args);
+                        message = System.String.Format("{0}", message.Replace(args[0] + " ", ""));
                         Server.Broadcast(message);
                     }
                 }
