@@ -82,8 +82,9 @@ namespace Mappy
                         {
                             Pluton.Player player = Server.Players[sid];
                             int count = args[2].ToInt();
-                            int item = Pluton.InvItem.GetItemID(args[3]);
-                            if (item == null)
+                            int item = 0;
+                            item = Pluton.InvItem.GetItemID(args[3]);
+                            if (item == 0)
                                 return;
                             player.Inventory.Add(item, count);
                         }
