@@ -53,7 +53,9 @@ namespace Mappy
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            player.Kick("Mappy control panel kick");
+                            string message = string.Join(" ", args);
+                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            player.Kick(message);
                         }
                     }
                 }
