@@ -57,6 +57,21 @@ namespace Mappy
                         }
                     }
                 }
+
+                else if (args[0] == "ban")
+                {
+                    if (args.Length >= 2)
+                    {
+                        ulong sid = System.UInt64.Parse(args[1]);
+                        if (Server.Players.ContainsKey(sid))
+                        {
+                            Pluton.Player player = Server.Players[sid];
+                            string message = string.Join(" ", args);
+                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            player.Ban(message);
+                        }
+                    }
+                }
                 
                 else if (args[0] == "message")
                 {

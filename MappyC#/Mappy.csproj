@@ -41,9 +41,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>ref\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Facepunch">
-      <HintPath>ref\Facepunch.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
