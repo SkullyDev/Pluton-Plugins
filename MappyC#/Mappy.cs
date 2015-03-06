@@ -23,11 +23,20 @@ namespace Mappy
                     DataStore.Add("Mappy", "SendChat", 1);
                     DataStore.Add("Mappy", "LinkChat", link + "chat.php");
                 }
+                if (ini.GetSetting("Settings", "SendBuildings") == "1")
+                {
+                    DataStore.Add("Mappy", "SendBuildings", 1);
+                    DataStore.Add("Mappy", "LinkBuildings", link + "buildings.php");
+                    Plugin.CreateTimer("SendBuildings", 10000).Start();
+                }
+                if (ini.GetSetting("Settings", "SendSleepers") == "1")
+                { DataStore.Add("Mappy", "SendSleepers", 1); }
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
-                string mseconds = ini.GetSetting("Settings", "Timer");
+                int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
                 Plugin.CreateTimer("SendSizeOnce", 15000).Start();
-                Plugin.CreateTimer("Send", mseconds.ToInt()).Start();
+                Plugin.CreateTimer("Send", mseconds).Start();
+                Console.WriteLine("MAPPY PLUGIN WAS LOADED AND TIMERS WERE STARTED");
             }
         }
 
@@ -49,12 +58,12 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        ulong sid = System.UInt64.Parse(args[1]);
+                        ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            string message = string.Join(" ", args);
-                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            string message = String.Join(" ", args);
+                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Kick(message);
                         }
                     }
@@ -64,12 +73,12 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        ulong sid = System.UInt64.Parse(args[1]);
+                        ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            string message = string.Join(" ", args);
-                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            string message = String.Join(" ", args);
+                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Ban(message);
                         }
                     }
@@ -79,12 +88,12 @@ namespace Mappy
                 {
                     if (args.Length >= 3)
                     {
-                        ulong sid = System.UInt64.Parse(args[1]);
+                        ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            string message = string.Join(" ", args);
-                            message = System.String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            string message = String.Join(" ", args);
+                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Message(message);
                         }
                     }
@@ -94,7 +103,7 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        ulong sid = System.UInt64.Parse(args[1]);
+                        ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
@@ -112,12 +121,12 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        ulong sid = System.UInt64.Parse(args[1]);
+                        ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            string x = args[2];
-                            string z = args[3];
+                            String x = args[2];
+                            String z = args[3];
                             player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
                         }
                     }
@@ -138,15 +147,16 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        string message = string.Join(" ", args);
-                        message = System.String.Format("{0}", message.Replace(args[0] + " ", ""));
+                        string message = String.Join(" ", args);
+                        message = String.Format("{0}", message.Replace(args[0] + " ", ""));
                         Server.Broadcast(message);
                     }
                 }
             }
             else
             {
-                Logger.Log("MAPPY PLUGIN MADE BY SKULLY (REALLY HARD WORK)");
+                Console.WriteLine("MAPPY PLUGIN & MAP MADE BY Skully (SkullyDev)");
+                Console.WriteLine("Proud member of Pluton-Team.ORG");
             }
         }
 
@@ -157,6 +167,8 @@ namespace Mappy
                 IniParser ini = Plugin.CreateIni("ConfigurationFile");
                 ini.AddSetting("Settings", "enabled", "1");
                 ini.AddSetting("Settings", "SendChat", "1");
+                ini.AddSetting("Settings", "SendBuildings", "1");
+                ini.AddSetting("Settings", "SendSleepers", "1");
                 ini.AddSetting("Settings", "Timer", "60000");
                 ini.AddSetting("Settings", "url", "http://www.example.com/mappy/");
                 ini.Save();
@@ -167,38 +179,25 @@ namespace Mappy
         public void SendSizeOnceCallback(TimedEvent timer)
         {
             timer.Kill();
-            DataStore.Add("Mappy", "SizeSent", 1);
             string link = (string)DataStore.Get("Mappy", "LinkSize");
-            string WorldSize = "&worldsize=" + global::World.Size.ToString();
+            string WorldSize = String.Format("&worldsize={0}", global::World.Size.ToString());
             Plugin.POST(link, WorldSize);
         }
 
         public void SendCallback(TimedEvent timer)
         {
-            string ServersTime = World.Time.ToString();
-            string plcount = Server.SleepingPlayers.Count.ToString();
-            string post = "&time=" + ServersTime + "&sleepers=" + plcount;
-            if ((int)DataStore.Get("Mappy", "SendChat") == 1)
+            string post = String.Format("&time={0}&sleepers={1}", World.Time.ToString(), Server.SleepingPlayers.Count.ToString());
+            if ((int)DataStore.Get("Mappy", "SendChat") == 1) { post = String.Format("{0}&showchat=true", post); }
+            if ((int)DataStore.Get("Mappy", "SendBuildings") == 1) { post = String.Format("{0}&showbuildings=true", post); }
+            if ((int)DataStore.Get("Mappy", "SendSleepers") == 1)
             {
-                post = post + "&showchat=true";
+                post = String.Format("{0}&showsleepers=true&sleepersloc=::", post);
+                foreach (Pluton.Player player in Server.SleepingPlayers)
+                { post = String.Format("{0};{1}:{2}:{3}", post, Uri.EscapeDataString(player.Name), player.X, player.Z); }
             }
-            post = post + "&players=::";
-            int i = 1;
+            post = String.Format("{0}&players=::", post);
             foreach (Pluton.Player player in Server.ActivePlayers)
-            {
-                string Name = player.Name;
-                if (Name.Length < 2)
-                {
-                    string k = i.ToString();
-                    Name = "Player - " + i.ToString();
-                    i++;
-                }
-                else
-                {
-                    Name = Uri.EscapeDataString(Name);
-                }
-                post = System.String.Format("{0};{1}:{2}:{3}:{4}", post, Name, player.X, player.Z, player.SteamID);
-            }
+            { post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID); }
             string link = (string)DataStore.Get("Mappy", "Link");
             Plugin.POST(link, post);
         }
@@ -207,21 +206,20 @@ namespace Mappy
         {
             if ((int)DataStore.Get("Mappy", "SendChat") == 1)
             {
-                Pluton.Player  player = Chat.User;
-                string Message = Uri.EscapeDataString(Chat.OriginalText);
-                string Sender = player.Name;
-                if (Sender.Length < 2)
-                {
-                    Sender = "Player";
-                }
-                else
-                {
-                    Sender = Uri.EscapeDataString(Sender);
-                }
+                Pluton.Player player = Chat.User;
+                string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
-                string post = System.String.Format("&chat={0}:{1}", Sender, Message);
                 Plugin.POST(link, post);
             }
+        }
+
+        public void SendBuildingsCallback(TimedEvent timer)
+        {
+            string post = "&buildings=:";
+            foreach (BuildingBlock gameObject in UnityEngine.Object.FindObjectsOfType<BuildingBlock>())
+            { post = String.Format("{0};{1}:{2}", post, gameObject.transform.position.x, gameObject.transform.position.z); }
+            string link = (string)DataStore.Get("Mappy", "LinkBuildings");
+            Plugin.POST(link, post);
         }
     }
 }
