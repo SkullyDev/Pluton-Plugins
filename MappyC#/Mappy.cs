@@ -27,7 +27,7 @@ namespace Mappy
                 {
                     DataStore.Add("Mappy", "SendBuildings", 1);
                     DataStore.Add("Mappy", "LinkBuildings", link + "buildings.php");
-                    Plugin.CreateTimer("SendBuildings", 10000).Start();
+                    Plugin.CreateTimer("SendBuildings", 180000).Start();
                 }
                 if (ini.GetSetting("Settings", "SendSleepers") == "1")
                 { DataStore.Add("Mappy", "SendSleepers", 1); }
