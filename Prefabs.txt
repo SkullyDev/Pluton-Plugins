@@ -162,7 +162,8 @@ autospawn/resource/beachside-temperate/tree-a2-7
 autospawn/resource/beachside-tundra/tree-g-5
 autospawn/resource/beachside-tundra/tree-g-6
 autospawn/resource/beachside-tundra/tree-g-7
-autospawn/resource/crystals/resource_crystal1
+autospawn/resource/crystals/crystal_1
+autospawn/resource/crystals/crystal_2
 autospawn/resource/fields-arctic/fields-north-1
 autospawn/resource/fields-arid/tree-a-1
 autospawn/resource/fields-arid/tree-a-2
@@ -884,6 +885,7 @@ group4
 group5
 group6
 group7
+hatch
 head
 head_ctrl
 head_end
@@ -1072,10 +1074,12 @@ lip_lower
 lip_lower_end
 lip_upper
 lock
+lod
 lod0
 lod01
 lod02
 lod03
+lod1
 lower_jaw
 lower_jaw_eff
 mane_5a
@@ -1300,6 +1304,7 @@ rpc_lock
 rpc_lootcorpse
 rpc_opendoor
 rpc_openloot
+rpc_takelock
 rpc_unlock
 rustplayer
 sand
@@ -1408,7 +1413,6 @@ w_storage_box_1_lod0
 w_storage_box_1_lod1
 w_storage_box_1_lod2
 w_storage_box_1_lod3
-wall.doorway.door.hatch
 wall.doorway/sockets/doorway-in
 wall.doorway/sockets/doorway-out
 wall.doorway/sockets/floor-top 1/floor_a
