@@ -207,6 +207,7 @@ namespace Mappy
             if ((int)DataStore.Get("Mappy", "SendChat") == 1)
             {
                 Pluton.Player player = Chat.User;
+                //var color = String.Format("#{0:X6}", new System.Random().Next(0x1000000));
                 string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
                 Plugin.POST(link, post);
@@ -217,7 +218,10 @@ namespace Mappy
         {
             string post = "&buildings=:";
             foreach (BuildingBlock gameObject in UnityEngine.Object.FindObjectsOfType<BuildingBlock>())
-            { post = String.Format("{0};{1}:{2}", post, gameObject.transform.position.x, gameObject.transform.position.z); }
+            {
+                if (gameObject.name.Contains("foundation"))
+                    post = String.Format("{0};{1}:{2}", post, gameObject.transform.position.x, gameObject.transform.position.z);
+            }
             string link = (string)DataStore.Get("Mappy", "LinkBuildings");
             Plugin.POST(link, post);
         }
