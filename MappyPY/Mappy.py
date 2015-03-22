@@ -49,24 +49,24 @@ class Mappy:
             z = args[2]
             World.AirDropAt(float(x), 0, float(z))
         elif args[0] == "kick":
-            steamid = args[1]
-            player = Pluton.Player.Find(steamid)
+            steamid = int(args[1])
+            player = Pluton.Players[steamid]
             player.Kick("Mappy control panel kick")
         elif args[0] == "message":
-            steamid = args[1]
-            player = Pluton.Player.Find(steamid)
+            steamid = int(args[1])
+            player = Pluton.Players[steamid]
             message = str.Join(" ", args)
             message = message.replace(args[0] + " " + args[1] + " ", "")
             player.Message(message)
         elif args[0] == "teleport":
             x = args[2]
             z = args[3]
-            steamid = args[1]
-            player = Pluton.Player.Find(steamid)
+            steamid = int(args[1])
+            player = Pluton.Players[steamid]
             player.Teleport(float(x), World.GetGround(float(x), float(z)), float(z))
         elif args[0] == "give":
-            steamid = args[1]
-            player = Pluton.Player.Find(steamid)
+            steamid = int(args[1])
+            player = Pluton.Players[steamid]
             count = args[2]
             # GIVE CODE USED FROM "Give" balu92's PLUGIN
             item = Pluton.InvItem.GetItemID(args[3])
@@ -94,15 +94,9 @@ class Mappy:
         if DataStore.Get("Mappy", "SendChat") == 1:
             post = post + "&showchat=true"
         post = post + "&players=::"
-        i = 1
         for player in Server.ActivePlayers:
             if player.Location:
-                Name = player.Name
-                if len(Name) < 2:
-                    Name = "Player - " + str(i)
-                    i = i+1
-                else:
-                    Name = Uri.EscapeDataString(Name)
+                Name = Uri.EscapeDataString(player.Name)
                 coords = str(player.Location)
                 stripit = str.strip(coords, "()")
                 sripped = str.strip(stripit, ",")
@@ -117,11 +111,7 @@ class Mappy:
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
             Message = Uri.EscapeDataString(Chat.OriginalText)
-            Sender = player.Name;
-            if (Sender.Length < 2):
-                Sender = "Player"
-            else:
-                Sender = Uri.EscapeDataString(Sender)
+            Sender = Uri.EscapeDataString(player.Name)
             link = DataStore.Get("Mappy", "LinkChat")
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)
