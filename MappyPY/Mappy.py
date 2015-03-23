@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '2.5'
+__version__ = '3.0'
 
 import clr
 import sys
