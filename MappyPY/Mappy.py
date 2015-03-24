@@ -111,7 +111,7 @@ class Mappy:
     def On_Chat(self, Chat):
         if DataStore.Get("Mappy", "SendChat") == 1:
             Message = Uri.EscapeDataString(Chat.OriginalText)
-            Sender = Uri.EscapeDataString(player.Name)
+            Sender = Uri.EscapeDataString(Chat.User.Name)
             link = DataStore.Get("Mappy", "LinkChat")
             post = "&chat=" + Sender + ": " + Message
             Plugin.POST(link, post)
