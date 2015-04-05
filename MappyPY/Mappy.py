@@ -42,7 +42,7 @@ class Mappy:
             Plugin.CreateTimer("Send", msec).Start()
 
     def ReceiveCommand(self, args):
-        if len(args) == 0:
+        if args[0] == "":
             return
         if args[0] == "airdrop":
             x = args[1]
