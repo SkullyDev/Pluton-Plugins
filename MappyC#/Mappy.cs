@@ -23,20 +23,34 @@ namespace Mappy
                     DataStore.Add("Mappy", "SendChat", 1);
                     DataStore.Add("Mappy", "LinkChat", link + "chat.php");
                 }
-                if (ini.GetSetting("Settings", "SendBuildings") == "1")
+                else
+                {
+                    DataStore.Add("Mappy", "SendChat", 0);
+                }
+                /*if (ini.GetSetting("Settings", "SendBuildings") == "1")
                 {
                     DataStore.Add("Mappy", "SendBuildings", 1);
                     DataStore.Add("Mappy", "LinkBuildings", link + "buildings.php");
                     Plugin.CreateTimer("SendBuildings", 180000).Start();
                 }
+                else
+                {
+                    DataStore.Add("Mappy", "SendBuildings", 0);
+                }*/
                 if (ini.GetSetting("Settings", "SendSleepers") == "1")
-                { DataStore.Add("Mappy", "SendSleepers", 1); }
+                {
+                    DataStore.Add("Mappy", "SendSleepers", 1);
+                }
+                else
+                {
+                    DataStore.Add("Mappy", "SendSleepers", 0);
+                }
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
                 int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
                 Plugin.CreateTimer("SendSizeOnce", 15000).Start();
                 Plugin.CreateTimer("Send", mseconds).Start();
-                Console.WriteLine("MAPPY PLUGIN WAS LOADED AND TIMERS WERE STARTED");
+                Logger.Log("MAPPY PLUGIN WILL BE FULLY LOADED IN 15 SECONDS");
             }
         }
 
@@ -155,8 +169,8 @@ namespace Mappy
             }
             else
             {
-                Console.WriteLine("MAPPY PLUGIN & MAP MADE BY Skully (SkullyDev)");
-                Console.WriteLine("Proud member of Pluton-Team.ORG");
+                Logger.Log("MAPPY PLUGIN & MAP CODE MADE BY Skully (SkullyDev)");
+                Logger.Log("Proud member of Pluton-Team.ORG");
             }
         }
 
@@ -167,7 +181,7 @@ namespace Mappy
                 IniParser ini = Plugin.CreateIni("ConfigurationFile");
                 ini.AddSetting("Settings", "enabled", "1");
                 ini.AddSetting("Settings", "SendChat", "1");
-                ini.AddSetting("Settings", "SendBuildings", "1");
+                //ini.AddSetting("Settings", "SendBuildings", "1");
                 ini.AddSetting("Settings", "SendSleepers", "1");
                 ini.AddSetting("Settings", "Timer", "60000");
                 ini.AddSetting("Settings", "url", "http://www.example.com/mappy/");
@@ -182,22 +196,33 @@ namespace Mappy
             string link = (string)DataStore.Get("Mappy", "LinkSize");
             string WorldSize = String.Format("&worldsize={0}", global::World.Size.ToString());
             Plugin.POST(link, WorldSize);
+            Logger.Log("MAPPY PLUGIN WAS LOADED AND TIMERS WERE STARTED");
         }
 
         public void SendCallback(TimedEvent timer)
         {
             string post = String.Format("&time={0}&sleepers={1}", World.Time.ToString(), Server.SleepingPlayers.Count.ToString());
-            if ((int)DataStore.Get("Mappy", "SendChat") == 1) { post = String.Format("{0}&showchat=true", post); }
-            if ((int)DataStore.Get("Mappy", "SendBuildings") == 1) { post = String.Format("{0}&showbuildings=true", post); }
+            if ((int)DataStore.Get("Mappy", "SendChat") == 1)
+            {
+                post = String.Format("{0}&showchat=true", post);
+            }
+            if ((int)DataStore.Get("Mappy", "SendBuildings") == 1)
+            {
+                post = String.Format("{0}&showbuildings=true", post);
+            }
             if ((int)DataStore.Get("Mappy", "SendSleepers") == 1)
             {
                 post = String.Format("{0}&showsleepers=true&sleepersloc=::", post);
                 foreach (Pluton.Player player in Server.SleepingPlayers)
-                { post = String.Format("{0};{1}:{2}:{3}", post, Uri.EscapeDataString(player.Name), player.X, player.Z); }
+                {
+                    post = String.Format("{0};{1}:{2}:{3}", post, Uri.EscapeDataString(player.Name), player.X, player.Z);
+                }
             }
             post = String.Format("{0}&players=::", post);
             foreach (Pluton.Player player in Server.ActivePlayers)
-            { post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID); }
+            {
+                post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
+            }
             string link = (string)DataStore.Get("Mappy", "Link");
             Plugin.POST(link, post);
         }
