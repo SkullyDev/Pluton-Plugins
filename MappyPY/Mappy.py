@@ -1,5 +1,5 @@
 __author__ = 'Skully'
-__version__ = '3.0'
+__version__ = '3.1.1'
 
 import clr
 import sys
@@ -14,12 +14,15 @@ import Pluton
 import System
 from System import Uri
 
+
 class Mappy:
     def ConfigurationFile(self):
         if not Plugin.IniExists("ConfigurationFile"):
             ini = Plugin.CreateIni("ConfigurationFile")
             ini.AddSetting("Settings", "enabled", "1")
             ini.AddSetting("Settings", "SendChat", "1")
+            #ini.AddSetting("Settings", "SendBuildings", "1")
+            ini.AddSetting("Settings", "SendSleepers", "1")
             ini.AddSetting("Settings", "Timer", "60000")
             ini.AddSetting("Settings", "url", "http://www.example.com/mappy/")
             ini.Save()
@@ -34,12 +37,24 @@ class Mappy:
             if ini.GetSetting("Settings", "SendChat") == "1":
                 DataStore.Add("Mappy", "SendChat", 1)
                 DataStore.Add("Mappy", "LinkChat", link + "chat.php")
+            else:
+                DataStore.Add("Mappy", "SendChat", 0)
+            #if ini.GetSetting("Settings", "SendBuildings") == "1":
+            #    DataStore.Add("Mappy", "SendBuildings", 1)
+            #    DataStore.Add("Mappy", "LinkBuildings", link + "buildings.php")
+            #    Plugin.CreateTimer("SendBuildings", 180000).Start()
+            #else:
+            #    DataStore.Add("Mappy", "SendBuildings", 0)
+            #if ini.GetSetting("Settings", "SendSleepers") == "1":
+            #    DataStore.Add("Mappy", "SendSleepers", 1)
+            #else:
+            #    DataStore.Add("Mappy", "SendSleepers", 0)
             DataStore.Add("Mappy", "Link", link + "server.php")
             DataStore.Add("Mappy", "LinkSize", link + "size.php")
-            mseconds = ini.GetSetting("Settings", "Timer")
-            msec = int(mseconds)
-            Plugin.CreateTimer("SendSizeOnce", 15000).Start()
-            Plugin.CreateTimer("Send", msec).Start()
+            mseconds = int(ini.GetSetting("Settings", "Timer"))
+            data = Plugin.CreateDict()
+            data["timerMSec"] = mseconds
+            Plugin.CreateTimer("TimerOnce", 15000, data).Start()
 
     def ReceiveCommand(self, args):
         if args[0] == "":
@@ -80,20 +95,29 @@ class Mappy:
             message = str.Join(" ", args)
             message = message.replace(args[0] + " ", "")
             Server.Broadcast(message)
+        else:
+            Logger.Log("MAPPY PLUGIN & MAP CODE MADE BY Skully (SkullyDev)")
+            Logger.Log("Proud member of Pluton-Team.ORG")
 
-    def SendSizeOnceCallback(self, timer):
+    def TimerOnceCallback(self, timer):
         timer.Kill()
-        DataStore.Add("Mappy", "SizeSent", 1)
+        args = timer.Args
+        Plugin.CreateTimer("Send", args["timerMSec"]).Start()
         link = DataStore.Get("Mappy", "LinkSize")
         WorldSize = "&worldsize=" + str(globalWorld.Size)
-        Plugin.POST(link, WorldSize)
+        response = Plugin.POST(link, WorldSize)
+        Logger.Log("MAPPY PLUGIN WAS LOADED AND TIMERS WERE STARTED")
 
     def SendCallback(self, timer):
         ServersTime = str(World.Time)
         post = "&time=" + ServersTime + "&sleepers=" + str(Server.SleepingPlayers.Count)
         if DataStore.Get("Mappy", "SendChat") == 1:
-            post = post + "&showchat=true"
-        post = post + "&players=::"
+            post += "&showchat=true"
+        #if DataStore.Get("Mappy", "SendSleepers") == 1:
+        #    post += "&showsleepers=true&sleepersloc=::"
+        #    for player in Server.SleepingPlayers:
+        #        post = post + Uri.EscapeDataString(player.Name) + str(player.X) + str(player.Z)
+        post += "&players=::"
         for player in Server.ActivePlayers:
             if player.Location:
                 Name = Uri.EscapeDataString(player.Name)

@@ -36,7 +36,7 @@ namespace Mappy
                 else
                 {
                     DataStore.Add("Mappy", "SendBuildings", 0);
-                }*/
+                }
                 if (ini.GetSetting("Settings", "SendSleepers") == "1")
                 {
                     DataStore.Add("Mappy", "SendSleepers", 1);
@@ -44,12 +44,13 @@ namespace Mappy
                 else
                 {
                     DataStore.Add("Mappy", "SendSleepers", 0);
-                }
+                }*/
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
                 int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
-                Plugin.CreateTimer("SendSizeOnce", 15000).Start();
-                Plugin.CreateTimer("Send", mseconds).Start();
+                Dictionary<string, object> timerData = Plugin.CreateDict();
+                timerData["SendTimer"] = mseconds;
+                Plugin.CreateTimer("TimerOnce", 15000, timerData).Start();
                 Logger.Log("MAPPY PLUGIN WILL BE FULLY LOADED IN 15 SECONDS");
             }
         }
@@ -150,10 +151,10 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        string x = args[1];
-                        string z = args[2];
+                        float x = float.Parse(args[1]);
+                        float z = float.Parse(args[2]);
                         string animalname = args[3];
-                        World.SpawnAnimal(animalname, float.Parse(x), float.Parse(z));
+                        GameManager.server.CreateEntity("autospawn/animals/" + animalname, new UnityEngine.Vector3(x, World.GetGround(x, z), z)).Spawn(true);
                     }
                 }
                 
@@ -182,7 +183,7 @@ namespace Mappy
                 ini.AddSetting("Settings", "enabled", "1");
                 ini.AddSetting("Settings", "SendChat", "1");
                 //ini.AddSetting("Settings", "SendBuildings", "1");
-                ini.AddSetting("Settings", "SendSleepers", "1");
+                //ini.AddSetting("Settings", "SendSleepers", "1");
                 ini.AddSetting("Settings", "Timer", "60000");
                 ini.AddSetting("Settings", "url", "http://www.example.com/mappy/");
                 ini.Save();
@@ -190,9 +191,11 @@ namespace Mappy
             return Plugin.GetIni("ConfigurationFile");
         }
 
-        public void SendSizeOnceCallback(TimedEvent timer)
+        public void TimerOnceCallback(TimedEvent timer)
         {
             timer.Kill();
+            Dictionary<string, object> args = timer.Args;
+            Plugin.CreateTimer("Send", (int)args["SendTimer"]).Start();
             string link = (string)DataStore.Get("Mappy", "LinkSize");
             string WorldSize = String.Format("&worldsize={0}", global::World.Size.ToString());
             Plugin.POST(link, WorldSize);
@@ -206,7 +209,7 @@ namespace Mappy
             {
                 post = String.Format("{0}&showchat=true", post);
             }
-            if ((int)DataStore.Get("Mappy", "SendBuildings") == 1)
+            /*if ((int)DataStore.Get("Mappy", "SendBuildings") == 1)
             {
                 post = String.Format("{0}&showbuildings=true", post);
             }
@@ -217,7 +220,7 @@ namespace Mappy
                 {
                     post = String.Format("{0};{1}:{2}:{3}", post, Uri.EscapeDataString(player.Name), player.X, player.Z);
                 }
-            }
+            }*/
             post = String.Format("{0}&players=::", post);
             foreach (Pluton.Player player in Server.ActivePlayers)
             {
