@@ -98,12 +98,12 @@ class PM:
                         p = offlineplayer
                         count += 1
         if count == 0:
-            Player.MessageFrom("Couldn't find " + str.Join(" ", args) + "!")
+            Player.Message("Couldn't find " + str.Join(" ", args) + "!")
             return None
         elif count == 1 and p is not None:
             return p
         else:
-            Player.MessageFrom("Found " + str(count) + " player with similar name. Use more correct name!")
+            Player.Message("Found " + str(count) + " player with similar name. Use more correct name!")
             return None
 
     def MessageMake(self, args, name):
