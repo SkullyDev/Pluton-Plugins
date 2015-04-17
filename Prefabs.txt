@@ -3,6 +3,7 @@ assigntofriend
 autospawn/animals/bear
 autospawn/animals/boar
 autospawn/animals/chicken
+autospawn/animals/horse
 autospawn/animals/stag
 autospawn/animals/wolf
 autospawn/clutter/beachdriftwood/driftwood_clutter1
@@ -325,6 +326,7 @@ clothing/hands/burlap_gloves
 clothing/hands/hazmat_gloves
 clothing/hands/skin_hands
 clothing/head/bucket_helmet
+clothing/head/burlap_headwrap
 clothing/head/candlehat
 clothing/head/candlehat_lit
 clothing/head/coffeecan_helmet
@@ -574,6 +576,7 @@ fx/door/lock.code.lock
 fx/door/lock.code.unlock
 fx/door/lock.code.updated
 fx/door/open_start
+fx/entities/loot_barrel/impact
 fx/gas_explosion_small
 fx/gestures/cameratakescreenshot
 fx/gestures/drink_generic
@@ -672,6 +675,7 @@ fx/weapons/vm_ak47u/reload_start
 fx/weapons/vm_bandage/deploy
 fx/weapons/vm_bandage/wraparm
 fx/weapons/vm_bandage/wraphead
+fx/weapons/vm_bandage/wrapother
 fx/weapons/vm_bolt_rifle/attack
 fx/weapons/vm_bolt_rifle/attack_shake
 fx/weapons/vm_bolt_rifle/boltback
@@ -758,10 +762,16 @@ fx/weapons/vm_revolver/insert_shells
 fx/weapons/vm_revolver/open_cylinder
 fx/weapons/vm_revolver/prime_striker
 fx/weapons/vm_revolver/shut_cylinder
+fx/weapons/vm_rocket_launcher/attack
 fx/weapons/vm_rocket_launcher/deploy
 fx/weapons/vm_rocket_launcher/fire
 fx/weapons/vm_rocket_launcher/grab_handle
 fx/weapons/vm_rocket_launcher/holster
+fx/weapons/vm_rocket_launcher/reload_begin
+fx/weapons/vm_rocket_launcher/reload_close_hatch
+fx/weapons/vm_rocket_launcher/reload_end
+fx/weapons/vm_rocket_launcher/reload_insert_rocket
+fx/weapons/vm_rocket_launcher/reload_open_hatch
 fx/weapons/vm_rocket_launcher/rocket_launch_fx
 fx/weapons/vm_salvaged_axe/attack1
 fx/weapons/vm_salvaged_axe/attack2
@@ -1091,6 +1101,9 @@ npc/animals/chicken_collision
 npc/animals/chicken_corpse
 npc/animals/chicken_ragdoll
 npc/animals/chicken_skin
+npc/animals/horse_collision
+npc/animals/horse_corpse
+npc/animals/horse_ragdoll
 npc/animals/horse_skin
 npc/animals/rabbit_skin
 npc/animals/stag_collision
@@ -1400,7 +1413,6 @@ unlockwithcode
 updateconditionalmodels
 updateditemcontainer
 updateitem
-updateloading
 updateloot
 updatemetabolism
 updatesign
@@ -1437,6 +1449,7 @@ weapons/bow/hunting.weapon
 weapons/deploy/generic_deploy
 weapons/explosive/f1_grenade.viewmodel
 weapons/explosive/f1_grenade.weapon
+weapons/explosive/rocketlauncher.viewmodel
 weapons/melee/boneknife.viewmodel
 weapons/melee/boneknife.weapon
 weapons/melee/hatchet.viewmodel
