@@ -37,7 +37,7 @@ namespace Droper
                     }
                     
                 }
-                else if (!dropped[dropCountIn] && Vector3.Distance(this.transform.position, dropPoints[dropCountIn]) <= 100f && this.transform.rotation != Quaternion.LookRotation(dropPoints[dropCountIn]))
+                else if (!dropped[dropCountIn] && Vector3.Distance(this.transform.position, dropPoints[dropCountIn]) <= 100f)
                 {
                     this.transform.LookAt(dropPoints[dropCountIn], new Vector3(0, this.transform.position.y, 0));
                 }
@@ -85,13 +85,12 @@ namespace Droper
             ServerConsoleCommands.Register("plane").setCallback(SpawnPlaneCMD);
             EventSchedule[] eventschedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
             foreach (EventSchedule each in eventschedule) each.CancelInvoke("RunSchedule");
-            ServerConsoleCommands.Register("plane").setCallback("SpawnPlane");
             IniParser ini = DroperIniSettings();
             if (ini.GetSetting("Settings", "Enabled") == "1")
             {
                 int mins = int.Parse(ini.GetSetting("Settings", "EventEveryMins"));
                 int timer = mins * 60000;
-                //Plugin.CreateTimer("Drop", timer).Start();
+                Plugin.CreateTimer("Drop", timer).Start();
             }
         }
 
@@ -105,13 +104,10 @@ namespace Droper
             {
                 int drops = int.Parse(ini.GetSetting("Settings", "DropsFromOnePlane"));
                 int planes = int.Parse(ini.GetSetting("Settings", "PlanesInSameTime"));
-                for (int i = 0; i < planes; i++)
-                {
-                    SpawnPlane(drops);
-                    i = i + 1;
-                }
+                for (int i = 1; i <= planes; i++) SpawnPlane(drops);
                 string message = ini.GetSetting("Settings", "BroadcastMsgAirdropIncoming");
                 Server.BroadcastFrom(sysName, message);
+                Logger.Log("[EVENT] AIRDROP CARGO PLANE IN SERVER");
             }
             else
             {
@@ -123,6 +119,7 @@ namespace Droper
         public void SpawnPlaneCMD(string[] cmd)
         {
             SpawnPlane(1);
+            Logger.Log("[EVENT] AIRDROP CARGO PLANE IN SERVER");
         }
 
         public void SpawnPlane(int drops)
@@ -191,7 +188,6 @@ namespace Droper
             classy.dropCountTotal = drops;
             classy.startPos = startingpos;
             classy.plane = baseEntity;
-            Logger.Log("[EVENT] AIRDROP CARGO PLANE IN SERVER");
         }
     }
 }
