@@ -20,8 +20,8 @@ namespace AutoLanterns
             return Plugin.GetIni("Settings");
         }
 
-        //public void On_ServerInit()
-        public void On_PluginInit()
+        public void On_ServerInit()
+        //public void On_PluginInit()
         {
             IniParser ini = IniSettings();
             if (ini.GetSetting("Settings", "Enabled") == "1")
