@@ -125,7 +125,7 @@ namespace Droper
         public void SpawnPlane(int drops)
         {
             float worldsize = global::World.Size;
-            float y = global::World.HighestPoint.y + 500f;
+            float y = 1000f;
             Vector3 startingpos = default(Vector3);
             float pos = UnityEngine.Random.Range(-(worldsize / 3), worldsize / 3);
             int rand = UnityEngine.Random.Range(1, 100);
@@ -157,8 +157,8 @@ namespace Droper
                     RaycastHit hit;
                     float x = UnityEngine.Random.Range(-worldsize, worldsize);
                     float z = UnityEngine.Random.Range(-worldsize, worldsize);
-                    var origin = new Vector3(x, global::World.HighestPoint.y + 1f, z);
-                    if (Physics.Raycast(origin, Vector3.down, out hit, global::World.HighestPoint.y + 101f, 1 << 23))
+                    var origin = new Vector3(x, 1000f, z);
+                    if (Physics.Raycast(origin, Vector3.down, out hit, 1100f, 1 << 23))
                     {
                         if (hit.point.y > 0f)
                         {
