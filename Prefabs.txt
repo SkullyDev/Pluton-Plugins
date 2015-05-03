@@ -129,6 +129,8 @@ autospawn/monument/radtown/radtown_small_2
 autospawn/monument/radtown/radtown_small_3
 autospawn/monument/radtown/radtown_small_4
 autospawn/monument/radtown/radtown_small_5
+autospawn/resource/backup/bush-1
+autospawn/resource/backup/bush-2
 autospawn/resource/beachside-deadtrees/deadtree-1
 autospawn/resource/beachside-deadtrees/deadtree-2
 autospawn/resource/crystals/crystal1
@@ -137,8 +139,6 @@ autospawn/resource/crystals/crystal1c
 autospawn/resource/crystals/crystal2
 autospawn/resource/crystals/crystal2b
 autospawn/resource/crystals/crystal2c
-autospawn/resource/field-tundra/bush-1
-autospawn/resource/field-tundra/bush-2
 autospawn/resource/field-tundra/field-1
 autospawn/resource/field-tundra/field-2
 autospawn/resource/field-tundra/field-3
