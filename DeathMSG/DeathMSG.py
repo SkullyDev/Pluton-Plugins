@@ -212,6 +212,8 @@ class DeathMSG:
                     sysname = ini.GetSetting("Settings", "SysName")
                     if PlayerDeathEvent.Weapon is not None:
                         Weapon = PlayerDeathEvent.Weapon.Name
+                    else:
+                        Weapon = "some weapon"
                     if Sleeping and type == "Slash":
                         dmgmsg = ini.GetSetting("Settings", "SlashSleep")
                     elif Sleeping and type == "Bullet":
@@ -229,14 +231,20 @@ class DeathMSG:
                     dmgmsg = dmgmsg.replace("victim", VictimName)
                     dmgmsg = dmgmsg.replace("dist", str(dist))
                     if PlayerDeathEvent.Weapon is not None:
-                        dmgmsg = dmgmsg.replace("weapon", Weapon)
+                        Weapon = PlayerDeathEvent.Weapon.Name
+                    else:
+                        Weapon = "some weapon"
+                    dmgmsg = dmgmsg.replace("weapon", Weapon)
                     dmgmsg = dmgmsg.replace("bodypart", bpart)
                     self.SendTheMessage(sysname, dmgmsg, sysnamecolor, msgcolor)
                     if KillLog == 1:
                         Plugin.Log("KillLog", str(System.DateTime.Now) + " " + dmgmsg)
                 elif type == "Blunt":
                     sysname = ini.GetSetting("Settings", "SysName")
-                    Weapon = PlayerDeathEvent.Weapon.Name
+                    if PlayerDeathEvent.Weapon is not None:
+                        Weapon = PlayerDeathEvent.Weapon.Name
+                    else:
+                        Weapon = "some weapon"
                     if Sleeping:
                         dmgmsg = ini.GetSetting("Settings", "BluntSleep")
                     else:
@@ -257,9 +265,10 @@ class DeathMSG:
                         Plugin.Log("KillLog", str(System.DateTime.Now) + " " + dmgmsg)
                 elif type == "Stab":
                     sysname = ini.GetSetting("Settings", "SysName")
-                    Weapon = PlayerDeathEvent.Weapon.Name
-                    if Weapon is None or Weapon == "":
-                        return
+                    if PlayerDeathEvent.Weapon is not None:
+                        Weapon = PlayerDeathEvent.Weapon.Name
+                    else:
+                        Weapon = "some weapon"
                     if Weapon == "Hunting Bow":
                         if Sleeping:
                             dmgmsg = ini.GetSetting("Settings", "BowSleep")
@@ -287,7 +296,10 @@ class DeathMSG:
                         Plugin.Log("KillLog", str(System.DateTime.Now) + " " + dmgmsg)
                 elif type == "Slash":
                     sysname = ini.GetSetting("Settings", "SysName")
-                    Weapon = PlayerDeathEvent.Weapon.Name
+                    if PlayerDeathEvent.Weapon is not None:
+                        Weapon = PlayerDeathEvent.Weapon.Name
+                    else:
+                        Weapon = "some weapon"
                     if Sleeping:
                         dmgmsg = ini.GetSetting("Settings", "SlashSleep")
                     else:
@@ -331,7 +343,10 @@ class DeathMSG:
             Attacker = NPCDeathEvent.Attacker.ToPlayer()
             VictimName = self.IsAnimal.get(Victim.Name, Victim.Name)
             AttackerName = Attacker.Name
-            Weapon = NPCDeathEvent.Weapon.Name
+            if NPCDeathEvent.Weapon is not None:
+                Weapon = NPCDeathEvent.Weapon.Name
+            else:
+                Weapon = "some weapon"
             vloc = Victim.Location
             aloc = Attacker.Location
             dist = round(Util.GetVectorsDistance(vloc, aloc), 2)
