@@ -58,9 +58,9 @@ class TPA:
             DataStore.Remove("TeleportRequest", Player.SteamID)
 
     def On_Command(self, cmd):
-        if cmd.cmd == "tpa":
+        if cmd.cmd == "tpa" or cmd.cmd == "tpr":
             if len(cmd.args) == 0:
-                cmd.User.Message("USAGE: /tpa Player Name")
+                cmd.User.Message("USAGE: /" + cmd.cmd + " Player Name")
                 return
             PlayerFrom = cmd.User
             PlayerTo = self.CheckV(PlayerFrom, cmd.args)
