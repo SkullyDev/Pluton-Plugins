@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Pluton;
 using UnityEngine;
 
-namespace Droper
+namespace Dropper
 {
-    public class Droper : CSharpPlugin
+    public class Dropper : CSharpPlugin
     {
-        public class DroperPlane : MonoBehaviour
+        public class DropperPlane : MonoBehaviour
         {
             public int dropCountIn = 1;
             public bool[] dropped;
@@ -55,22 +55,22 @@ namespace Droper
             }
         }
 
-        private IniParser DroperIniSettings()
+        private IniParser DropperIniSettings()
         {
-            if (!Plugin.IniExists("DroperSettings"))
+            if (!Plugin.IniExists("DropperSettings"))
             {
-                IniParser ini = Plugin.CreateIni("DroperSettings");
+                IniParser ini = Plugin.CreateIni("DropperSettings");
                 ini.AddSetting("Settings", "Enabled", "1");
                 ini.AddSetting("Settings", "EventEveryMins", "30");
                 ini.AddSetting("Settings", "PlayersNeeded", "5");
                 ini.AddSetting("Settings", "PlanesInSameTime", "1");
                 ini.AddSetting("Settings", "DropsFromOnePlane", "1");
-                ini.AddSetting("Settings", "BroadcastMsgName", "Droper");
+                ini.AddSetting("Settings", "BroadcastMsgName", "Dropper");
                 ini.AddSetting("Settings", "BroadcastMsgLowPlayers", "AIRDROP WAS CANCELLED, NEED MORE PLAYER");
                 ini.AddSetting("Settings", "BroadcastMsgAirdropIncoming", "AIRDROP CARGO PLANE INCOMING");
                 ini.Save();
             }
-            return Plugin.GetIni("DroperSettings");
+            return Plugin.GetIni("DropperSettings");
         }
 
         public void On_ServerInit()
@@ -85,7 +85,7 @@ namespace Droper
             ServerConsoleCommands.Register("plane").setCallback(SpawnPlaneCMD);
             EventSchedule[] eventschedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
             foreach (EventSchedule each in eventschedule) each.CancelInvoke("RunSchedule");
-            IniParser ini = DroperIniSettings();
+            IniParser ini = DropperIniSettings();
             if (ini.GetSetting("Settings", "Enabled") == "1")
             {
                 int mins = int.Parse(ini.GetSetting("Settings", "EventEveryMins"));
@@ -96,7 +96,7 @@ namespace Droper
 
         public void DropCallback(TimedEvent timer)
         {
-            IniParser ini = DroperIniSettings();
+            IniParser ini = DropperIniSettings();
             int online = Server.Players.Count;
             int needed = int.Parse(ini.GetSetting("Settings", "PlayersNeeded"));
             string sysName = ini.GetSetting("Settings", "BroadcastMsgName");
@@ -180,7 +180,7 @@ namespace Droper
             baseEntity.transform.position = startingpos;
             baseEntity.transform.LookAt(droppingpoint[1], new Vector3(0,y,0));
             baseEntity.TransformChanged();
-            DroperPlane classy = baseEntity.gameObject.AddComponent<DroperPlane>();
+            DropperPlane classy = baseEntity.gameObject.AddComponent<DropperPlane>();
             classy.dropPoints = new Vector3[drops + 1];
             classy.dropped = new bool[drops + 1];
             classy.dropPoints = droppingpoint;
