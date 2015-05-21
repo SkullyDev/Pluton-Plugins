@@ -13,9 +13,6 @@ autospawn/clutter/beachdriftwood/driftwood-4
 autospawn/clutter/beachdriftwood/driftwood-5
 autospawn/clutter/dirtrocks/pebble-3
 autospawn/clutter/dirtrocks/pebble-cluster-1
-autospawn/clutter/forestclovers/clover-patch-1
-autospawn/clutter/forestclovers/clover-patch-2
-autospawn/clutter/forestclovers/clover-patch-3
 autospawn/clutter/forestclovers/flowers-white
 autospawn/clutter/forestmediumgrowth/bush-snakeweed-1
 autospawn/clutter/forestmediumgrowth/bush-snakeweed-2
@@ -374,6 +371,7 @@ clothing/torso/tshirtlongsleeve_yellow
 clothing/torso/urban_jacket
 clothing/torso/urban_shirt
 clproject
+collision
 concrete
 cube
 curve1
@@ -1001,6 +999,7 @@ items/generic_world
 items/grenade.beancan.deployed
 items/grenade.f1.deployed
 items/grenade.smoke.deployed
+items/ladders/ladder.wooden.wall
 items/lantern_deployed
 items/large_woodbox_deployed
 items/map
@@ -1017,6 +1016,7 @@ items/meat_human_ribcage_cooked
 items/meat_human_ribcage_raw
 items/meat_rabbit_cooked
 items/meat_rabbit_raw
+items/mining_quarry
 items/repairbench_deployed
 items/researchtable_deployed
 items/rocket_basic
@@ -1027,6 +1027,8 @@ items/sleepingbag_leather_deployed
 items/sleepingbag_leather_occupied
 items/supply_drop
 items/timed.explosive.deployed
+items/water_catcher_large
+items/water_catcher_small
 items/woodbox_deployed
 jaw
 jaw_connection
@@ -1130,10 +1132,7 @@ l_wing_feather5_0
 l_wing_feather5_1
 l_wing_feather5_end
 l_winglet
-largestorage_lod0
-largestorage_lod01
-largestorage_lod02
-largestorage_lod03
+ladder.wooden.wall/sockets/free
 left_arm_polevector
 left_arm_upvector
 left_calf
@@ -1182,12 +1181,6 @@ lip_lower_end
 lip_upper
 lock
 locksign
-lod
-lod0
-lod01
-lod02
-lod03
-lod1
 lower_jaw
 lower_jaw_eff
 mane_5a
@@ -1274,10 +1267,6 @@ prop_3
 prop_4
 r_ankle_scale
 r_arm_polevector
-r_bench
-r_bench_lod0
-r_bench_lod1
-r_bench_lod2
 r_chin
 r_chin_end
 r_clavicle
@@ -1355,12 +1344,19 @@ r_wing_feather5_end
 r_winglet
 radtown/crate_normal
 radtown/crate_normal_2
+radtown/loot_barrel_1
+radtown/loot_barrel_2
 radtown/loot_trash
 recievetexture
 reload
 removeselfauthorize
 rename
 repairitem
+research_table
+research_table_lod0
+research_table_lod1
+research_table_lod2
+research_table_lod3
 resourceupdate
 righ_arm_upvector
 right_arm_polevector
@@ -1470,7 +1466,6 @@ startloading
 startlootingcontainer
 stomache_expander_1
 stomache_expander_2
-storagebox
 sv_launch
 sv_requestfile
 svnotescreenshot
@@ -1546,10 +1541,6 @@ updatemetabolism
 updatesign
 useother
 useself
-w_storage_box_1_lod0
-w_storage_box_1_lod1
-w_storage_box_1_lod2
-w_storage_box_1_lod3
 wall.doorway.door.hatch
 wall.doorway/sockets/doorway-in
 wall.doorway/sockets/doorway-out
@@ -1651,6 +1642,5 @@ weapons/vm_flare
 weapons/vm_flashlight
 weapons/vm_rocketlauncher
 wood
-wooden box
 zero friction
 
