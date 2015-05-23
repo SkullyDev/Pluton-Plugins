@@ -5,52 +5,63 @@ using UnityEngine;
 
 namespace Dropper
 {
+
     public class Dropper : CSharpPlugin
     {
+        private string sysName = "Dropper";
+        private bool showDropPos = false;
+        private string dropPosMsg = "SUPPLY DROP WAS DROPPED AT";
+
         public class DropperPlane : MonoBehaviour
         {
-            public int dropCountIn = 1;
+            public int droppedCount = 0;
             public bool[] dropped;
+            public string sysName;
             public int dropCountTotal;
             public Vector3 lookAt;
-            public Vector3 startPos;
             public Vector3[] dropPoints;
             public BaseEntity plane;
+            public string dropPosMsg;
+            public bool showDropPos = false;
             public float wsize = global::World.Size;
 
             void Update()
             {
-                if (!dropped[dropCountIn] && Vector3.Distance(this.transform.position, dropPoints[dropCountIn]) <= 1f)
+                if (!dropped[droppedCount] && Vector3.Distance(transform.position, dropPoints[droppedCount]) <= 1f)
                 {
-                    BaseEntity baseEntity = GameManager.server.CreateEntity("items/supply_drop", this.transform.position);
+                    BaseEntity baseEntity = GameManager.server.CreateEntity("items/supply_drop", transform.position);
                     baseEntity.globalBroadcast = true;
                     baseEntity.Spawn();
-                    dropped[dropCountIn] = true;
+                    if (showDropPos)
+                    {
+                        string posmsg = String.Format("X: {0} Z: {1}", ((int)(transform.position.x)).ToString(), ((int)(transform.position.z)).ToString());
+                        ConsoleSystem.Broadcast("chat.add", 0, String.Format("{0}: {1} {2}", sysName.ColorText("fa5"), dropPosMsg, posmsg));
+                    }
+                    dropped[droppedCount] = true;
                     if (dropped[dropCountTotal])
                     {
-                        lookAt = startPos;
+                        lookAt = dropPoints[dropCountTotal + 1];
                     }
                     else
                     {
-                        dropCountIn++;
-                        lookAt = dropPoints[dropCountIn];
+                        droppedCount++;
+                        lookAt = dropPoints[droppedCount];
                     }
-                    
+
                 }
-                else if (!dropped[dropCountIn] && Vector3.Distance(this.transform.position, dropPoints[dropCountIn]) <= 100f)
+                else if (!dropped[droppedCount] && Vector3.Distance(transform.position, dropPoints[droppedCount]) <= 100f)
                 {
-                    this.transform.LookAt(dropPoints[dropCountIn], new Vector3(0, this.transform.position.y, 0));
+                    transform.LookAt(dropPoints[droppedCount], new Vector3(0, transform.position.y, 0));
                 }
-                Quaternion rotatePoint = Quaternion.LookRotation(lookAt - this.transform.position);
-                Quaternion slowly = Quaternion.Slerp(this.transform.rotation, rotatePoint, 0.3f * Time.deltaTime);
-                this.transform.rotation = slowly;
-                Vector3 forward = this.transform.position + this.transform.forward;
-                forward.y = this.transform.position.y;
-                this.transform.position = Vector3.MoveTowards(this.transform.position, forward, 50f * Time.deltaTime);
+                Quaternion rotatePoint = Quaternion.LookRotation(lookAt - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotatePoint, 0.3f * Time.deltaTime);
+                Vector3 forward = transform.position + transform.forward;
+                forward.y = transform.position.y;
+                transform.position = Vector3.MoveTowards(transform.position, forward, 50f * Time.deltaTime);
                 plane.TransformChanged();
-                if (dropped[dropCountTotal] && (this.transform.position.x >= wsize || this.transform.position.z >= wsize || this.transform.position.x <= -wsize || this.transform.position.z <= -wsize))
+                if (dropped[dropCountTotal] && (transform.position.x >= wsize - 1 || transform.position.z >= wsize - 1 || transform.position.x <= -(wsize - 1) || transform.position.z <= -(wsize - 1)))
                 {
-                    this.SendMessage("KillMessage", 1);
+                    SendMessage("KillMessage", 1);
                 }
             }
         }
@@ -65,8 +76,10 @@ namespace Dropper
                 ini.AddSetting("Settings", "PlayersNeeded", "5");
                 ini.AddSetting("Settings", "PlanesInSameTime", "1");
                 ini.AddSetting("Settings", "DropsFromOnePlane", "1");
+                ini.AddSetting("Settings", "DropPositionMessage", "1");
                 ini.AddSetting("Settings", "BroadcastMsgName", "Dropper");
-                ini.AddSetting("Settings", "BroadcastMsgLowPlayers", "AIRDROP WAS CANCELLED, NEED MORE PLAYER");
+                ini.AddSetting("Settings", "DropPositionMessageText", "SUPPLY DROP WAS DROPPED AT");
+                ini.AddSetting("Settings", "BroadcastMsgLowPlayers", "AIRDROP WAS CANCELLED, NEED MORE PLAYERS");
                 ini.AddSetting("Settings", "BroadcastMsgAirdropIncoming", "AIRDROP CARGO PLANE INCOMING");
                 ini.Save();
             }
@@ -75,19 +88,48 @@ namespace Dropper
 
         public void On_ServerInit()
         {
-            EventSchedule[] eventschedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
-            foreach (EventSchedule each in eventschedule) each.CancelInvoke("RunSchedule");
+            IniParser ini = DropperIniSettings();
+            if (ini.GetSetting("Settings", "Enabled") == "1")
+            {
+                try
+                {
+                    EventSchedule[] eventSchedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
+                    foreach (EventSchedule eachEventSchedule in eventSchedule) eachEventSchedule.CancelInvoke("RunSchedule");
+                }
+                catch
+                {
+                    Logger.LogDebug("Cloud not stop all events");
+                }
+            }
         }
 
         public void On_PluginInit()
         {
-            ServerConsoleCommands.Register("airdrop").setCallback(SpawnPlaneCMD);
-            ServerConsoleCommands.Register("plane").setCallback(SpawnPlaneCMD);
-            EventSchedule[] eventschedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
-            foreach (EventSchedule each in eventschedule) each.CancelInvoke("RunSchedule");
+            Commands.Register("airdrop").setCallback(SpawnPlaneChatCMD);
+            ServerConsoleCommands.Register("airdrop").setCallback(SpawnPlaneConsoleCMD);
+            try
+            {
+
+                EventSchedule[] eventSchedule = UnityEngine.Object.FindObjectsOfType<EventSchedule>();
+                foreach (EventSchedule eachEventSchedule in eventSchedule) eachEventSchedule.CancelInvoke("RunSchedule");
+                foreach (CargoPlane gameObject in UnityEngine.Object.FindObjectsOfType<CargoPlane>())
+                {
+                    gameObject.SendMessage("KillMessage", 1);
+                }
+            }
+            catch
+            {
+                Logger.LogDebug("Cloud not stop all events");
+            }
             IniParser ini = DropperIniSettings();
             if (ini.GetSetting("Settings", "Enabled") == "1")
             {
+                if (ini.GetSetting("Settings", "DropPositionMessage") == "1")
+                {
+                    showDropPos = true;
+                    dropPosMsg = ini.GetSetting("Settings", "DropPositionMessageText");
+                }
+                sysName = ini.GetSetting("Settings", "BroadcastMsgName");
                 int mins = int.Parse(ini.GetSetting("Settings", "EventEveryMins"));
                 int timer = mins * 60000;
                 Plugin.CreateTimer("Drop", timer).Start();
@@ -99,7 +141,6 @@ namespace Dropper
             IniParser ini = DropperIniSettings();
             int online = Server.Players.Count;
             int needed = int.Parse(ini.GetSetting("Settings", "PlayersNeeded"));
-            string sysName = ini.GetSetting("Settings", "BroadcastMsgName");
             if (online >= needed)
             {
                 int drops = int.Parse(ini.GetSetting("Settings", "DropsFromOnePlane"));
@@ -116,13 +157,27 @@ namespace Dropper
             }
         }
 
-        public void SpawnPlaneCMD(string[] cmd)
+        public void SpawnPlaneChatCMD(string[] args, Player player)
         {
-            SpawnPlane(1);
+            if (player.Admin)
+            {
+                SpawnPlane();
+                player.Message("AIRDROP CARGO PLANE IN SERVER");
+                Logger.Log("[EVENT] AIRDROP CARGO PLANE IN SERVER");
+            }
+            else
+            {
+                player.Message("You are not allowed to use this command");
+            }
+        }
+
+        public void SpawnPlaneConsoleCMD(string[] args)
+        {
+            SpawnPlane();
             Logger.Log("[EVENT] AIRDROP CARGO PLANE IN SERVER");
         }
 
-        public void SpawnPlane(int drops)
+        public void SpawnPlane(int drops = 1)
         {
             float worldsize = global::World.Size;
             float y = 1000f;
@@ -145,14 +200,22 @@ namespace Dropper
             else
             {
                 startingpos.z = pos;
-                if (rand2 <= 50) startingpos.x = worldsize; else startingpos.x = -(worldsize);
+                if (rand2 <= 50)
+                {
+                    startingpos.x = worldsize;
+                }
+                else
+                {
+                    startingpos.x = -(worldsize);
+                }
             }
             startingpos.y = y;
-            Vector3[] droppingpoint = new Vector3[drops + 1];
-            for (int i = 1; i <= drops; i++)
+            Vector3[] droppingpoints = new Vector3[drops + 1];
+            droppingpoints[drops] = startingpos;
+            for (int i = 0; i < drops; i++)
             {
-                bool grounded = false;
-                while (!grounded)
+                bool regenerate = true;
+                while (regenerate)
                 {
                     RaycastHit hit;
                     float x = UnityEngine.Random.Range(-worldsize, worldsize);
@@ -162,15 +225,22 @@ namespace Dropper
                     {
                         if (hit.point.y > 0f)
                         {
-                            grounded = true;
-                            droppingpoint[i].x = x;
-                            droppingpoint[i].y = y;
-                            droppingpoint[i].z = z;
+                            Vector3 newpoint = new Vector3(x, y, z);
+                            foreach (Vector3 point in droppingpoints)
+                            {
+                                if (point == null || point == default(Vector3) || Vector3.Distance(newpoint, point) >= 150f)
+                                {
+                                    regenerate = false;
+                                    droppingpoints[i].x = x;
+                                    droppingpoints[i].y = y;
+                                    droppingpoints[i].z = z;
+                                }
+                            }
                         }
                     }
                 }
             }
-            BaseEntity baseEntity = GameManager.server.CreateEntity("events/cargo_plane", startingpos, Quaternion.LookRotation(droppingpoint[1]));
+            BaseEntity baseEntity = GameManager.server.CreateEntity("events/cargo_plane", startingpos, Quaternion.LookRotation(droppingpoints[0]));
             baseEntity.Spawn();
             CargoPlane[] cp = baseEntity.GetComponents<CargoPlane>();
             foreach (CargoPlane each in cp)
@@ -178,16 +248,21 @@ namespace Dropper
                 each.enabled = false;
             }
             baseEntity.transform.position = startingpos;
-            baseEntity.transform.LookAt(droppingpoint[1], new Vector3(0,y,0));
+            baseEntity.transform.LookAt(droppingpoints[0], new Vector3(0,y,0));
             baseEntity.TransformChanged();
             DropperPlane classy = baseEntity.gameObject.AddComponent<DropperPlane>();
             classy.dropPoints = new Vector3[drops + 1];
-            classy.dropped = new bool[drops + 1];
-            classy.dropPoints = droppingpoint;
-            classy.lookAt = droppingpoint[1];
-            classy.dropCountTotal = drops;
-            classy.startPos = startingpos;
+            classy.dropped = new bool[drops];
+            classy.dropPoints = droppingpoints;
+            classy.lookAt = droppingpoints[0];
+            classy.dropCountTotal = drops - 1;
             classy.plane = baseEntity;
+            if (showDropPos)
+            {
+                classy.dropPosMsg = dropPosMsg;
+                classy.showDropPos = showDropPos;
+                classy.sysName = sysName;
+            }
         }
     }
 }
