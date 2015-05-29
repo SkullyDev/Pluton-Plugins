@@ -50,8 +50,8 @@ namespace Mappy
                 int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
                 Dictionary<string, object> timerData = Plugin.CreateDict();
                 timerData["SendTimer"] = mseconds;
-                Plugin.CreateTimer("TimerOnce", 15000, timerData).Start();
-                Logger.Log("MAPPY PLUGIN WILL BE FULLY LOADED IN 15 SECONDS");
+                Plugin.CreateTimer("TimerOnce", 45000, timerData).Start();
+                Logger.Log("MAPPY PLUGIN WILL BE FULLY LOADED IN 45 SECONDS");
             }
         }
 
