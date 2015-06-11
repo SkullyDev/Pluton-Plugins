@@ -38,6 +38,7 @@ autospawn/clutter/icesheet/icesheets-4
 autospawn/clutter/icesheet/icesheets-5
 autospawn/clutter/icesheet/icesheets-6
 autospawn/clutter/icesheet/icesheets-7
+autospawn/collectable/hemp/hemp
 autospawn/collectable/mushrooms/mushroom-cluster-1
 autospawn/collectable/mushrooms/mushroom-cluster-2
 autospawn/collectable/mushrooms/mushroom-cluster-3
@@ -401,6 +402,7 @@ clothing/head/metal_facemask
 clothing/head/minerhat
 clothing/head/skin_head
 clothing/head/urban_hat
+clothing/head/wolfheaddress
 clothing/legs/burlap_trousers
 clothing/legs/hazmat_pants
 clothing/legs/hide_pants
@@ -1077,6 +1079,7 @@ items/cupboard.tool.deployed
 items/flare.deployed
 items/floor_spikes
 items/furnace_deployed
+items/generator_deployed
 items/generic_world
 items/grenade.beancan.deployed
 items/grenade.f1.deployed
@@ -1099,6 +1102,7 @@ items/meat_human_ribcage_raw
 items/meat_rabbit_cooked
 items/meat_rabbit_raw
 items/mining_quarry
+items/oiljack
 items/repairbench_deployed
 items/researchtable_deployed
 items/rocket_basic
@@ -1222,6 +1226,7 @@ l_wing_feather5_1
 l_wing_feather5_end
 l_winglet
 ladder.wooden.wall/sockets/free
+largestorage
 left_arm_ik_handle
 left_arm_polevector
 left_arm_upvector
@@ -1372,6 +1377,7 @@ prop_3
 prop_4
 r_ankle_scale
 r_arm_polevector
+r_bench
 r_chin
 r_chin_end
 r_clavicle
@@ -1586,6 +1592,7 @@ stomache_expander_1
 stomache_expander_2
 sv_launch
 sv_requestfile
+svdrink
 svnotescreenshot
 svplaynote
 svswitch
@@ -1650,6 +1657,7 @@ ui/lootpanels/lootpanel.player_corpse
 ui/lootpanels/lootpanel.repairbench
 ui/lootpanels/lootpanel.researchtable
 ui/lootpanels/lootpanel.smallwoodbox
+ui/lootpanels/lootpanel.watercatcher
 unlockedblueprint
 unlockwithcode
 updateconditionalmodels
@@ -1660,6 +1668,7 @@ updatemetabolism
 updatesign
 useother
 useself
+w_storage_box
 wall.doorway.door.hatch
 wall.doorway/sockets/doorway-in
 wall.doorway/sockets/doorway-out
@@ -1682,6 +1691,8 @@ wall/sockets/ground
 wall/sockets/wall_f
 wall/sockets/wall_m
 water
+water_catcher_large/sockets/free
+water_catcher_small/sockets/free
 weapons/bota_bag/bota_bag.viewmodel
 weapons/bota_bag/bota_bag.weapon
 weapons/bow/hunting.viewmodel
