@@ -1,4 +1,5 @@
 addselfauthorize
+addselfauthorize
 addui
 assets/content/animals/bear/bear_entity.prefab
 assets/content/animals/boar/boar_entity.prefab
@@ -22,6 +23,7 @@ assets/content/entities/plants/corn/corn.skin.1.seedling.prefab
 assets/content/entities/plants/corn/corn.skin.2.sapling.prefab
 assets/content/entities/plants/corn/corn.skin.3.mature.prefab
 assets/content/entities/plants/corn/corn.skin.4.fruiting.prefab
+assets/content/entities/plants/corn/corn.skin.5.dying.prefab
 assets/content/entities/plants/corn/corn_seed.item.prefab
 assets/content/entities/plants/plantharvest.effect.prefab
 assets/content/entities/plants/plantseed.effect.prefab
@@ -31,6 +33,7 @@ assets/content/entities/plants/pumpkin/pumpkin.skin.1.seedling.prefab
 assets/content/entities/plants/pumpkin/pumpkin.skin.2.sapling.prefab
 assets/content/entities/plants/pumpkin/pumpkin.skin.3.mature.prefab
 assets/content/entities/plants/pumpkin/pumpkin.skin.4.fruiting.prefab
+assets/content/entities/plants/pumpkin/pumpkin.skin.5.dying.prefab
 assets/content/entities/plants/pumpkin/pumpkin.wearable.prefab
 assets/content/entities/plants/pumpkin/pumpkin_seed.item.prefab
 assets/content/monuments/fence_chainlink/fencetriplets.prefab
@@ -217,12 +220,12 @@ assets/content/sound/templates/small_explosion.prefab
 assets/content/sound/templates/small-local-ambience.prefab
 assets/content/sound/templates/small-sound.prefab
 assets/content/sound/templates/tiny-local-ambience.prefab
+assets/content/sound/templates/tiny-sound.prefab
 assets/content/ui/developer/networkgraph.prefab
 assets/content/ui/ingame/craftingqueue.icon.prefab
 assets/content/ui/ingame/ui.blueprint.button.prefab
 assets/content/ui/ingame/ui.blueprint.category.button.prefab
 assets/content/ui/ingame/ui.blueprint.craft.row.prefab
-assets/content/ui/ingame/ui.blueprint.header.prefab
 assets/content/ui/ingame/ui.chat.item.prefab
 assets/content/ui/ingame/ui.deathscreen.respawn.prefab
 assets/content/ui/ingame/ui.deathscreen.respawn.sleepingbag.prefab
@@ -258,7 +261,6 @@ assets/content/vessels/bota bag/bota_bag.entity.prefab
 assets/content/vessels/bota bag/bota_bag.item.prefab
 assets/content/vessels/bota bag/bota_bag.viewmodel.prefab
 assets/content/vessels/bota bag/bota_bag.worldmodel.prefab
-assets/content/vessels/bota bag/medical_syringe.weapon 1.prefab
 assets/content/weapons/ak47u/ak47u.worldmodel.prefab
 assets/content/weapons/beancan_grenade/beancan_grenade.worldmodel.prefab
 assets/content/weapons/bolt rifle/bolt_rifle.worldmodel.prefab
@@ -295,6 +297,8 @@ assets/content/weapons/salvaged_hammer/salvaged_hammer.worldmodel.prefab
 assets/content/weapons/salvaged_icepick/salvaged_icepick.worldmodel.prefab
 assets/content/weapons/sawnoff_shotgun/sawnoffshotgun.worldmodel.prefab
 assets/content/weapons/semi auto pistol/semi_auto_pistol.prefab
+assets/content/weapons/semi auto pistol/semi_pistol.worldmodel.prefab
+assets/content/weapons/semi auto pistol/semiauto.worldmodel.prefab
 assets/content/weapons/smg/smg.worldmodel.prefab
 assets/content/weapons/spears/stone_spear.worldmodel.prefab
 assets/content/weapons/spears/wooden_spear.worldmodel.prefab
@@ -346,6 +350,7 @@ assets/items/attire/jacket_snow3.item.prefab
 assets/items/attire/longsleeve_tshirt_blue.item.prefab
 assets/items/attire/metal_facemask.item.prefab
 assets/items/attire/metal_plate_torso.item.prefab
+assets/items/attire/roadsign_armor.item.prefab
 assets/items/attire/urban.shirt.item.prefab
 assets/items/attire/urban_boots.item.prefab
 assets/items/attire/urban_jacket.item.prefab
@@ -452,6 +457,7 @@ assets/items/weapons/knife_bone.item.prefab
 assets/items/weapons/pickaxe.item.prefab
 assets/items/weapons/pistol_eoka.item.prefab
 assets/items/weapons/pistol_revolver.item.prefab
+assets/items/weapons/pistol_semiauto.item.prefab
 assets/items/weapons/rifle_bolt.item.prefab
 assets/items/weapons/rock.item.prefab
 assets/items/weapons/rocket_launcher.item.prefab
@@ -1226,6 +1232,28 @@ assets/third party/props/ruins/prefabs_lod/wallbrick1.prefab
 assets/third party/props/ruins/prefabs_lod/wallbrick2.prefab
 assets/third party/props/ruins/prefabs_lod/wallbrick3.prefab
 assets/third party/props/ruins/prefabs_lod/warehouse.prefab
+assets/third party/storm effects/2 - particles/prefabs/clouds heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/clouds light.prefab
+assets/third party/storm effects/2 - particles/prefabs/clouds medium.prefab
+assets/third party/storm effects/2 - particles/prefabs/clouds stormy.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain light.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain medium.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain mobile heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain mobile light.prefab
+assets/third party/storm effects/2 - particles/prefabs/rain mobile medium.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow light .prefab
+assets/third party/storm effects/2 - particles/prefabs/snow medium happy.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow medium.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow mobile heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow mobile light.prefab
+assets/third party/storm effects/2 - particles/prefabs/snow mobile medium.prefab
+assets/third party/storm effects/2 - particles/prefabs/tornado clouds.prefab
+assets/third party/storm effects/2 - particles/prefabs/tornado.prefab
+assets/third party/storm effects/2 - particles/prefabs/wind heavy.prefab
+assets/third party/storm effects/2 - particles/prefabs/wind light.prefab
+assets/third party/storm effects/2 - particles/prefabs/wind medium.prefab
 assets/third party/time of day/prefabs/sky dome.prefab
 assets/third party/water/prefabs/water.prefab
 assigntofriend
@@ -1434,8 +1462,6 @@ autospawn/resource/forestside-tundraarctic/bushbare-1
 autospawn/resource/forestside-tundraarctic/bushbare-2
 autospawn/resource/forest-temperate/oak-1
 autospawn/resource/forest-temperate/oak-2
-autospawn/resource/forest-temperate-hapis/oak-1
-autospawn/resource/forest-temperate-hapis/oak-2
 autospawn/resource/forest-tundra/pine-1
 autospawn/resource/forest-tundra/pine-2
 autospawn/resource/forest-tundra-commons/pine-3
@@ -1450,9 +1476,6 @@ autospawn/resource/loot/loot-barrel-2
 autospawn/resource/ores/metal-ore
 autospawn/resource/ores/stone-ore
 autospawn/resource/ores/sulfur-ore
-autospawn/resource/ores-hapis/metal-ore
-autospawn/resource/ores-hapis/stone-ore
-autospawn/resource/ores-hapis/sulfur-ore
 autospawn/resource/roadside/hollywood-juniper-1
 autospawn/resource/roadside/hollywood-juniper-2
 barricade.concrete/sockets/free
@@ -1615,16 +1638,20 @@ clothflesh
 clothing/feet/burlap_shoes
 clothing/feet/hazmat_boots
 clothing/feet/hide_boots
+clothing/feet/player_fem_naked_feet
 clothing/feet/skin_feet
 clothing/feet/urban_boots
 clothing/hands/burlap_gloves
 clothing/hands/hazmat_gloves
+clothing/hands/player_fem_naked_hands
 clothing/hands/skin_hands
+clothing/head/baseballhelmet
 clothing/head/bucket_helmet
 clothing/head/burlap_headwrap
 clothing/head/burlap_headwrap_02
 clothing/head/candlehat
 clothing/head/coffeecan_helmet
+clothing/head/fem_head
 clothing/head/hazmat_helmet
 clothing/head/metal_facemask
 clothing/head/minerhat
@@ -1633,10 +1660,12 @@ clothing/head/urban_hat
 clothing/legs/burlap_trousers
 clothing/legs/hazmat_pants
 clothing/legs/hide_pants
+clothing/legs/player_fem_naked_legs
 clothing/legs/skin_legs
 clothing/legs/urban_pants
 clothing/legs/urban_pants_2
 clothing/torso/burlap_shirt
+clothing/torso/fem_skin_torso
 clothing/torso/hazmat_jacket
 clothing/torso/hide_poncho
 clothing/torso/hide_ponchoandshirt
@@ -1655,6 +1684,7 @@ clothing/torso/jacket_snow
 clothing/torso/jacket_snow2
 clothing/torso/jacket_snow3
 clothing/torso/metal_plate_torso
+clothing/torso/roadsignarmor_jacket
 clothing/torso/skin_torso
 clothing/torso/tshirtlongsleeve_black
 clothing/torso/tshirtlongsleeve_blue
@@ -1680,6 +1710,7 @@ destroyui
 directionaldamage
 dirt
 displacement
+dodemolish
 dodeploy
 dodrink
 doempty
@@ -2035,7 +2066,16 @@ fx/impacts/slash/wood/wood2
 fx/impacts/slash/wood/wood3
 fx/item_break
 fx/missing
+fx/notice/item.select.fx
+fx/notice/loot.copy.fx
+fx/notice/loot.drag.dropsuccess.fx
+fx/notice/loot.drag.grab.fx
+fx/notice/loot.drag.itemdrop.fx
+fx/notice/loot.start.fx
+fx/notice/stack.ui.fx
+fx/notice/stack.world.fx
 fx/player/flinch
+fx/player/howl
 fx/player/onfire
 fx/repairbench/itemrepair
 fx/ricochet/ricochet1
@@ -2210,6 +2250,16 @@ fx/weapons/vm_sawnoff_shotgun/flipover
 fx/weapons/vm_sawnoff_shotgun/insert_shell
 fx/weapons/vm_sawnoff_shotgun/pump_forward
 fx/weapons/vm_sawnoff_shotgun/reload_start
+fx/weapons/vm_semi_pistol/attack
+fx/weapons/vm_semi_pistol/attack_shake
+fx/weapons/vm_semi_pistol/deploy
+fx/weapons/vm_semi_pistol/dryfire
+fx/weapons/vm_semi_pistol/eject_clip
+fx/weapons/vm_semi_pistol/eject_pistol_shell
+fx/weapons/vm_semi_pistol/grab_clip
+fx/weapons/vm_semi_pistol/insert_clip
+fx/weapons/vm_semi_pistol/slide_back
+fx/weapons/vm_semi_pistol/slide_shut
 fx/weapons/vm_smg/attack
 fx/weapons/vm_smg/attack_shake
 fx/weapons/vm_smg/attack_shake_ads
@@ -2467,6 +2517,7 @@ l_wing_feather5_1
 l_wing_feather5_end
 l_winglet
 ladder.wooden.wall/sockets/free
+large_woodbox_deployed
 largestorage
 left_arm_ik_handle
 left_arm_polevector
@@ -2601,6 +2652,7 @@ player/ui_damageindicator
 player_model
 player_ragdoll
 playerattack
+preventbuilding
 projectiles/arrow
 projectiles/arrow_hv
 projectiles/pistolbullet
@@ -2896,6 +2948,7 @@ ui/dialogs/ui.dialog.sign.update
 ui/dialogs/ui.dialog.sleepingbag.rename
 ui/lootpanels/lootpanel.campfire
 ui/lootpanels/lootpanel.crate
+ui/lootpanels/lootpanel.fuelstorage
 ui/lootpanels/lootpanel.furnace
 ui/lootpanels/lootpanel.generic
 ui/lootpanels/lootpanel.lantern
@@ -2977,6 +3030,8 @@ weapons/pistol/eoka.viewmodel
 weapons/pistol/eoka.weapon
 weapons/pistol/revolver.viewmodel
 weapons/pistol/revolver.weapon
+weapons/pistol/semi_pistol.viewmodel
+weapons/pistol/semi_pistol.weapon
 weapons/rifle/ak47u.viewmodel
 weapons/rifle/ak47u.weapon
 weapons/rifle/bolt.viewmodel
@@ -3028,12 +3083,15 @@ wolf_lod2
 wolf_lod3
 wolf_ragdoll
 wood
+woodbox_deployed
 world/ai
 world/ambience
 world/climate
 world/decor
 world/grass
 world/lod
+world/rain
+world/snow
 world/wind
 zero friction
 
