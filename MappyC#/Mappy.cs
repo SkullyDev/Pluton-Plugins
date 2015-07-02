@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Timers;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using Pluton;
-using Pluton.Events;
 using UnityEngine;
 
 namespace Mappy
@@ -11,6 +7,31 @@ namespace Mappy
     public class Mappy : CSharpPlugin
     {
         public void On_PluginInit()
+        {
+            if (!Server.Loaded) return;
+            DataStore.Flush("Mappy");
+            IniParser ini = ConfigurationFile();
+            if (ini.GetSetting("Settings", "enabled") == "1")
+            {
+                ServerConsoleCommands.Register("mappy").setCallback(GetCommand);
+                string link = ini.GetSetting("Settings", "url");
+                if (ini.GetSetting("Settings", "SendChat") == "1")
+                {
+                    DataStore.Add("Mappy", "SendChat", 1);
+                    DataStore.Add("Mappy", "LinkChat", link + "chat.php");
+                }
+                else
+                {
+                    DataStore.Add("Mappy", "SendChat", 0);
+                }
+                DataStore.Add("Mappy", "Link", link + "server.php");
+                DataStore.Add("Mappy", "LinkSize", link + "size.php");
+                int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
+                StartPlugin(mseconds);
+            }
+        }
+
+        public void On_ServerInit()
         {
             DataStore.Flush("Mappy");
             IniParser ini = ConfigurationFile();
@@ -27,31 +48,10 @@ namespace Mappy
                 {
                     DataStore.Add("Mappy", "SendChat", 0);
                 }
-                /*if (ini.GetSetting("Settings", "SendBuildings") == "1")
-                {
-                    DataStore.Add("Mappy", "SendBuildings", 1);
-                    DataStore.Add("Mappy", "LinkBuildings", link + "buildings.php");
-                    Plugin.CreateTimer("SendBuildings", 180000).Start();
-                }
-                else
-                {
-                    DataStore.Add("Mappy", "SendBuildings", 0);
-                }
-                if (ini.GetSetting("Settings", "SendSleepers") == "1")
-                {
-                    DataStore.Add("Mappy", "SendSleepers", 1);
-                }
-                else
-                {
-                    DataStore.Add("Mappy", "SendSleepers", 0);
-                }*/
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
                 int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
-                Dictionary<string, object> timerData = Plugin.CreateDict();
-                timerData["SendTimer"] = mseconds;
-                Plugin.CreateTimer("TimerOnce", 45000, timerData).Start();
-                Logger.Log("MAPPY PLUGIN WILL BE FULLY LOADED IN 45 SECONDS");
+                StartPlugin(mseconds);
             }
         }
 
@@ -182,24 +182,19 @@ namespace Mappy
                 IniParser ini = Plugin.CreateIni("ConfigurationFile");
                 ini.AddSetting("Settings", "enabled", "1");
                 ini.AddSetting("Settings", "SendChat", "1");
-                //ini.AddSetting("Settings", "SendBuildings", "1");
-                //ini.AddSetting("Settings", "SendSleepers", "1");
-                ini.AddSetting("Settings", "Timer", "60000");
+                ini.AddSetting("Settings", "Timer", "5000");
                 ini.AddSetting("Settings", "url", "http://www.example.com/mappy/");
                 ini.Save();
             }
             return Plugin.GetIni("ConfigurationFile");
         }
 
-        public void TimerOnceCallback(TimedEvent timer)
+        public void StartPlugin(int ms)
         {
-            timer.Kill();
-            Dictionary<string, object> args = timer.Args;
-            Plugin.CreateTimer("Send", (int)args["SendTimer"]).Start();
+            Plugin.CreateTimer("Send", ms).Start();
             string link = (string)DataStore.Get("Mappy", "LinkSize");
             string WorldSize = String.Format("&worldsize={0}", global::World.Size.ToString());
             Plugin.POST(link, WorldSize);
-            Logger.Log("MAPPY PLUGIN WAS LOADED AND TIMERS WERE STARTED");
         }
 
         public void SendCallback(TimedEvent timer)
@@ -209,18 +204,6 @@ namespace Mappy
             {
                 post = String.Format("{0}&showchat=true", post);
             }
-            /*if ((int)DataStore.Get("Mappy", "SendBuildings") == 1)
-            {
-                post = String.Format("{0}&showbuildings=true", post);
-            }
-            if ((int)DataStore.Get("Mappy", "SendSleepers") == 1)
-            {
-                post = String.Format("{0}&showsleepers=true&sleepersloc=::", post);
-                foreach (Pluton.Player player in Server.SleepingPlayers)
-                {
-                    post = String.Format("{0};{1}:{2}:{3}", post, Uri.EscapeDataString(player.Name), player.X, player.Z);
-                }
-            }*/
             post = String.Format("{0}&players=::", post);
             foreach (Pluton.Player player in Server.ActivePlayers)
             {
@@ -230,28 +213,15 @@ namespace Mappy
             Plugin.POST(link, post);
         }
 
-        public void On_Chat(ChatEvent Chat)
+        public void On_Chat(Pluton.Events.ChatEvent Chat)
         {
             if ((int)DataStore.Get("Mappy", "SendChat") == 1)
             {
                 Pluton.Player player = Chat.User;
-                //var color = String.Format("#{0:X6}", new System.Random().Next(0x1000000));
                 string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
                 Plugin.POST(link, post);
             }
-        }
-
-        public void SendBuildingsCallback(TimedEvent timer)
-        {
-            string post = "&buildings=:";
-            foreach (BuildingBlock gameObject in UnityEngine.Object.FindObjectsOfType<BuildingBlock>())
-            {
-                if (gameObject.name.Contains("foundation"))
-                    post = String.Format("{0};{1}:{2}", post, gameObject.transform.position.x, gameObject.transform.position.z);
-            }
-            string link = (string)DataStore.Get("Mappy", "LinkBuildings");
-            Plugin.POST(link, post);
         }
     }
 }
