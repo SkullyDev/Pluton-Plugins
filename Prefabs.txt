@@ -1,5 +1,4 @@
 addselfauthorize
-addselfauthorize
 addui
 assets/content/animals/bear/bear_entity.prefab
 assets/content/animals/boar/boar_entity.prefab
@@ -159,25 +158,28 @@ assets/content/nature/treesprefabs/fields-mid-2.prefab
 assets/content/nature/treesprefabs/fields-mid-4.prefab
 assets/content/nature/treesprefabs/fields-mid-6.prefab
 assets/content/nature/treesprefabs/fields-mid-7.prefab
-assets/content/nature/treesprefabs/snow/tree-bluesprucesnow.prefab
-assets/content/nature/treesprefabs/snow/tree-bluesprucesnow2.prefab
-assets/content/nature/treesprefabs/snow/tree-scotspinesnow.prefab
+assets/content/nature/treesprefabs/snow/tree-bluespruce-snow-1.prefab
+assets/content/nature/treesprefabs/snow/tree-bluespruce-snow-2.prefab
+assets/content/nature/treesprefabs/snow/tree-scotspine-snow.prefab
+assets/content/nature/treesprefabs/tree-a-1.prefab
+assets/content/nature/treesprefabs/tree-a-3.prefab
+assets/content/nature/treesprefabs/tree-a-6.prefab
 assets/content/nature/treesprefabs/tree-b-1.prefab
 assets/content/nature/treesprefabs/tree-b-6.prefab
-assets/content/nature/treesprefabs/tree-douglasfir.prefab
-assets/content/nature/treesprefabs/tree-douglasfir2.prefab
-assets/content/nature/treesprefabs/tree-douglasfirbare.prefab
-assets/content/nature/treesprefabs/tree-hollywoodjuniper.prefab
+assets/content/nature/treesprefabs/tree-douglasfir-1.prefab
+assets/content/nature/treesprefabs/tree-douglasfir-2.prefab
+assets/content/nature/treesprefabs/tree-douglasfir-bare.prefab
+assets/content/nature/treesprefabs/tree-hollywoodjuniper-1.prefab
 assets/content/nature/treesprefabs/tree-hollywoodjuniper-3.prefab
-assets/content/nature/treesprefabs/tree-pine1.prefab
-assets/content/nature/treesprefabs/tree-pine2.prefab
-assets/content/nature/treesprefabs/tree-pine3.prefab
-assets/content/nature/treesprefabs/tree-pine4.prefab
-assets/content/nature/treesprefabs/tree-pinebare1.prefab
-assets/content/nature/treesprefabs/tree-pinebare2.prefab
+assets/content/nature/treesprefabs/tree-pine-1.prefab
+assets/content/nature/treesprefabs/tree-pine-2.prefab
+assets/content/nature/treesprefabs/tree-pine-3.prefab
+assets/content/nature/treesprefabs/tree-pine-4.prefab
+assets/content/nature/treesprefabs/tree-pine-bare-1.prefab
+assets/content/nature/treesprefabs/tree-pine-bare-2.prefab
 assets/content/nature/treesprefabs/tree-scotspine-1.prefab
 assets/content/nature/treesprefabs/tree-scotspine-2.prefab
-assets/content/nature/treesprefabs/tree-scotspinebare.prefab
+assets/content/nature/treesprefabs/tree-scotspine-bare.prefab
 assets/content/nature/treesprefabs/undergrowth/bush-a-1.prefab
 assets/content/nature/treesprefabs/undergrowth/bush-a-2.prefab
 assets/content/nature/treesprefabs/undergrowth/bush-b-1.prefab
@@ -202,6 +204,7 @@ assets/content/props/resourceprops/stone.worldmodel.prefab
 assets/content/props/resourceprops/wood.worldmodel.prefab
 assets/content/props/sack/burlap sack.prefab
 assets/content/props/skull/skull.prefab
+assets/content/props/surveycharge/surveycharge.prefab
 assets/content/props/water catchers/w_tank_big.prefab
 assets/content/props/water catchers/w_tank_small.prefab
 assets/content/props/wooden loot crates/wooden_crate_1.prefab
@@ -214,6 +217,8 @@ assets/content/sound/templates/event.prefab
 assets/content/sound/templates/explosion.prefab
 assets/content/sound/templates/footstep.prefab
 assets/content/sound/templates/gunshot.prefab
+assets/content/sound/templates/medium-local-ambience.prefab
+assets/content/sound/templates/medium-sound.prefab
 assets/content/sound/templates/projectile-flight.prefab
 assets/content/sound/templates/projectile-flight-powered.prefab
 assets/content/sound/templates/small_explosion.prefab
@@ -264,10 +269,12 @@ assets/content/vessels/bota bag/bota_bag.worldmodel.prefab
 assets/content/weapons/ak47u/ak47u.worldmodel.prefab
 assets/content/weapons/beancan_grenade/beancan_grenade.worldmodel.prefab
 assets/content/weapons/bolt rifle/bolt_rifle.worldmodel.prefab
+assets/content/weapons/bone club/boneclub.worldmodel.prefab
 assets/content/weapons/boneknife/boneknife.worldmodel.prefab
 assets/content/weapons/bow/arrow_stone.worldmodel.prefab
 assets/content/weapons/bow/arrow_wooden.worldmodel.prefab
 assets/content/weapons/bow/bow.worldmodel.prefab
+assets/content/weapons/cleaver/cleaver.worldmodel.prefab
 assets/content/weapons/eoka pistol/eoka_pistol.worldmodel.prefab
 assets/content/weapons/f1_grenade/f1_grenade.worldmodel.prefab
 assets/content/weapons/fishing_rod/fishing_rod.worldmodel.prefab
@@ -304,6 +311,7 @@ assets/content/weapons/spears/stone_spear.worldmodel.prefab
 assets/content/weapons/spears/wooden_spear.worldmodel.prefab
 assets/content/weapons/stone hatchet/hatchet_stone.worldmodel.prefab
 assets/content/weapons/stone pickaxe/stone_pickaxe.worldmodel.prefab
+assets/content/weapons/sword/sword.worldmodel.prefab
 assets/content/weapons/thompson/thompson.worldmodel.prefab
 assets/content/weapons/torch/torch.worldmodel.prefab
 assets/editor/unitytesttools/integrationtestsframework/testingassets/cubecollisionfailure.prefab
@@ -350,6 +358,7 @@ assets/items/attire/jacket_snow3.item.prefab
 assets/items/attire/longsleeve_tshirt_blue.item.prefab
 assets/items/attire/metal_facemask.item.prefab
 assets/items/attire/metal_plate_torso.item.prefab
+assets/items/attire/riot_helmet.item.prefab
 assets/items/attire/roadsign_armor.item.prefab
 assets/items/attire/urban.shirt.item.prefab
 assets/items/attire/urban_boots.item.prefab
@@ -442,9 +451,11 @@ assets/items/tools/hammer.item.prefab
 assets/items/tools/supplysignal.item.prefab
 assets/items/tools/surveycharge.item.prefab
 assets/items/traps/beartrap.item.prefab
+assets/items/traps/landmine.item.prefab
 assets/items/traps/spikes.floor.item.prefab
 assets/items/weapons/ak47.item.prefab
 assets/items/weapons/axe_salvaged.item.prefab
+assets/items/weapons/bone_club.item.prefab
 assets/items/weapons/bow_hunting.item.prefab
 assets/items/weapons/explosive.timed.item.prefab
 assets/items/weapons/flare.item.prefab
@@ -454,6 +465,7 @@ assets/items/weapons/hammer_salvaged.item.prefab
 assets/items/weapons/hatchet.item.prefab
 assets/items/weapons/icepick_salvaged.item.prefab
 assets/items/weapons/knife_bone.item.prefab
+assets/items/weapons/machete.item.prefab
 assets/items/weapons/pickaxe.item.prefab
 assets/items/weapons/pistol_eoka.item.prefab
 assets/items/weapons/pistol_revolver.item.prefab
@@ -461,6 +473,7 @@ assets/items/weapons/pistol_semiauto.item.prefab
 assets/items/weapons/rifle_bolt.item.prefab
 assets/items/weapons/rock.item.prefab
 assets/items/weapons/rocket_launcher.item.prefab
+assets/items/weapons/salvaged_sword.item.prefab
 assets/items/weapons/shotgun_pump.item.prefab
 assets/items/weapons/shotgun_waterpipe.item.prefab
 assets/items/weapons/smg.item.prefab
@@ -1268,25 +1281,18 @@ autospawn/clutter/beachdriftwood/driftwood-2
 autospawn/clutter/beachdriftwood/driftwood-3
 autospawn/clutter/beachdriftwood/driftwood-4
 autospawn/clutter/beachdriftwood/driftwood-5
-autospawn/clutter/dirtrocks/pebble-3
-autospawn/clutter/dirtrocks/pebble-cluster-1
-autospawn/clutter/forestclovers/flowers-white 1
-autospawn/clutter/forestclovers/flowers-yellow 1
-autospawn/clutter/forestferns/fern-a-3
-autospawn/clutter/forestferns/fern-a-4
-autospawn/clutter/forestferns/fern-b-3
-autospawn/clutter/forestferns/fern-b-4
+autospawn/clutter/forestferns/fern-a-1
+autospawn/clutter/forestferns/fern-a-2
+autospawn/clutter/forestferns/fern-b-1
+autospawn/clutter/forestferns/fern-b-2
+autospawn/clutter/forestflowers/flowers-white
+autospawn/clutter/forestflowers/flowers-yellow
 autospawn/clutter/forestmediumgrowth/bush-snakeweed-1
 autospawn/clutter/forestmediumgrowth/bush-snakeweed-2
-autospawn/clutter/forestrocks/pebble-1
-autospawn/clutter/forestrocks/pebble-2
-autospawn/clutter/forestrocks/pebble-cluster-1
 autospawn/clutter/grassflowers/flowers-red
 autospawn/clutter/grassflowers/flowers-violet
 autospawn/clutter/grassflowers/flowers-white
 autospawn/clutter/grassflowers/flowers-yellow
-autospawn/clutter/gravel/pebble-2
-autospawn/clutter/gravel/pebble-cluster-1
 autospawn/clutter/icesheet/icesheets-1
 autospawn/clutter/icesheet/icesheets-2
 autospawn/clutter/icesheet/icesheets-3
@@ -1320,6 +1326,8 @@ autospawn/decor/fields-arctic/bush-a-1-snow
 autospawn/decor/fields-arid/azalea-1
 autospawn/decor/fields-arid/azalea-2
 autospawn/decor/fields-arid/azalea-3
+autospawn/decor/fields-arid/bush-a-1
+autospawn/decor/fields-arid/bush-a-2
 autospawn/decor/fields-arid/snakeweed-1
 autospawn/decor/fields-arid/snakeweed-2
 autospawn/decor/fields-arid/snakeweed-flower-1
@@ -1331,18 +1339,10 @@ autospawn/decor/fields-tundra/bush-a-2
 autospawn/decor/forest-arctic/bush-a-1-snow
 autospawn/decor/forest-arid/bush-a-1
 autospawn/decor/forest-arid/bush-a-2
-autospawn/decor/forest-arid/fern-a-1
-autospawn/decor/forest-arid/fern-a-2
-autospawn/decor/forest-arid/fern-b-1
-autospawn/decor/forest-arid/fern-b-2
 autospawn/decor/forest-arid/knapweed
 autospawn/decor/forest-arid/knapweed-flower
 autospawn/decor/forest-temperate/bush-a-1
 autospawn/decor/forest-temperate/bush-a-2
-autospawn/decor/forest-temperate/fern-a-1
-autospawn/decor/forest-temperate/fern-a-2
-autospawn/decor/forest-temperate/fern-b-1
-autospawn/decor/forest-temperate/fern-b-2
 autospawn/decor/forest-tundra/bush-a-1
 autospawn/decor/forest-tundra/bush-a-2
 autospawn/decor/hapis-rocks-bottom/rock_a
@@ -1433,6 +1433,9 @@ autospawn/resource/beachside-deadtrees/deadtree-2
 autospawn/resource/beachside-deadtrees/field-bare-1
 autospawn/resource/beachside-deadtrees/field-bare-2
 autospawn/resource/beachside-deadtrees/field-bare-3
+autospawn/resource/beachside-palms/palm-1
+autospawn/resource/beachside-palms/palm-2
+autospawn/resource/beachside-palms/palm-3
 autospawn/resource/crystals/crystal1
 autospawn/resource/crystals/crystal1b
 autospawn/resource/crystals/crystal1c
@@ -1947,7 +1950,6 @@ fx/impacts/blunt/clothflesh/clothflesh1
 fx/impacts/blunt/concrete/concrete1
 fx/impacts/blunt/concrete/concrete2
 fx/impacts/blunt/flesh/flesh1
-fx/impacts/blunt/flesh/flesh2
 fx/impacts/blunt/grass/grass1
 fx/impacts/blunt/grass/grass2
 fx/impacts/blunt/metal/metal1
@@ -1963,8 +1965,6 @@ fx/impacts/bullet/concrete/concrete2
 fx/impacts/bullet/concrete/concrete3
 fx/impacts/bullet/concrete/concrete4
 fx/impacts/bullet/flesh/flesh1
-fx/impacts/bullet/flesh/flesh2
-fx/impacts/bullet/flesh/flesh3
 fx/impacts/bullet/grass/grass1
 fx/impacts/bullet/grass/grass2
 fx/impacts/bullet/grass/grass3
@@ -2056,7 +2056,6 @@ fx/impacts/slash/clothflesh/clothflesh1
 fx/impacts/slash/concrete/concrete1
 fx/impacts/slash/concrete/concrete2
 fx/impacts/slash/flesh/flesh1
-fx/impacts/slash/flesh/flesh2
 fx/impacts/slash/grass/grass1
 fx/impacts/slash/grass/grass2
 fx/impacts/slash/metal/metal1
@@ -2074,7 +2073,10 @@ fx/notice/loot.drag.itemdrop.fx
 fx/notice/loot.start.fx
 fx/notice/stack.ui.fx
 fx/notice/stack.world.fx
+fx/player/beartrap_clothing_rustle
+fx/player/beartrap_scream
 fx/player/flinch
+fx/player/groundfall
 fx/player/howl
 fx/player/onfire
 fx/repairbench/itemrepair
@@ -2125,9 +2127,12 @@ fx/weapons/vm_bolt_rifle/deploy
 fx/weapons/vm_bolt_rifle/dryfire
 fx/weapons/vm_bolt_rifle/holster
 fx/weapons/vm_bolt_rifle/insertbullet
+fx/weapons/vm_bone_club/hit
+fx/weapons/vm_bone_club/tap
 fx/weapons/vm_boneknife/attack-1
 fx/weapons/vm_boneknife/attack-2
 fx/weapons/vm_boneknife/deploy
+fx/weapons/vm_boneknife/hit
 fx/weapons/vm_boneknife/holster
 fx/weapons/vm_boneknife/strike
 fx/weapons/vm_boneknife/strike_screenshake
@@ -2137,6 +2142,11 @@ fx/weapons/vm_bow/draw_arrow
 fx/weapons/vm_bow/draw_cancel
 fx/weapons/vm_bow/fire
 fx/weapons/vm_bow/hit
+fx/weapons/vm_cleaver/attack-1
+fx/weapons/vm_cleaver/attack-2
+fx/weapons/vm_cleaver/attack-3
+fx/weapons/vm_cleaver/deploy
+fx/weapons/vm_cleaver/hit
 fx/weapons/vm_eoka_pistol/attack
 fx/weapons/vm_eoka_pistol/attack_shake
 fx/weapons/vm_eoka_pistol/deploy
@@ -2371,6 +2381,7 @@ items/grenade.beancan.deployed
 items/grenade.f1.deployed
 items/grenade.smoke.deployed
 items/ladders/ladder.wooden.wall
+items/landmine
 items/lantern_deployed
 items/large_woodbox_deployed
 items/map
@@ -2392,6 +2403,7 @@ items/mining/quarry/fuelstorage
 items/mining/quarry/hopperoutput
 items/mining/quarry/mining_quarry
 items/oiljack
+items/refinery_small
 items/repairbench_deployed
 items/researchtable_deployed
 items/rocket_basic
@@ -2517,6 +2529,7 @@ l_wing_feather5_1
 l_wing_feather5_end
 l_winglet
 ladder.wooden.wall/sockets/free
+landmine/sockets/free
 large_woodbox_deployed
 largestorage
 left_arm_ik_handle
@@ -2825,6 +2838,7 @@ rpc_changecode
 rpc_clientlootcorpse
 rpc_closedoor
 rpc_createkey
+rpc_disarm
 rpc_knockdoor
 rpc_lock
 rpc_lootcorpse
@@ -3005,8 +3019,12 @@ weapons/explosive/rocketlauncher.viewmodel
 weapons/explosive/rocketlauncher.weapon
 weapons/explosive/smoke_grenade.viewmodel
 weapons/explosive/smoke_grenade.weapon
+weapons/melee/bone_club.viewmodel
+weapons/melee/bone_club.weapon
 weapons/melee/boneknife.viewmodel
 weapons/melee/boneknife.weapon
+weapons/melee/cleaver.viewmodel
+weapons/melee/cleaver.weapon
 weapons/melee/hatchet.viewmodel
 weapons/melee/hatchet.weapon
 weapons/melee/hatchet_stone.viewmodel
@@ -3023,6 +3041,8 @@ weapons/melee/stone_pickaxe.viewmodel
 weapons/melee/stone_pickaxe.weapon
 weapons/melee/stone_spear.viewmodel
 weapons/melee/stone_spear.weapon
+weapons/melee/sword.viewmodel
+weapons/melee/sword.weapon
 weapons/melee/unarmed.viewmodel
 weapons/melee/wooden_spear.viewmodel
 weapons/melee/wooden_spear.weapon
@@ -3092,6 +3112,7 @@ world/grass
 world/lod
 world/rain
 world/snow
+world/spawn
 world/wind
 zero friction
 
