@@ -29,7 +29,7 @@ namespace Dropper
             {
                 if (!dropped[droppedCount] && Vector3.Distance(transform.position, dropPoints[droppedCount]) <= 1f)
                 {
-                    BaseEntity baseEntity = GameManager.server.CreateEntity("items/supply_drop", transform.position);
+                    BaseEntity baseEntity = GameManager.server.CreateEntity("assets/bundled/prefabs/items/supply_drop.prefab", transform.position);
                     baseEntity.globalBroadcast = true;
                     baseEntity.Spawn();
                     if (showDropPos)
@@ -240,7 +240,7 @@ namespace Dropper
                     }
                 }
             }
-            BaseEntity baseEntity = GameManager.server.CreateEntity("events/cargo_plane", startingpos, Quaternion.LookRotation(droppingpoints[0]));
+            BaseEntity baseEntity = GameManager.server.CreateEntity("assets/bundled/prefabs/events/cargo_plane.prefab", startingpos, Quaternion.LookRotation(droppingpoints[0]));
             baseEntity.Spawn();
             CargoPlane[] cp = baseEntity.GetComponents<CargoPlane>();
             foreach (CargoPlane each in cp)
