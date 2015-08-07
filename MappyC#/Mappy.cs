@@ -210,7 +210,8 @@ namespace Mappy
                 post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
             }
             string link = (string)DataStore.Get("Mappy", "Link");
-            Plugin.POST(link, post);
+            try { Plugin.POST(link, post); }
+            catch { Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that file is reachable!"); }
         }
 
         public void On_Chat(Pluton.Events.ChatEvent Chat)
@@ -220,7 +221,8 @@ namespace Mappy
                 Pluton.Player player = Chat.User;
                 string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
-                Plugin.POST(link, post);
+                try { Plugin.POST(link, post); }
+                catch { Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that file is reachable!"); }
             }
         }
     }
