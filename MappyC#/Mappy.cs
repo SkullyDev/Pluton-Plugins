@@ -6,6 +6,8 @@ namespace Mappy
 {
     public class Mappy : CSharpPlugin
     {
+        DateTime dt = DateTime.Now;
+
         public void On_PluginInit()
         {
             if (!Server.Loaded) return;
@@ -211,7 +213,14 @@ namespace Mappy
             }
             string link = (string)DataStore.Get("Mappy", "Link");
             try { Plugin.POST(link, post); }
-            catch { Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that file is reachable!"); }
+            catch
+            {
+                if (dt.AddSeconds(30d) < DateTime.Now)
+                {
+                    dt = DateTime.Now;
+                    Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that web server and file is reachable!");
+                }
+            }
         }
 
         public void On_Chat(Pluton.Events.ChatEvent Chat)
@@ -221,8 +230,7 @@ namespace Mappy
                 Pluton.Player player = Chat.User;
                 string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
-                try { Plugin.POST(link, post); }
-                catch { Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that file is reachable!"); }
+                try { Plugin.POST(link, post); } catch { }
             }
         }
     }
