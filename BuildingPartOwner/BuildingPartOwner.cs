@@ -45,9 +45,10 @@ namespace BuildingPartOwner
         }
 
         public void On_NetworkableKill(BaseNetworkable bn)
+
         {
             BuildingBlock bb = bn.GetComponent<BuildingBlock>();
-            if (bb != null) RemoveFromList(bb);
+            if (bb != null) RemoveFromDB(bb);
         }
 
         private void LoadSave()
@@ -83,7 +84,7 @@ namespace BuildingPartOwner
             }
         }
 
-        public bool RemoveFromList(BuildingBlock bb)
+        public bool RemoveFromDB(BuildingBlock bb)
         {
             if (bb == null) return false;
             foreach (SerializedBuildingBlock sbb in OwnedBuildingBlocks)
