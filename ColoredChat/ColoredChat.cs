@@ -13,10 +13,11 @@ namespace ColoredChat
     {
         Dictionary<string, string> colorCodes;
         Dictionary<string, string> colorCodesAdmin;
+        Dictionary<ulong, string> playerColor;
 
         public void On_PluginInit()
         {
-            DataStore.Flush("ColoredChat");
+            playerColor = new Dictionary<ulong, string>();
             Commands.Register("ccolor").setCallback(ColorCommand);
 
             colorCodes = new Dictionary<string, string>();
@@ -51,12 +52,20 @@ namespace ColoredChat
                 string color = args[0].ToLower();
                 if (colorCodes.ContainsKey(color))
                 {
-                    DataStore.Add("ColoredChat", player.GameID, color);
+                    if (playerColor.ContainsKey(player.GameID))
+                    {
+                        playerColor.Remove(player.GameID);
+                    }
+                    playerColor.Add(player.GameID, color);
                     player.Message("<color=#" + colorCodes[color] + ">This is your new chat color</color>");
                 }
                 else if (player.Admin && colorCodesAdmin.ContainsKey(color))
                 {
-                    DataStore.Add("ColoredChat", player.GameID, color);
+                    if (playerColor.ContainsKey(player.GameID))
+                    {
+                        playerColor.Remove(player.GameID);
+                    }
+                    playerColor.Add(player.GameID, color);
                     player.Message("<color=#" + colorCodesAdmin[color] + ">This is your new chat color</color>");
                 }
                 else
@@ -66,9 +75,9 @@ namespace ColoredChat
             }
             else
             {
-                if (DataStore.ContainsKey("ColoredChat", player.GameID))
+                if (playerColor.ContainsKey(player.GameID))
                 {
-                    DataStore.Remove("ColoredChat", player.GameID);
+                    playerColor.Remove(player.GameID);
                     player.Message("Your chat color was set to default!");
                     return;
                 }
@@ -105,18 +114,10 @@ namespace ColoredChat
 
         public void On_Chat(ChatEvent ce)
         {
-            Player player = ce.User;
-            if (DataStore.ContainsKey("ColoredChat", player.GameID))
+            if (playerColor.ContainsKey(ce.User.GameID))
             {
-                string colorCode;
-                if (player.Admin)
-                {
-                    colorCode = colorCodesAdmin[(string)DataStore.Get("ColoredChat", player.GameID)];
-                }
-                else
-                {
-                    colorCode = colorCodes[(string)DataStore.Get("ColoredChat", player.GameID)];
-                }
+                string color = playerColor[ce.User.GameID];
+                string colorCode = colorCodes.ContainsKey(color) ? colorCodes[color] : colorCodesAdmin[color];
                 ce.FinalText = string.Format("<color=#{0}>{1}</color>", colorCode, ce.FinalText);
             }
         }
