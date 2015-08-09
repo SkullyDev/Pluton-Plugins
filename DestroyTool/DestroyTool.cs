@@ -175,21 +175,10 @@ namespace DestroyTool
             if (DataStore.ContainsKey("DestroyTool", steamID))
             {
                 DataStore.Remove("DestroyTool", steamID);
+                Player player = Server.Players[steamID];
+                if (player != null) player.Message("Destroy tool was deactivated");
+                timer.Kill();
             }
-            else if (DataStore.ContainsKey("DestroyAdmin", steamID))
-            {
-                DataStore.Remove("DestroyAdmin", steamID);
-            }
-            else if (DataStore.ContainsKey("DestroyAll", steamID))
-            {
-                DataStore.Remove("DestroyAll", steamID);
-            }
-            Player player = Server.Players[steamID];
-            if (player != null)
-            {
-                player.Message("Destroy tool was deactivated");
-            }
-            timer.Kill();
         }
     }
 }
