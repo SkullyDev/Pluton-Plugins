@@ -1,5 +1,31 @@
+_hold_barrel
+_hold_bolt
+_hold_forearm
+_hold_gun_foregrip
+_hold_leftarm
+_hold_lefthand
+_hold_magazine
+_hold_rightarm
+_hold_righthand
+_hold_shell
+_hold_slide
+_root_sawnoffshotgun
+_root_semi_pistol
+_root_shotgun
+_root_thompson
 addselfauthorize
 addui
+ak47_lod03
+ak47_lod04
+ak47_lod05
+ak47_lod06
+ak47_mesh
+ak47_root_bone
+ak47u
+ak47u.viewmodel
+ak47u.worldmodel
+angle
+army_bed
 assets/bundled/prefabs/autospawn/animals/bear.prefab
 assets/bundled/prefabs/autospawn/animals/boar.prefab
 assets/bundled/prefabs/autospawn/animals/chicken.prefab
@@ -498,7 +524,9 @@ assets/bundled/prefabs/fx/door/lock.code.denied.prefab
 assets/bundled/prefabs/fx/door/lock.code.lock.prefab
 assets/bundled/prefabs/fx/door/lock.code.unlock.prefab
 assets/bundled/prefabs/fx/door/lock.code.updated.prefab
+assets/bundled/prefabs/fx/entities/loot_barrel/gib.prefab
 assets/bundled/prefabs/fx/entities/loot_barrel/impact.prefab
+assets/bundled/prefabs/fx/entities/pumpkin/gib.prefab
 assets/bundled/prefabs/fx/fire/fire_v2.prefab
 assets/bundled/prefabs/fx/fire/fire_v3.prefab
 assets/bundled/prefabs/fx/fire_explosion.prefab
@@ -519,6 +547,7 @@ assets/bundled/prefabs/fx/gestures/guitarstrum.prefab
 assets/bundled/prefabs/fx/gestures/take_pills.prefab
 assets/bundled/prefabs/fx/headshot.prefab
 assets/bundled/prefabs/fx/headshot_2d.prefab
+assets/bundled/prefabs/fx/hit_notify.prefab
 assets/bundled/prefabs/fx/impacts/additive/explosion.prefab
 assets/bundled/prefabs/fx/impacts/additive/fire.prefab
 assets/bundled/prefabs/fx/impacts/blunt/cloth/cloth1.prefab
@@ -654,9 +683,14 @@ assets/bundled/prefabs/fx/notice/stack.world.fx.prefab
 assets/bundled/prefabs/fx/oil_geyser.prefab
 assets/bundled/prefabs/fx/oiljack/pump_down.prefab
 assets/bundled/prefabs/fx/oiljack/pump_up.prefab
+assets/bundled/prefabs/fx/player/beartrap_blood.prefab
 assets/bundled/prefabs/fx/player/beartrap_clothing_rustle.prefab
 assets/bundled/prefabs/fx/player/beartrap_scream.prefab
+assets/bundled/prefabs/fx/player/bloodspurt_wounded_head.prefab
+assets/bundled/prefabs/fx/player/bloodspurt_wounded_leftarm.prefab
+assets/bundled/prefabs/fx/player/bloodspurt_wounded_stomache.prefab
 assets/bundled/prefabs/fx/player/flinch.prefab
+assets/bundled/prefabs/fx/player/frosty_breath.prefab
 assets/bundled/prefabs/fx/player/groundfall.prefab
 assets/bundled/prefabs/fx/player/howl.prefab
 assets/bundled/prefabs/fx/player/onfire.prefab
@@ -680,268 +714,11 @@ assets/bundled/prefabs/fx/weapons/c4/c4_explosion.prefab
 assets/bundled/prefabs/fx/weapons/c4/c4_stick.prefab
 assets/bundled/prefabs/fx/weapons/rifle_jingle1.prefab
 assets/bundled/prefabs/fx/weapons/rifle_jingle2.prefab
-assets/bundled/prefabs/fx/weapons/rock/attack.prefab
-assets/bundled/prefabs/fx/weapons/rock/deploy.prefab
-assets/bundled/prefabs/fx/weapons/rock/holster.prefab
-assets/bundled/prefabs/fx/weapons/rock/strike.prefab
-assets/bundled/prefabs/fx/weapons/rock/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_cleaver/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_cleaver/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_cleaver/attack-3.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_cleaver/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_cleaver/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_mace/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_mace/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_mace/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_mace/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_sword/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_sword/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_sword/attack-3.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_sword/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_2handed_sword/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/eject_rifle_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/grab_magazine.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/insert_magazine.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/reload_boltaction.prefab
-assets/bundled/prefabs/fx/weapons/vm_ak47u/reload_start.prefab
-assets/bundled/prefabs/fx/weapons/vm_bandage/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_bandage/wraparm.prefab
-assets/bundled/prefabs/fx/weapons/vm_bandage/wraphead.prefab
-assets/bundled/prefabs/fx/weapons/vm_bandage/wrapother.prefab
-assets/bundled/prefabs/fx/weapons/vm_beancan_grenade/bounce.prefab
-assets/bundled/prefabs/fx/weapons/vm_beancan_grenade/light_fuse.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/boltback.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/boltforward.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_bolt_rifle/insertbullet.prefab
-assets/bundled/prefabs/fx/weapons/vm_bone_club/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_bone_club/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_bone_club/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_bone_club/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_bone_club/tap.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_boneknife/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/draw_arrow.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/draw_cancel.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/fire.prefab
-assets/bundled/prefabs/fx/weapons/vm_bow/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_crossbow/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_crossbow/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_crossbow/reload.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/flint_spark.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/insert_bullet.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/push_barrel.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/rock_scrape-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/rock_scrape-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_eoka_pistol/rock_scrape-3.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/beancan_grenade_explosion.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/bounce.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/f1grenade_explosion.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/pullpin.prefab
-assets/bundled/prefabs/fx/weapons/vm_f1_grenade/throw.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/catch_empty.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/catch_fish.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/lure_splash.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/pluck_fish.prefab
-assets/bundled/prefabs/fx/weapons/vm_fishing_rod/throw_lure.prefab
-assets/bundled/prefabs/fx/weapons/vm_flare/pullpin.prefab
-assets/bundled/prefabs/fx/weapons/vm_flashlight/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_flashlight/attack_end.prefab
-assets/bundled/prefabs/fx/weapons/vm_flashlight/attack_hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_flashlight/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_flashlight/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_gestures/drink.prefab
-assets/bundled/prefabs/fx/weapons/vm_gestures/eat_1hand_celery.prefab
-assets/bundled/prefabs/fx/weapons/vm_gestures/eat_2hand_chewymeat.prefab
-assets/bundled/prefabs/fx/weapons/vm_hacksaw/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_hacksaw/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_hacksaw/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_hammer/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_hammer/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_hammer/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_hammer/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_hammer/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet/swing.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet_stone/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_hatchet_stone/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_lantern/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_lantern/attack_hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_lantern/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_lantern/holster.prefab
 assets/bundled/prefabs/fx/weapons/vm_machete/attack-1.prefab
 assets/bundled/prefabs/fx/weapons/vm_machete/attack-2.prefab
 assets/bundled/prefabs/fx/weapons/vm_machete/attack-3.prefab
 assets/bundled/prefabs/fx/weapons/vm_machete/deploy.prefab
 assets/bundled/prefabs/fx/weapons/vm_machete/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_medical_syringe/inject_friend.prefab
-assets/bundled/prefabs/fx/weapons/vm_medical_syringe/inject_self.prefab
-assets/bundled/prefabs/fx/weapons/vm_medical_syringe/pop_button_cap.prefab
-assets/bundled/prefabs/fx/weapons/vm_medical_syringe/pop_cap.prefab
-assets/bundled/prefabs/fx/weapons/vm_pickaxe/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_pickaxe/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_pickaxe/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_pickaxe/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_pickaxe/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/eject_shells.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/insert_shells.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/open_cylinder.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/prime_striker.prefab
-assets/bundled/prefabs/fx/weapons/vm_revolver/shut_cylinder.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/fire.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/grab_handle.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/pfx_close_hatch_smoke.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/pfx_fire_rocket_smokeout.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/pfx_open_hatch_smokeout.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/pfx_rocket_insert_smoke.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/pfx_rocket_insert_sparks.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/reload_begin.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/reload_close_hatch.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/reload_end.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/reload_insert_rocket.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/reload_open_hatch.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/rocket_explosion.prefab
-assets/bundled/prefabs/fx/weapons/vm_rocket_launcher/rocket_launch_fx.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/attack1.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/attack2.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_axe/tap.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/attack1.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/attack2.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_hammer/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_icepick/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_icepick/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_icepick/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_icepick/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_salvaged_icepick/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/attack_pumpaction.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/deploy2.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/flipover.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/insert_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/pump_forward.prefab
-assets/bundled/prefabs/fx/weapons/vm_sawnoff_shotgun/reload_start.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/eject_clip.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/eject_pistol_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/grab_clip.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/insert_clip.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/slide_back.prefab
-assets/bundled/prefabs/fx/weapons/vm_semi_pistol/slide_shut.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/attack_shake_ads.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/bolt_back.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/bolt_shut.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/clip_in.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/clip_out.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/eject_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_smg/reload_start.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/2hand_deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/pull_out.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/strike_stone.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/strike_wood.prefab
-assets/bundled/prefabs/fx/weapons/vm_spear/throw.prefab
-assets/bundled/prefabs/fx/weapons/vm_sword/attack-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_sword/attack-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_sword/attack-3.prefab
-assets/bundled/prefabs/fx/weapons/vm_sword/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_sword/hit.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/bolt_action.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/eject_pistol_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/idle_finger_taps.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/insert_clip.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/reload_begin.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/remove_clip.prefab
-assets/bundled/prefabs/fx/weapons/vm_thompson/safety_off.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/attack_lit.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/extinguish.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/ignite.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/strike.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/strike_screenshake.prefab
-assets/bundled/prefabs/fx/weapons/vm_torch/torch_loop.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/drop_item.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/hook_hit-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/hook_hit-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/hook-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/hook-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/jab_hit-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/jab_hit-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/jab-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/jab-2.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/jab-3.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/pickup_item.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/shove.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/uppercut.prefab
-assets/bundled/prefabs/fx/weapons/vm_unarmed/uppercut_hit-1.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/attack.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/attack_shake.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/close_pipe.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/deploy.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/dryfire.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/holster.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/insert_shell.prefab
-assets/bundled/prefabs/fx/weapons/vm_waterpipe_shotgun/reload_start.prefab
 assets/bundled/prefabs/gib_test.prefab
 assets/bundled/prefabs/items/arrow.prefab
 assets/bundled/prefabs/items/barricades/barricade.concrete.prefab
@@ -951,6 +728,7 @@ assets/bundled/prefabs/items/barricades/barricade.stone.prefab
 assets/bundled/prefabs/items/barricades/barricade.wood.prefab
 assets/bundled/prefabs/items/barricades/barricade.woodwire.prefab
 assets/bundled/prefabs/items/beartrap.prefab
+assets/bundled/prefabs/items/bed_deployed.prefab
 assets/bundled/prefabs/items/campfire_deployed.prefab
 assets/bundled/prefabs/items/ceilinglight.prefab
 assets/bundled/prefabs/items/cupboard.tool.deployed.prefab
@@ -1060,6 +838,7 @@ assets/bundled/prefabs/projectiles/stone_spear.projectile.prefab
 assets/bundled/prefabs/projectiles/wooden_spear.projectile.prefab
 assets/bundled/prefabs/radtown/crate_normal.prefab
 assets/bundled/prefabs/radtown/crate_normal_2.prefab
+assets/bundled/prefabs/radtown/crate_normal_2_food.prefab
 assets/bundled/prefabs/radtown/loot_barrel_1.prefab
 assets/bundled/prefabs/radtown/loot_barrel_2.prefab
 assets/bundled/prefabs/radtown/loot_trash.prefab
@@ -1105,79 +884,19 @@ assets/bundled/prefabs/ui/lootpanels/lootpanel.researchtable.prefab
 assets/bundled/prefabs/ui/lootpanels/lootpanel.smallrefinery.prefab
 assets/bundled/prefabs/ui/lootpanels/lootpanel.smallwoodbox.prefab
 assets/bundled/prefabs/ui/lootpanels/lootpanel.watercatcher.prefab
-assets/bundled/prefabs/weapons/bow/crossbow.viewmodel.prefab
-assets/bundled/prefabs/weapons/bow/crossbow.weapon.prefab
-assets/bundled/prefabs/weapons/bow/hunting.viewmodel.prefab
-assets/bundled/prefabs/weapons/bow/hunting.weapon.prefab
 assets/bundled/prefabs/weapons/deploy/generic_deploy.prefab
-assets/bundled/prefabs/weapons/explosive/beancan_grenade.viewmodel.prefab
-assets/bundled/prefabs/weapons/explosive/beancan_grenade.weapon.prefab
-assets/bundled/prefabs/weapons/explosive/f1_grenade.viewmodel.prefab
-assets/bundled/prefabs/weapons/explosive/f1_grenade.weapon.prefab
-assets/bundled/prefabs/weapons/explosive/rocketlauncher.viewmodel.prefab
-assets/bundled/prefabs/weapons/explosive/rocketlauncher.weapon.prefab
 assets/bundled/prefabs/weapons/explosive/smoke_grenade.viewmodel.prefab
 assets/bundled/prefabs/weapons/explosive/smoke_grenade.weapon.prefab
-assets/bundled/prefabs/weapons/melee/2handed_cleaver.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/2handed_cleaver.weapon.prefab
-assets/bundled/prefabs/weapons/melee/2handed_mace.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/2handed_mace.weapon.prefab
-assets/bundled/prefabs/weapons/melee/2handed_sword.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/2handed_sword.weapon.prefab
-assets/bundled/prefabs/weapons/melee/bone_club.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/bone_club.weapon.prefab
-assets/bundled/prefabs/weapons/melee/boneknife.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/boneknife.weapon.prefab
 assets/bundled/prefabs/weapons/melee/cleaver.viewmodel.prefab
 assets/bundled/prefabs/weapons/melee/cleaver.weapon.prefab
 assets/bundled/prefabs/weapons/melee/hacksaw.viewmodel.prefab
 assets/bundled/prefabs/weapons/melee/hacksaw.weapon.prefab
-assets/bundled/prefabs/weapons/melee/hatchet.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/hatchet.weapon.prefab
-assets/bundled/prefabs/weapons/melee/hatchet_stone.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/hatchet_stone.weapon.prefab
-assets/bundled/prefabs/weapons/melee/pickaxe.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/pickaxe.weapon.prefab
-assets/bundled/prefabs/weapons/melee/rock.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/rock.weapon.prefab
-assets/bundled/prefabs/weapons/melee/salvaged_axe.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/salvaged_axe.weapon.prefab
-assets/bundled/prefabs/weapons/melee/salvaged_icepick.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/salvaged_icepick.weapon.prefab
-assets/bundled/prefabs/weapons/melee/stone_pickaxe.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/stone_pickaxe.weapon.prefab
-assets/bundled/prefabs/weapons/melee/stone_spear.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/stone_spear.weapon.prefab
-assets/bundled/prefabs/weapons/melee/sword.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/sword.weapon.prefab
 assets/bundled/prefabs/weapons/melee/unarmed.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/wooden_spear.viewmodel.prefab
-assets/bundled/prefabs/weapons/melee/wooden_spear.weapon.prefab
-assets/bundled/prefabs/weapons/pistol/eoka.viewmodel.prefab
-assets/bundled/prefabs/weapons/pistol/eoka.weapon.prefab
-assets/bundled/prefabs/weapons/pistol/revolver.viewmodel.prefab
-assets/bundled/prefabs/weapons/pistol/revolver.weapon.prefab
-assets/bundled/prefabs/weapons/pistol/semi_pistol.viewmodel.prefab
-assets/bundled/prefabs/weapons/pistol/semi_pistol.weapon.prefab
-assets/bundled/prefabs/weapons/rifle/ak47u.viewmodel.prefab
-assets/bundled/prefabs/weapons/rifle/ak47u.weapon.prefab
-assets/bundled/prefabs/weapons/rifle/bolt.viewmodel.prefab
-assets/bundled/prefabs/weapons/rifle/boltrifle.weapon.prefab
-assets/bundled/prefabs/weapons/shotgun/sawnoffshotgun.viewmodel.prefab
-assets/bundled/prefabs/weapons/shotgun/sawnoffshotgun.weapon.prefab
-assets/bundled/prefabs/weapons/shotgun/waterpipe.viewmodel.prefab
-assets/bundled/prefabs/weapons/shotgun/waterpipe.weapon.prefab
-assets/bundled/prefabs/weapons/smg/smg.viewmodel.prefab
-assets/bundled/prefabs/weapons/smg/smg.weapon.prefab
-assets/bundled/prefabs/weapons/smg/thompson.viewmodel.prefab
-assets/bundled/prefabs/weapons/smg/thompson.weapon.prefab
 assets/bundled/prefabs/weapons/smg2/barrel_sights.prefab
 assets/bundled/prefabs/weapons/smg2/grip.prefab
 assets/bundled/prefabs/weapons/smg2/magazine.prefab
 assets/bundled/prefabs/weapons/smg2/smg_basic.prefab
 assets/bundled/prefabs/weapons/smg2/stock.prefab
-assets/bundled/prefabs/weapons/tool/bandage.viewmodel.prefab
-assets/bundled/prefabs/weapons/tool/bandage.weapon.prefab
 assets/bundled/prefabs/weapons/tool/explosive.timed.prefab
 assets/bundled/prefabs/weapons/tool/fishing_rod.viewmodel.prefab
 assets/bundled/prefabs/weapons/tool/fishing_rod.weapon.prefab
@@ -1188,19 +907,11 @@ assets/bundled/prefabs/weapons/tool/flashlight.weapon.prefab
 assets/bundled/prefabs/weapons/tool/food.weapon.prefab
 assets/bundled/prefabs/weapons/tool/food_gestures.viewmodel.prefab
 assets/bundled/prefabs/weapons/tool/fun_guitar.weapon.prefab
-assets/bundled/prefabs/weapons/tool/hammer.viewmodel.prefab
-assets/bundled/prefabs/weapons/tool/hammer.weapon.prefab
 assets/bundled/prefabs/weapons/tool/lantern.viewmodel.prefab
 assets/bundled/prefabs/weapons/tool/lantern.weapon.prefab
-assets/bundled/prefabs/weapons/tool/medical_syringe.viewmodel.prefab
-assets/bundled/prefabs/weapons/tool/medical_syringe.weapon.prefab
 assets/bundled/prefabs/weapons/tool/planner.prefab
-assets/bundled/prefabs/weapons/tool/salvaged_hammer.viewmodel.prefab
-assets/bundled/prefabs/weapons/tool/salvaged_hammer.weapon.prefab
 assets/bundled/prefabs/weapons/tool/survey_charge.prefab
 assets/bundled/prefabs/weapons/tool/tool_camera.prefab
-assets/bundled/prefabs/weapons/tool/torch.viewmodel.prefab
-assets/bundled/prefabs/weapons/tool/torch.weapon.prefab
 assets/bundled/prefabs/weapons/vm_flare.prefab
 assets/bundled/prefabs/weapons/vm_flashlight.prefab
 assets/bundled/prefabs/weapons/vm_rocketlauncher.prefab
@@ -1214,10 +925,14 @@ assets/bundled/prefabs/world/rain.prefab
 assets/bundled/prefabs/world/snow.prefab
 assets/bundled/prefabs/world/spawn.prefab
 assets/bundled/prefabs/world/wind.prefab
+assets/content/building/parts/armored/small_armored_house.prefab
 assets/content/building/wall.external.high.stone/wall.external.high.stone.prefab
+assets/content/building/wall.external.high.stone/wall.external.high.stone.skin.prefab
+assets/content/building/wall.external.high.wood/wall.external.high.gate.wood.skin.prefab
 assets/content/building/wall.external.high.wood/wall.external.high.wood.prefab
+assets/content/building/wall.external.high.wood/wall.external.high.wood.skin.prefab
 assets/content/building/windmill/generator.wind.scrap.prefab
-assets/content/clothing/tshirt/tshirt.preview.prefab
+assets/content/building/windmill/generator.wind.scrap.skin.prefab
 assets/content/entities/plants/corn/corn.entity.prefab
 assets/content/entities/plants/plantharvest.effect.prefab
 assets/content/entities/plants/plantseed.effect.prefab
@@ -1225,6 +940,7 @@ assets/content/entities/plants/pumpkin/pumpkin.entity.prefab
 assets/content/entities/plants/pumpkin/pumpkin.wearable.prefab
 assets/content/entities/plants/pumpkin/pumpkin.worldmodel.prefab
 assets/content/player/clothing/basic/hat.beenie/hat.beenie.prefab
+assets/content/player/clothing/basic/hat.boonie/hat.boonie.prefab
 assets/content/player/clothing/basic/hat.cap/hat.cap.prefab
 assets/content/player/clothing/basic/hoodie/black/hoodie.black_fem.prefab
 assets/content/player/clothing/basic/hoodie/blue/hoodie.blue_fem.prefab
@@ -1232,6 +948,8 @@ assets/content/player/clothing/basic/hoodie/green/hoodie.green_fem.prefab
 assets/content/player/clothing/basic/hoodie/red/hoodie.red.prefab
 assets/content/player/clothing/basic/hoodie/red/hoodie.red_fem.prefab
 assets/content/player/clothing/basic/jacket/jacket.prefab
+assets/content/player/clothing/basic/mask.balaclava/mask.balaclava.prefab
+assets/content/player/clothing/basic/mask.bandana/mask.bandana.prefab
 assets/content/player/clothing/basic/pants/pants.generic.prefab
 assets/content/player/clothing/basic/shoes.boots/shoes.boots.prefab
 assets/content/player/clothing/basic/shoes.boots/shoes.boots_fem.prefab
@@ -1243,54 +961,361 @@ assets/content/player/clothing/special/wolf head dress/wolfheaddress.wearable.pr
 assets/content/props/resourceprops/stone.worldmodel.prefab
 assets/content/props/resourceprops/wood.worldmodel.prefab
 assets/content/props/skull/skull.prefab
+assets/content/skinnable/tshirt/preview.prefab
 assets/content/vessels/bota bag/bota_bag.entity.prefab
 assets/content/vessels/bota bag/bota_bag.worldmodel.prefab
-assets/content/weapons/2handed_cleaver/2handed_cleaver.worldmodel.prefab
-assets/content/weapons/2handed_mace/2handed_mace.worldmodel.prefab
-assets/content/weapons/2handed_sword/2handed_sword.worldmodel.prefab
+assets/content/weapons/_gestures/effects/drink.prefab
+assets/content/weapons/_gestures/effects/eat_1hand_celery.prefab
+assets/content/weapons/_gestures/effects/eat_2hand_chewymeat.prefab
+assets/content/weapons/_unimplemented/fishing_rod/fishing_rod.worldmodel.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/catch_empty.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/catch_fish.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/deploy.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/holster.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/lure_splash.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/pluck_fish.prefab
+assets/content/weapons/_unimplemented/fishing_rod/vm_fishing_rod/throw_lure.prefab
+assets/content/weapons/_unimplemented/flare/effects/pullpin.prefab
+assets/content/weapons/_unimplemented/flare/flare.worldmodel.prefab
+assets/content/weapons/_unimplemented/flashlight/flashlight.worldmodel.prefab
+assets/content/weapons/_unimplemented/flashlight/vm_flashlight/attack.prefab
+assets/content/weapons/_unimplemented/flashlight/vm_flashlight/attack_end.prefab
+assets/content/weapons/_unimplemented/flashlight/vm_flashlight/attack_hit.prefab
+assets/content/weapons/_unimplemented/flashlight/vm_flashlight/deploy.prefab
+assets/content/weapons/_unimplemented/flashlight/vm_flashlight/holster.prefab
+assets/content/weapons/_unimplemented/lantern/lantern.worldmodel.prefab
+assets/content/weapons/_unimplemented/lantern/vm_lantern/attack.prefab
+assets/content/weapons/_unimplemented/lantern/vm_lantern/attack_hit.prefab
+assets/content/weapons/_unimplemented/lantern/vm_lantern/deploy.prefab
+assets/content/weapons/_unimplemented/lantern/vm_lantern/holster.prefab
+assets/content/weapons/ak47u/ak47u.entity.prefab
 assets/content/weapons/ak47u/ak47u.worldmodel.prefab
-assets/content/weapons/beancan_grenade/beancan_grenade.worldmodel.prefab
+assets/content/weapons/ak47u/effects/attack.prefab
+assets/content/weapons/ak47u/effects/attack_shake.prefab
+assets/content/weapons/ak47u/effects/deploy.prefab
+assets/content/weapons/ak47u/effects/dryfire.prefab
+assets/content/weapons/ak47u/effects/eject_rifle_shell.prefab
+assets/content/weapons/ak47u/effects/grab_magazine.prefab
+assets/content/weapons/ak47u/effects/holster.prefab
+assets/content/weapons/ak47u/effects/insert_magazine.prefab
+assets/content/weapons/ak47u/effects/reload_boltaction.prefab
+assets/content/weapons/ak47u/effects/reload_start.prefab
+assets/content/weapons/arms/effects/drop_item.prefab
+assets/content/weapons/arms/effects/hook_hit-1.prefab
+assets/content/weapons/arms/effects/hook_hit-2.prefab
+assets/content/weapons/arms/effects/hook-1.prefab
+assets/content/weapons/arms/effects/hook-2.prefab
+assets/content/weapons/arms/effects/jab_hit-1.prefab
+assets/content/weapons/arms/effects/jab_hit-2.prefab
+assets/content/weapons/arms/effects/jab-1.prefab
+assets/content/weapons/arms/effects/jab-2.prefab
+assets/content/weapons/arms/effects/jab-3.prefab
+assets/content/weapons/arms/effects/pickup_item.prefab
+assets/content/weapons/arms/effects/shove.prefab
+assets/content/weapons/arms/effects/uppercut.prefab
+assets/content/weapons/arms/effects/uppercut_hit-1.prefab
+assets/content/weapons/bandage/bandage.entity.prefab
+assets/content/weapons/bandage/effects/deploy.prefab
+assets/content/weapons/bandage/effects/wraparm.prefab
+assets/content/weapons/bandage/effects/wraphead.prefab
+assets/content/weapons/bandage/effects/wrapother.prefab
+assets/content/weapons/beancan grenade/beancan_grenade.worldmodel.prefab
+assets/content/weapons/beancan grenade/effects/beancan_grenade_explosion.prefab
+assets/content/weapons/beancan grenade/effects/bounce.prefab
+assets/content/weapons/beancan grenade/effects/light_fuse.prefab
+assets/content/weapons/beancan grenade/grenade.beancan.entity.prefab
+assets/content/weapons/bolt rifle/bolt_rifle.entity.prefab
 assets/content/weapons/bolt rifle/bolt_rifle.worldmodel.prefab
+assets/content/weapons/bolt rifle/effects/attack.prefab
+assets/content/weapons/bolt rifle/effects/attack_shake.prefab
+assets/content/weapons/bolt rifle/effects/boltback.prefab
+assets/content/weapons/bolt rifle/effects/boltforward.prefab
+assets/content/weapons/bolt rifle/effects/deploy.prefab
+assets/content/weapons/bolt rifle/effects/dryfire.prefab
+assets/content/weapons/bolt rifle/effects/holster.prefab
+assets/content/weapons/bolt rifle/effects/insertbullet.prefab
+assets/content/weapons/bone club/bone_club.entity.prefab
 assets/content/weapons/bone club/boneclub.worldmodel.prefab
-assets/content/weapons/boneknife/boneknife.worldmodel.prefab
+assets/content/weapons/bone club/effects/attack-1.prefab
+assets/content/weapons/bone club/effects/attack-2.prefab
+assets/content/weapons/bone club/effects/deploy.prefab
+assets/content/weapons/bone club/effects/hit.prefab
+assets/content/weapons/bone club/effects/tap.prefab
+assets/content/weapons/bone knife/boneknife.worldmodel.prefab
+assets/content/weapons/bone knife/effects/attack-1.prefab
+assets/content/weapons/bone knife/effects/attack-2.prefab
+assets/content/weapons/bone knife/effects/deploy.prefab
+assets/content/weapons/bone knife/effects/hit.prefab
+assets/content/weapons/bone knife/effects/holster.prefab
+assets/content/weapons/bone knife/effects/strike.prefab
+assets/content/weapons/bone knife/effects/strike_screenshake.prefab
+assets/content/weapons/bone knife/knife_bone.entity.prefab
 assets/content/weapons/bow/arrow_stone.worldmodel.prefab
 assets/content/weapons/bow/arrow_wooden.worldmodel.prefab
 assets/content/weapons/bow/bow.worldmodel.prefab
+assets/content/weapons/bow/bow_hunting.entity.prefab
+assets/content/weapons/bow/effects/attack.prefab
+assets/content/weapons/bow/effects/deploy.prefab
+assets/content/weapons/bow/effects/draw_arrow.prefab
+assets/content/weapons/bow/effects/draw_cancel.prefab
+assets/content/weapons/bow/effects/fire.prefab
+assets/content/weapons/bow/effects/hit.prefab
+assets/content/weapons/cleaver big/2handed_cleaver.worldmodel.prefab
+assets/content/weapons/cleaver big/effects/attack-1.prefab
+assets/content/weapons/cleaver big/effects/attack-2.prefab
+assets/content/weapons/cleaver big/effects/attack-3.prefab
+assets/content/weapons/cleaver big/effects/deploy.prefab
+assets/content/weapons/cleaver big/effects/hit.prefab
+assets/content/weapons/cleaver big/salvaged_cleaver.entity.prefab
 assets/content/weapons/cleaver/cleaver.worldmodel.prefab
+assets/content/weapons/crossbow/crossbow.entity.prefab
 assets/content/weapons/crossbow/crossbow.worldmodel.prefab
+assets/content/weapons/crossbow/effects/attack.prefab
+assets/content/weapons/crossbow/effects/deploy.prefab
+assets/content/weapons/crossbow/effects/reload.prefab
+assets/content/weapons/eoka pistol/effects/attack.prefab
+assets/content/weapons/eoka pistol/effects/attack_shake.prefab
+assets/content/weapons/eoka pistol/effects/deploy.prefab
+assets/content/weapons/eoka pistol/effects/flint_spark.prefab
+assets/content/weapons/eoka pistol/effects/holster.prefab
+assets/content/weapons/eoka pistol/effects/insert_bullet.prefab
+assets/content/weapons/eoka pistol/effects/push_barrel.prefab
+assets/content/weapons/eoka pistol/effects/rock_scrape-1.prefab
+assets/content/weapons/eoka pistol/effects/rock_scrape-2.prefab
+assets/content/weapons/eoka pistol/effects/rock_scrape-3.prefab
 assets/content/weapons/eoka pistol/eoka_pistol.worldmodel.prefab
-assets/content/weapons/f1_grenade/f1_grenade.worldmodel.prefab
-assets/content/weapons/fishing_rod/fishing_rod.worldmodel.prefab
-assets/content/weapons/flare/flare.worldmodel.prefab
-assets/content/weapons/flashlight/flashlight.worldmodel.prefab
+assets/content/weapons/eoka pistol/pistol_eoka.entity.prefab
+assets/content/weapons/f1 grenade/effects/bounce.prefab
+assets/content/weapons/f1 grenade/effects/deploy.prefab
+assets/content/weapons/f1 grenade/effects/f1grenade_explosion.prefab
+assets/content/weapons/f1 grenade/effects/holster.prefab
+assets/content/weapons/f1 grenade/effects/pullpin.prefab
+assets/content/weapons/f1 grenade/effects/throw.prefab
+assets/content/weapons/f1 grenade/grenade.f1.entity.prefab
+assets/content/weapons/f1 grenade/grenade.f1.worldmodel.prefab
+assets/content/weapons/hacksaw/effects/attack-1.prefab
+assets/content/weapons/hacksaw/effects/attack-2.prefab
+assets/content/weapons/hacksaw/effects/hit.prefab
 assets/content/weapons/hacksaw/hacksaw.worldmodel.prefab
+assets/content/weapons/hammer/effects/attack.prefab
+assets/content/weapons/hammer/effects/deploy.prefab
+assets/content/weapons/hammer/effects/holster.prefab
+assets/content/weapons/hammer/effects/strike.prefab
+assets/content/weapons/hammer/effects/strike_screenshake.prefab
+assets/content/weapons/hammer/hammer.entity.prefab
 assets/content/weapons/hammer/hammer.worldmodel.prefab
+assets/content/weapons/hatchet/effects/attack_shake.prefab
+assets/content/weapons/hatchet/effects/deploy.prefab
+assets/content/weapons/hatchet/effects/holster.prefab
+assets/content/weapons/hatchet/effects/strike.prefab
+assets/content/weapons/hatchet/effects/strike_screenshake.prefab
+assets/content/weapons/hatchet/effects/swing.prefab
+assets/content/weapons/hatchet/hatchet.entity.prefab
 assets/content/weapons/hatchet/hatchet.worldmodel.prefab
-assets/content/weapons/lantern/lantern.worldmodel.prefab
 assets/content/weapons/m18 smoke grenade/smoke_grenade.worldmodel.prefab
-assets/content/weapons/medical_syringe/med_syringe.worldmodel.prefab
+assets/content/weapons/mace/effects/attack-1.prefab
+assets/content/weapons/mace/effects/attack-2.prefab
+assets/content/weapons/mace/effects/deploy.prefab
+assets/content/weapons/mace/effects/hit.prefab
+assets/content/weapons/mace/mace.entity.prefab
+assets/content/weapons/mace/mace.worldmodel.prefab
+assets/content/weapons/medical syringe/effects/inject_friend.prefab
+assets/content/weapons/medical syringe/effects/inject_self.prefab
+assets/content/weapons/medical syringe/effects/pop_button_cap.prefab
+assets/content/weapons/medical syringe/effects/pop_cap.prefab
+assets/content/weapons/medical syringe/syringe_medical.entity.prefab
+assets/content/weapons/medical syringe/syringe_medical.worldmodel.prefab
+assets/content/weapons/mods/silencers/effects/silencedshot_default.prefab
+assets/content/weapons/mods/silencers/silencer.entity.prefab
+assets/content/weapons/mods/silencers/silencer.vm.attachment.prefab
+assets/content/weapons/pickaxe/effects/attack.prefab
+assets/content/weapons/pickaxe/effects/deploy.prefab
+assets/content/weapons/pickaxe/effects/holster.prefab
+assets/content/weapons/pickaxe/effects/strike.prefab
+assets/content/weapons/pickaxe/effects/strike_screenshake.prefab
+assets/content/weapons/pickaxe/pickaxe.entity.prefab
 assets/content/weapons/pickaxe/pickaxe.worldmodel.prefab
+assets/content/weapons/pipe shotgun/effects/attack.prefab
+assets/content/weapons/pipe shotgun/effects/attack_shake.prefab
+assets/content/weapons/pipe shotgun/effects/close_pipe.prefab
+assets/content/weapons/pipe shotgun/effects/deploy.prefab
+assets/content/weapons/pipe shotgun/effects/dryfire.prefab
+assets/content/weapons/pipe shotgun/effects/holster.prefab
+assets/content/weapons/pipe shotgun/effects/insert_shell.prefab
+assets/content/weapons/pipe shotgun/effects/reload_start.prefab
+assets/content/weapons/pipe shotgun/shotgun_waterpipe.entity.prefab
 assets/content/weapons/pipe shotgun/waterpipe_shotgun.worldmodel.prefab
+assets/content/weapons/revolver/effects/attack.prefab
+assets/content/weapons/revolver/effects/attack_shake.prefab
+assets/content/weapons/revolver/effects/deploy.prefab
+assets/content/weapons/revolver/effects/dryfire.prefab
+assets/content/weapons/revolver/effects/eject_shells.prefab
+assets/content/weapons/revolver/effects/insert_shells.prefab
+assets/content/weapons/revolver/effects/open_cylinder.prefab
+assets/content/weapons/revolver/effects/prime_striker.prefab
+assets/content/weapons/revolver/effects/shut_cylinder.prefab
+assets/content/weapons/revolver/pistol_revolver.entity.prefab
 assets/content/weapons/revolver/revolver.worldmodel.prefab
-assets/content/weapons/rock_02/rock.worldmodel.prefab
+assets/content/weapons/rock/rock.entity.prefab
+assets/content/weapons/rock/rock.worldmodel.prefab
+assets/content/weapons/rock/rock/attack.prefab
+assets/content/weapons/rock/rock/deploy.prefab
+assets/content/weapons/rock/rock/holster.prefab
+assets/content/weapons/rock/rock/strike.prefab
+assets/content/weapons/rock/rock/strike_screenshake.prefab
+assets/content/weapons/rocketlauncher/effects/attack.prefab
+assets/content/weapons/rocketlauncher/effects/deploy.prefab
+assets/content/weapons/rocketlauncher/effects/fire.prefab
+assets/content/weapons/rocketlauncher/effects/grab_handle.prefab
+assets/content/weapons/rocketlauncher/effects/holster.prefab
+assets/content/weapons/rocketlauncher/effects/pfx_close_hatch_smoke.prefab
+assets/content/weapons/rocketlauncher/effects/pfx_fire_rocket_smokeout.prefab
+assets/content/weapons/rocketlauncher/effects/pfx_open_hatch_smokeout.prefab
+assets/content/weapons/rocketlauncher/effects/pfx_rocket_insert_smoke.prefab
+assets/content/weapons/rocketlauncher/effects/pfx_rocket_insert_sparks.prefab
+assets/content/weapons/rocketlauncher/effects/reload_begin.prefab
+assets/content/weapons/rocketlauncher/effects/reload_close_hatch.prefab
+assets/content/weapons/rocketlauncher/effects/reload_end.prefab
+assets/content/weapons/rocketlauncher/effects/reload_insert_rocket.prefab
+assets/content/weapons/rocketlauncher/effects/reload_open_hatch.prefab
+assets/content/weapons/rocketlauncher/effects/rocket_explosion.prefab
+assets/content/weapons/rocketlauncher/effects/rocket_launch_fx.prefab
+assets/content/weapons/rocketlauncher/rocket_launcher.entity.prefab
 assets/content/weapons/rocketlauncher/rocketlauncher.worldmodel.prefab
-assets/content/weapons/rpg/rocket.worldmodel.prefab
+assets/content/weapons/rocketlauncher/rpg/rocket.worldmodel.prefab
+assets/content/weapons/salvaged_axe/axe_salvaged.entity.prefab
+assets/content/weapons/salvaged_axe/effects/attack1.prefab
+assets/content/weapons/salvaged_axe/effects/attack2.prefab
+assets/content/weapons/salvaged_axe/effects/deploy.prefab
+assets/content/weapons/salvaged_axe/effects/holster.prefab
+assets/content/weapons/salvaged_axe/effects/strike.prefab
+assets/content/weapons/salvaged_axe/effects/strike_screenshake.prefab
+assets/content/weapons/salvaged_axe/effects/tap.prefab
 assets/content/weapons/salvaged_axe/salvaged_axe.worldmodel.prefab
+assets/content/weapons/salvaged_hammer/effects/attack1.prefab
+assets/content/weapons/salvaged_hammer/effects/attack2.prefab
+assets/content/weapons/salvaged_hammer/effects/deploy.prefab
+assets/content/weapons/salvaged_hammer/effects/holster.prefab
+assets/content/weapons/salvaged_hammer/effects/strike.prefab
+assets/content/weapons/salvaged_hammer/effects/strike_screenshake.prefab
+assets/content/weapons/salvaged_hammer/hammer_salvaged.entity.prefab
 assets/content/weapons/salvaged_hammer/salvaged_hammer.worldmodel.prefab
+assets/content/weapons/salvaged_icepick/effects/attack.prefab
+assets/content/weapons/salvaged_icepick/effects/deploy.prefab
+assets/content/weapons/salvaged_icepick/effects/holster.prefab
+assets/content/weapons/salvaged_icepick/effects/strike.prefab
+assets/content/weapons/salvaged_icepick/effects/strike_screenshake.prefab
+assets/content/weapons/salvaged_icepick/icepick_salvaged.entity.prefab
 assets/content/weapons/salvaged_icepick/salvaged_icepick.worldmodel.prefab
+assets/content/weapons/sawnoff_shotgun/effects/attack.prefab
+assets/content/weapons/sawnoff_shotgun/effects/attack_pumpaction.prefab
+assets/content/weapons/sawnoff_shotgun/effects/attack_shake.prefab
+assets/content/weapons/sawnoff_shotgun/effects/deploy.prefab
+assets/content/weapons/sawnoff_shotgun/effects/deploy2.prefab
+assets/content/weapons/sawnoff_shotgun/effects/dryfire.prefab
+assets/content/weapons/sawnoff_shotgun/effects/flipover.prefab
+assets/content/weapons/sawnoff_shotgun/effects/insert_shell.prefab
+assets/content/weapons/sawnoff_shotgun/effects/pump_forward.prefab
+assets/content/weapons/sawnoff_shotgun/effects/reload_start.prefab
 assets/content/weapons/sawnoff_shotgun/sawnoffshotgun.worldmodel.prefab
+assets/content/weapons/sawnoff_shotgun/shotgun_pump.entity.prefab
+assets/content/weapons/semi auto pistol/effects/attack.prefab
+assets/content/weapons/semi auto pistol/effects/attack_shake.prefab
+assets/content/weapons/semi auto pistol/effects/deploy.prefab
+assets/content/weapons/semi auto pistol/effects/dryfire.prefab
+assets/content/weapons/semi auto pistol/effects/eject_clip.prefab
+assets/content/weapons/semi auto pistol/effects/eject_pistol_shell.prefab
+assets/content/weapons/semi auto pistol/effects/grab_clip.prefab
+assets/content/weapons/semi auto pistol/effects/insert_clip.prefab
+assets/content/weapons/semi auto pistol/effects/slide_back.prefab
+assets/content/weapons/semi auto pistol/effects/slide_shut.prefab
+assets/content/weapons/semi auto pistol/pistol_semiauto.entity.prefab
 assets/content/weapons/semi auto pistol/semi_pistol.worldmodel.prefab
 assets/content/weapons/semi auto pistol/semiauto.worldmodel.prefab
+assets/content/weapons/smg/effects/attack.prefab
+assets/content/weapons/smg/effects/attack_shake.prefab
+assets/content/weapons/smg/effects/attack_shake_ads.prefab
+assets/content/weapons/smg/effects/bolt_back.prefab
+assets/content/weapons/smg/effects/bolt_shut.prefab
+assets/content/weapons/smg/effects/clip_in.prefab
+assets/content/weapons/smg/effects/clip_out.prefab
+assets/content/weapons/smg/effects/deploy.prefab
+assets/content/weapons/smg/effects/dryfire.prefab
+assets/content/weapons/smg/effects/eject_shell.prefab
+assets/content/weapons/smg/effects/reload_start.prefab
+assets/content/weapons/smg/smg.entity.prefab
 assets/content/weapons/smg/smg.worldmodel.prefab
-assets/content/weapons/spears/stone_spear.worldmodel.prefab
-assets/content/weapons/spears/wooden_spear.worldmodel.prefab
+assets/content/weapons/stone hatchet/effects/strike.prefab
+assets/content/weapons/stone hatchet/effects/strike_screenshake.prefab
 assets/content/weapons/stone hatchet/hatchet_stone.worldmodel.prefab
+assets/content/weapons/stone hatchet/stonehatchet.entity.prefab
+assets/content/weapons/stone pickaxe/stone_pickaxe.entity.prefab
 assets/content/weapons/stone pickaxe/stone_pickaxe.worldmodel.prefab
+assets/content/weapons/stone spear/effects/2hand_deploy.prefab
+assets/content/weapons/stone spear/effects/attack.prefab
+assets/content/weapons/stone spear/effects/deploy.prefab
+assets/content/weapons/stone spear/effects/holster.prefab
+assets/content/weapons/stone spear/effects/strike_screenshake.prefab
+assets/content/weapons/stone spear/effects/strike_stone.prefab
+assets/content/weapons/stone spear/effects/strike_wood.prefab
+assets/content/weapons/stone spear/effects/throw.prefab
+assets/content/weapons/stone spear/spear_stone.entity.prefab
+assets/content/weapons/stone spear/stone_spear.worldmodel.prefab
+assets/content/weapons/sword big/2handed_sword.worldmodel.prefab
+assets/content/weapons/sword big/effects/attack-1.prefab
+assets/content/weapons/sword big/effects/attack-2.prefab
+assets/content/weapons/sword big/effects/attack-3.prefab
+assets/content/weapons/sword big/effects/deploy.prefab
+assets/content/weapons/sword big/effects/hit.prefab
+assets/content/weapons/sword big/longsword.entity.prefab
+assets/content/weapons/sword/effects/attack-1.prefab
+assets/content/weapons/sword/effects/attack-2.prefab
+assets/content/weapons/sword/effects/attack-3.prefab
+assets/content/weapons/sword/effects/deploy.prefab
+assets/content/weapons/sword/effects/hit.prefab
+assets/content/weapons/sword/salvaged_sword.entity.prefab
 assets/content/weapons/sword/sword.worldmodel.prefab
+assets/content/weapons/thompson/effects/attack.prefab
+assets/content/weapons/thompson/effects/attack_shake.prefab
+assets/content/weapons/thompson/effects/bolt_action.prefab
+assets/content/weapons/thompson/effects/deploy.prefab
+assets/content/weapons/thompson/effects/dryfire.prefab
+assets/content/weapons/thompson/effects/eject_pistol_shell.prefab
+assets/content/weapons/thompson/effects/holster.prefab
+assets/content/weapons/thompson/effects/idle_finger_taps.prefab
+assets/content/weapons/thompson/effects/insert_clip.prefab
+assets/content/weapons/thompson/effects/reload_begin.prefab
+assets/content/weapons/thompson/effects/remove_clip.prefab
+assets/content/weapons/thompson/effects/safety_off.prefab
+assets/content/weapons/thompson/thompson.entity.prefab
 assets/content/weapons/thompson/thompson.worldmodel.prefab
+assets/content/weapons/torch/effects/attack.prefab
+assets/content/weapons/torch/effects/attack_lit.prefab
+assets/content/weapons/torch/effects/deploy.prefab
+assets/content/weapons/torch/effects/extinguish.prefab
+assets/content/weapons/torch/effects/ignite.prefab
+assets/content/weapons/torch/effects/strike.prefab
+assets/content/weapons/torch/effects/strike_screenshake.prefab
+assets/content/weapons/torch/effects/torch_loop.prefab
+assets/content/weapons/torch/torch.entity.prefab
 assets/content/weapons/torch/torch.worldmodel.prefab
+assets/content/weapons/wooden spear/effects/2hand_deploy.prefab
+assets/content/weapons/wooden spear/effects/attack.prefab
+assets/content/weapons/wooden spear/effects/deploy.prefab
+assets/content/weapons/wooden spear/effects/holster.prefab
+assets/content/weapons/wooden spear/effects/strike_screenshake.prefab
+assets/content/weapons/wooden spear/effects/strike_stone.prefab
+assets/content/weapons/wooden spear/effects/strike_wood.prefab
+assets/content/weapons/wooden spear/effects/throw.prefab
+assets/content/weapons/wooden spear/spear_wooden.entity.prefab
+assets/content/weapons/wooden spear/wooden_spear.worldmodel.prefab
 assets/third party/acousticguitar/guitar.prefab
 assigntofriend
+barrel
+barrel_lod0
+barrel_lod1
+barrel_pivot
+barrel_sights
 barricade.concrete/sockets/free
 barricade.metal/sockets/free
 barricade.sandbags/sockets/free
@@ -1303,6 +1328,8 @@ bear_lod1
 bear_lod2
 bear_lod3
 bear_ragdoll
+bed_deployed
+bed_deployed/sockets/free
 block.halfheight.slanted/sockets/floor-male
 block.halfheight/sockets/block-female
 block.halfheight/sockets/block-male
@@ -1325,15 +1352,25 @@ boar_mesh_lod1
 boar_mesh_lod2
 boar_mesh_lod3
 boar_ragdoll
+body_legs_root_grp
+body_root_ctrl
 body_root_rotation
 body_root_rotation_ctrl
 body_root_translate
 body_root_translate_ctrl
 body_root_traslation
 body_space_ctrls
+bolt
+bolt_end
+bolt_rifle.entity
+boltrifle_bullet_mesh
+boltrifle_mesh
 bone
 broadcastsignalfromclient
 brow
+bullet
+bullet_case
+bullet1
 cargo_p
 chicken_mesh_lod0
 chicken_mesh_lod1
@@ -1379,11 +1416,14 @@ dorotation
 dothrow
 doupgradetograde
 enterunlockcode
+eoka_pistol_bone
 extinguish
 eyetranform
 eyetransform
 finishloading
+fire_select
 flesh
+flint
 floor.triangle/sockets/a/floor_a
 floor.triangle/sockets/a/floor_female
 floor.triangle/sockets/a/ground_a
@@ -1441,10 +1481,15 @@ foundation/sockets/support/b
 foundation/sockets/support/c
 foundation/sockets/support/d
 foundation/sockets/terrain
+free
+fur
 generator.wind.scrap/sockets/a
 generic
 grass
 grenade
+grip
+grip_lod0
+grip_lod1
 group1
 group2
 group3
@@ -1452,6 +1497,10 @@ group4
 group5
 group6
 group7
+guide_rod
+gun_mesh
+hand_mesh
+hand_mesh1
 hatch
 head
 head_ctrl
@@ -1459,6 +1508,8 @@ head_end
 head_rotate
 head2
 head2_end
+hitnotify
+hold_lefthand
 horse_mesh_lod0
 horse_mesh_lod1
 horse_mesh_lod2
@@ -1466,11 +1517,17 @@ horse_mesh_lod3
 horse_ragdoll
 horse_rootbone
 ignite
+ikhandtarget
 iktarget_lefthand
 iktarget_righthand
 imageupdate
 injectedother
 injectedself
+inside
+inside 1
+inside 2
+inside 3
+inside 4
 itemcmd
 jaw
 jaw_connection
@@ -1479,6 +1536,10 @@ jaw_end
 jaw_rotate
 joint10
 joint11
+joint12
+joint14
+joint16
+joint18
 joint2
 joint23
 joint24
@@ -1498,6 +1559,7 @@ joint7
 joint8
 joint9
 l_ankle_scale
+l_arm_ikhandle
 l_arm_polevector
 l_chin
 l_chin_end
@@ -1517,6 +1579,8 @@ l_fore_shin
 l_fore_thigh
 l_forearm
 l_hand
+l_hand_ikposition_ctrl
+l_hand_rotation_ctrl
 l_hand_settings
 l_hand_translate_ctrl
 l_hip
@@ -1637,6 +1701,10 @@ lock
 locksign
 lower_jaw
 lower_jaw_eff
+mag_release
+magazine
+magazine_lod0
+magazine_lod1
 main_body_rotate
 main_body_translate
 mane_5a
@@ -1648,6 +1716,7 @@ metalore
 mining_quarry/sockets/survey_crater_male
 model
 moveitem
+muzzle
 neck
 neck_1
 neck_2
@@ -1661,6 +1730,28 @@ neck_rotate
 neck1
 neck2
 neck3
+notinside 10
+notinside 2
+notinside 3
+notinside 4
+notinside 5
+notinside 6
+notinside 7
+notinside 8
+notinside 9
+notinsphere 1
+notinsphere 1 (1)
+notinsphere 1 (2)
+notinsphere 2
+notinsphere 2 (1)
+notinsphere 2 (2)
+notinsphere 3
+notinsphere 3 (1)
+notinsphere 3 (2)
+notinwater 1
+notinwater 2
+notinwater 3
+notinwater 4
 nurbscircle1
 object_space_ctrl
 ondied
@@ -1679,6 +1770,8 @@ penis
 pickup
 pillar/sockets/support-female
 pillar/sockets/support-male
+pistol_lod0
+pistol_lod1
 player_model
 player_ragdoll
 playerattack
@@ -1687,9 +1780,11 @@ prop_1
 prop_2
 prop_3
 prop_4
+pump_handle
 pumpjack/sockets/survey_crater_male
 pumpkin.entity/sockets/terrain
 r_ankle_scale
+r_arm_ikhandle
 r_arm_polevector
 r_bench
 r_chin
@@ -1709,6 +1804,8 @@ r_fore_shin
 r_fore_thigh
 r_forearm
 r_hand
+r_hand_ikposition_ctrl
+r_hand_rotation_ctrl
 r_hand_settings
 r_hand_translate_ctrl
 r_hip
@@ -1783,6 +1880,7 @@ research_table_lod1
 research_table_lod2
 research_table_lod3
 resourceupdate
+rifle_root
 righ_arm_upvector
 right_arm_ik_handle
 right_arm_polevector
@@ -1828,6 +1926,7 @@ right_upperarm_fatjiggle
 right_upperlip
 right_upperlip_end
 rock
+rock_bone
 roof/sockets/floor_a
 roof/sockets/floor_female/1
 roof/sockets/floor_female/2
@@ -1853,8 +1952,77 @@ rpc_pickup
 rpc_takelock
 rpc_unlock
 rustplayer
+rustplayer_head1
+rustplayer_l_clavicle
+rustplayer_l_finger0
+rustplayer_l_finger01
+rustplayer_l_finger02
+rustplayer_l_finger1
+rustplayer_l_finger11
+rustplayer_l_finger12
+rustplayer_l_finger2
+rustplayer_l_finger21
+rustplayer_l_finger22
+rustplayer_l_finger3
+rustplayer_l_finger31
+rustplayer_l_finger32
+rustplayer_l_finger4
+rustplayer_l_finger41
+rustplayer_l_finger42
+rustplayer_l_foot
+rustplayer_l_forearm
+rustplayer_l_hand
+rustplayer_l_hip
+rustplayer_l_knee
+rustplayer_l_toe0
+rustplayer_l_ulna
+rustplayer_l_upperarm
+rustplayer_neck1
+rustplayer_pelvis
+rustplayer_r_clavicle
+rustplayer_r_finger0
+rustplayer_r_finger01
+rustplayer_r_finger02
+rustplayer_r_finger1
+rustplayer_r_finger11
+rustplayer_r_finger12
+rustplayer_r_finger2
+rustplayer_r_finger21
+rustplayer_r_finger22
+rustplayer_r_finger3
+rustplayer_r_finger31
+rustplayer_r_finger32
+rustplayer_r_finger4
+rustplayer_r_finger41
+rustplayer_r_finger42
+rustplayer_r_foot
+rustplayer_r_forearm
+rustplayer_r_hand
+rustplayer_r_hip
+rustplayer_r_knee
+rustplayer_r_toe0
+rustplayer_r_ulna
+rustplayer_r_upperarm
+rustplayer_spine
+rustplayer_spine1
+rustplayer_spine2
+rustplayer_spine4
+rustplayer_weapon_bone
+rustplayer_weapon_bone1
+rustplayer_weapon_bone2
+safety
 sand
+sawnoffshotgun
+sawnoffshotgun_lod0
+sawnoffshotgun_lod1
+sawnoffshotgun_lod2
+sawnoffshotgun_mesh
+semi_auto_pistol
+semi_pistol_mesh
 settings
+settings_grp
+shell
+shell_eject
 shoulder_ctrl
 shoulder_rotate
 sign.huge.wood/sockets/free
@@ -1862,8 +2030,18 @@ sign.large.wood/sockets/free
 sign.medium.wood/sockets/free
 sign.small.wood/sockets/free
 signalfromserver
+sleepingbag_leather
+sleepingbag_leather_deployed
 sleepingbag_leather_deployed/sockets/free
+slide
+slide_lock
+smg.entity
+smg_basic
+smg_lod0
+smg_lod1
+smg_rootbone
 snow
+sockets
 spine_1
 spine_1_ctrl
 spine_2
@@ -1896,6 +2074,9 @@ stag_ragdoll
 startengine
 startloading
 startlootingcontainer
+stock
+stock_lod0
+stock_lod1
 stomache_expander_1
 stomache_expander_2
 stopengine
@@ -1929,10 +2110,14 @@ tail3_ctrl
 tail4
 tail4_ctrl
 tail5
+thompson.entity
+thompson_mesh
 tongue_1
 tongue_2
 tongue_end
 tongue_rotate
+trigger
+trigger_spring
 trylock
 tryunlock
 tundra
@@ -1947,8 +2132,28 @@ updatesign
 updatesteaminventory
 useother
 useself
+v_ak47u
+v_bolt_rifle
+v_eoka_pistol
+v_eoka_rock
+v_sawnoffshogun
+v_semi_pistol
+v_smg
+v_thompson
+v_waterpipe_shotgun
+v_waterpipe_shotgun_mesh
+v_waterpipe_shotgun_shell
+w_boltaction_rifle
 w_bota_bag
+w_eoka
+w_revolver
 w_storage_box
+w_thompson
+w_thompson_lod0
+w_thompson_lod1
+w_thompson_lod2
+w_thompson_lod3
+w_waterpipe_shotgun
 wall.doorway.door.hatch
 wall.doorway/sockets/doorway-in
 wall.doorway/sockets/doorway-out
