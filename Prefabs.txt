@@ -7,6 +7,7 @@ _hold_lefthand
 _hold_magazine
 _hold_rightarm
 _hold_righthand
+_hold_rocketlauncher
 _hold_shell
 _hold_slide
 _root_sawnoffshotgun
@@ -32,11 +33,13 @@ assets/bundled/prefabs/autospawn/animals/chicken.prefab
 assets/bundled/prefabs/autospawn/animals/horse.prefab
 assets/bundled/prefabs/autospawn/animals/stag.prefab
 assets/bundled/prefabs/autospawn/animals/wolf.prefab
-assets/bundled/prefabs/autospawn/clutter/beachdriftwood/driftwood-1.prefab
-assets/bundled/prefabs/autospawn/clutter/beachdriftwood/driftwood-2.prefab
-assets/bundled/prefabs/autospawn/clutter/beachdriftwood/driftwood-3.prefab
-assets/bundled/prefabs/autospawn/clutter/beachdriftwood/driftwood-4.prefab
-assets/bundled/prefabs/autospawn/clutter/beachdriftwood/driftwood-5.prefab
+assets/bundled/prefabs/autospawn/clutter/cliffside/boulder1.prefab
+assets/bundled/prefabs/autospawn/clutter/cliffside/boulder3.prefab
+assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-1.prefab
+assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-2.prefab
+assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-3.prefab
+assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-4.prefab
+assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-5.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-a-1.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-a-2.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-b-1.prefab
@@ -514,6 +517,19 @@ assets/bundled/prefabs/fx/building/wood_gib.prefab
 assets/bundled/prefabs/fx/c4_explosion.prefab
 assets/bundled/prefabs/fx/collect/collect mushroom.prefab
 assets/bundled/prefabs/fx/collect/collect stone.prefab
+assets/bundled/prefabs/fx/decals/blunt/wood/wood 1.prefab
+assets/bundled/prefabs/fx/decals/bullet/concrete/decal_bullet_concrete_01.prefab
+assets/bundled/prefabs/fx/decals/bullet/concrete/decal_bullet_concrete_02.prefab
+assets/bundled/prefabs/fx/decals/bullet/concrete/decal_bullet_concrete_03.prefab
+assets/bundled/prefabs/fx/decals/bullet/concrete/decal_bullet_concrete_04.prefab
+assets/bundled/prefabs/fx/decals/bullet/metal/decal_bullet_metal_01.prefab
+assets/bundled/prefabs/fx/decals/bullet/metal/decal_bullet_metal_02.prefab
+assets/bundled/prefabs/fx/decals/bullet/metal/decal_bullet_metal_03.prefab
+assets/bundled/prefabs/fx/decals/bullet/wood/decal_bullet_wood_01.prefab
+assets/bundled/prefabs/fx/decals/bullet/wood/decal_bullet_wood_02.prefab
+assets/bundled/prefabs/fx/decals/bullet/wood/decal_bullet_wood_03.prefab
+assets/bundled/prefabs/fx/decals/bullet/wood/decal_bullet_wood_04.prefab
+assets/bundled/prefabs/fx/decals/slash/wood/wood 1.prefab
 assets/bundled/prefabs/fx/door/door-metal-close-start.prefab
 assets/bundled/prefabs/fx/door/door-metal-knock.prefab
 assets/bundled/prefabs/fx/door/door-metal-open-start.prefab
@@ -524,6 +540,11 @@ assets/bundled/prefabs/fx/door/lock.code.denied.prefab
 assets/bundled/prefabs/fx/door/lock.code.lock.prefab
 assets/bundled/prefabs/fx/door/lock.code.unlock.prefab
 assets/bundled/prefabs/fx/door/lock.code.updated.prefab
+assets/bundled/prefabs/fx/entities/helicopter/gun_fire.prefab
+assets/bundled/prefabs/fx/entities/helicopter/gun_fire_small.prefab
+assets/bundled/prefabs/fx/entities/helicopter/heli_explosion.prefab
+assets/bundled/prefabs/fx/entities/helicopter/rocket_explosion.prefab
+assets/bundled/prefabs/fx/entities/helicopter/rocket_fire.prefab
 assets/bundled/prefabs/fx/entities/loot_barrel/gib.prefab
 assets/bundled/prefabs/fx/entities/loot_barrel/impact.prefab
 assets/bundled/prefabs/fx/entities/pumpkin/gib.prefab
@@ -553,23 +574,19 @@ assets/bundled/prefabs/fx/impacts/additive/fire.prefab
 assets/bundled/prefabs/fx/impacts/blunt/cloth/cloth1.prefab
 assets/bundled/prefabs/fx/impacts/blunt/clothflesh/clothflesh1.prefab
 assets/bundled/prefabs/fx/impacts/blunt/concrete/concrete1.prefab
-assets/bundled/prefabs/fx/impacts/blunt/concrete/concrete2.prefab
 assets/bundled/prefabs/fx/impacts/blunt/flesh/flesh1.prefab
 assets/bundled/prefabs/fx/impacts/blunt/grass/grass1.prefab
-assets/bundled/prefabs/fx/impacts/blunt/grass/grass2.prefab
 assets/bundled/prefabs/fx/impacts/blunt/metal/metal1.prefab
-assets/bundled/prefabs/fx/impacts/blunt/metal/metal2.prefab
 assets/bundled/prefabs/fx/impacts/blunt/water/water1.prefab
 assets/bundled/prefabs/fx/impacts/blunt/wood/wood1.prefab
-assets/bundled/prefabs/fx/impacts/blunt/wood/wood2.prefab
-assets/bundled/prefabs/fx/impacts/blunt/wood/wood3.prefab
 assets/bundled/prefabs/fx/impacts/bullet/cloth/cloth1.prefab
 assets/bundled/prefabs/fx/impacts/bullet/clothflesh/clothflesh1.prefab
 assets/bundled/prefabs/fx/impacts/bullet/concrete/concrete1.prefab
-assets/bundled/prefabs/fx/impacts/bullet/concrete/concrete2.prefab
-assets/bundled/prefabs/fx/impacts/bullet/concrete/concrete3.prefab
-assets/bundled/prefabs/fx/impacts/bullet/concrete/concrete4.prefab
 assets/bundled/prefabs/fx/impacts/bullet/flesh/flesh1.prefab
+assets/bundled/prefabs/fx/impacts/bullet/generic/generic1.prefab
+assets/bundled/prefabs/fx/impacts/bullet/generic/generic2.prefab
+assets/bundled/prefabs/fx/impacts/bullet/generic/generic3.prefab
+assets/bundled/prefabs/fx/impacts/bullet/generic/generic4.prefab
 assets/bundled/prefabs/fx/impacts/bullet/grass/grass1.prefab
 assets/bundled/prefabs/fx/impacts/bullet/grass/grass2.prefab
 assets/bundled/prefabs/fx/impacts/bullet/grass/grass3.prefab
@@ -660,16 +677,14 @@ assets/bundled/prefabs/fx/impacts/jump-start/water/jump-start-water.prefab
 assets/bundled/prefabs/fx/impacts/jump-start/wood/jump-start-wood.prefab
 assets/bundled/prefabs/fx/impacts/slash/cloth/cloth1.prefab
 assets/bundled/prefabs/fx/impacts/slash/clothflesh/clothflesh1.prefab
-assets/bundled/prefabs/fx/impacts/slash/concrete/concrete1.prefab
-assets/bundled/prefabs/fx/impacts/slash/concrete/concrete2.prefab
+assets/bundled/prefabs/fx/impacts/slash/concrete/slash_concrete_01.prefab
 assets/bundled/prefabs/fx/impacts/slash/flesh/flesh1.prefab
 assets/bundled/prefabs/fx/impacts/slash/grass/grass1.prefab
 assets/bundled/prefabs/fx/impacts/slash/grass/grass2.prefab
 assets/bundled/prefabs/fx/impacts/slash/metal/metal1.prefab
 assets/bundled/prefabs/fx/impacts/slash/metal/metal2.prefab
+assets/bundled/prefabs/fx/impacts/slash/rock/slash_rock_01.prefab
 assets/bundled/prefabs/fx/impacts/slash/wood/wood1.prefab
-assets/bundled/prefabs/fx/impacts/slash/wood/wood2.prefab
-assets/bundled/prefabs/fx/impacts/slash/wood/wood3.prefab
 assets/bundled/prefabs/fx/item_break.prefab
 assets/bundled/prefabs/fx/missing.prefab
 assets/bundled/prefabs/fx/notice/item.select.fx.prefab
@@ -775,6 +790,7 @@ assets/bundled/prefabs/items/repairbench_deployed.prefab
 assets/bundled/prefabs/items/researchtable_deployed.prefab
 assets/bundled/prefabs/items/rocket_basic.prefab
 assets/bundled/prefabs/items/rocket_fire.prefab
+assets/bundled/prefabs/items/rocket_heli.prefab
 assets/bundled/prefabs/items/rocket_hv.prefab
 assets/bundled/prefabs/items/rocket_smoke.prefab
 assets/bundled/prefabs/items/searchlight.prefab
@@ -813,6 +829,12 @@ assets/bundled/prefabs/npc/animals/wolf_collision.prefab
 assets/bundled/prefabs/npc/animals/wolf_corpse.prefab
 assets/bundled/prefabs/npc/animals/wolf_ragdoll.prefab
 assets/bundled/prefabs/npc/animals/wolf_skin.prefab
+assets/bundled/prefabs/npc/patrol_helicopter/damage_effect_debris.prefab
+assets/bundled/prefabs/npc/patrol_helicopter/groundeffect.prefab
+assets/bundled/prefabs/npc/patrol_helicopter/heli_crate.prefab
+assets/bundled/prefabs/npc/patrol_helicopter/patrolhelicopter.prefab
+assets/bundled/prefabs/npc/patrol_helicopter/servergibs_patrolhelicopter.prefab
+assets/bundled/prefabs/oilfireballsmall.prefab
 assets/bundled/prefabs/parachute.prefab
 assets/bundled/prefabs/player/construct_vision.prefab
 assets/bundled/prefabs/player/player.prefab
@@ -826,6 +848,7 @@ assets/bundled/prefabs/player/player_ragdoll.prefab
 assets/bundled/prefabs/player/ui_damageindicator.prefab
 assets/bundled/prefabs/projectiles/arrow.prefab
 assets/bundled/prefabs/projectiles/arrow_hv.prefab
+assets/bundled/prefabs/projectiles/helibullet.prefab
 assets/bundled/prefabs/projectiles/pistolbullet.prefab
 assets/bundled/prefabs/projectiles/pistolbullet_fire.prefab
 assets/bundled/prefabs/projectiles/riflebullet.prefab
@@ -839,6 +862,14 @@ assets/bundled/prefabs/projectiles/wooden_spear.projectile.prefab
 assets/bundled/prefabs/radtown/crate_normal.prefab
 assets/bundled/prefabs/radtown/crate_normal_2.prefab
 assets/bundled/prefabs/radtown/crate_normal_2_food.prefab
+assets/bundled/prefabs/radtown/crate_normal_2_medical.prefab
+assets/bundled/prefabs/radtown/dmloot/dm ammo.prefab
+assets/bundled/prefabs/radtown/dmloot/dm c4.prefab
+assets/bundled/prefabs/radtown/dmloot/dm food.prefab
+assets/bundled/prefabs/radtown/dmloot/dm medical.prefab
+assets/bundled/prefabs/radtown/dmloot/dm tier1 lootbox.prefab
+assets/bundled/prefabs/radtown/dmloot/dm tier2 lootbox.prefab
+assets/bundled/prefabs/radtown/dmloot/dm tier3 lootbox.prefab
 assets/bundled/prefabs/radtown/loot_barrel_1.prefab
 assets/bundled/prefabs/radtown/loot_barrel_2.prefab
 assets/bundled/prefabs/radtown/loot_trash.prefab
@@ -925,10 +956,14 @@ assets/bundled/prefabs/world/rain.prefab
 assets/bundled/prefabs/world/snow.prefab
 assets/bundled/prefabs/world/spawn.prefab
 assets/bundled/prefabs/world/wind.prefab
+assets/bundled/prefabs/world/worker.prefab
+assets/content/building/gates.external.high.stone/gates.external.high.stone.skin.prefab
+assets/content/building/gates.external.high.wood/gates.external.high.wood.anim.prefab
+assets/content/building/gates.external.high.wood/gates.external.high.wood.prefab
+assets/content/building/gates.external.high.wood/gates.external.high.wood.skin.prefab
 assets/content/building/parts/armored/small_armored_house.prefab
 assets/content/building/wall.external.high.stone/wall.external.high.stone.prefab
 assets/content/building/wall.external.high.stone/wall.external.high.stone.skin.prefab
-assets/content/building/wall.external.high.wood/wall.external.high.gate.wood.skin.prefab
 assets/content/building/wall.external.high.wood/wall.external.high.wood.prefab
 assets/content/building/wall.external.high.wood/wall.external.high.wood.skin.prefab
 assets/content/building/windmill/generator.wind.scrap.prefab
@@ -939,6 +974,7 @@ assets/content/entities/plants/plantseed.effect.prefab
 assets/content/entities/plants/pumpkin/pumpkin.entity.prefab
 assets/content/entities/plants/pumpkin/pumpkin.wearable.prefab
 assets/content/entities/plants/pumpkin/pumpkin.worldmodel.prefab
+assets/content/monuments/minors/light_barrel_station.prefab
 assets/content/player/clothing/basic/hat.beenie/hat.beenie.prefab
 assets/content/player/clothing/basic/hat.boonie/hat.boonie.prefab
 assets/content/player/clothing/basic/hat.cap/hat.cap.prefab
@@ -1072,6 +1108,7 @@ assets/content/weapons/crossbow/crossbow.entity.prefab
 assets/content/weapons/crossbow/crossbow.worldmodel.prefab
 assets/content/weapons/crossbow/effects/attack.prefab
 assets/content/weapons/crossbow/effects/deploy.prefab
+assets/content/weapons/crossbow/effects/dryfire.prefab
 assets/content/weapons/crossbow/effects/reload.prefab
 assets/content/weapons/eoka pistol/effects/attack.prefab
 assets/content/weapons/eoka pistol/effects/attack_shake.prefab
@@ -1125,7 +1162,11 @@ assets/content/weapons/medical syringe/effects/pop_button_cap.prefab
 assets/content/weapons/medical syringe/effects/pop_cap.prefab
 assets/content/weapons/medical syringe/syringe_medical.entity.prefab
 assets/content/weapons/medical syringe/syringe_medical.worldmodel.prefab
+assets/content/weapons/mods/holosight/holosight.entity.prefab
+assets/content/weapons/mods/holosight/holosight.vm.attachment.prefab
+assets/content/weapons/mods/mod_attach.fx.prefab
 assets/content/weapons/mods/silencers/effects/silencedshot_default.prefab
+assets/content/weapons/mods/silencers/effects/silencer_attach.fx.prefab
 assets/content/weapons/mods/silencers/silencer.entity.prefab
 assets/content/weapons/mods/silencers/silencer.vm.attachment.prefab
 assets/content/weapons/pickaxe/effects/attack.prefab
@@ -1156,13 +1197,13 @@ assets/content/weapons/revolver/effects/prime_striker.prefab
 assets/content/weapons/revolver/effects/shut_cylinder.prefab
 assets/content/weapons/revolver/pistol_revolver.entity.prefab
 assets/content/weapons/revolver/revolver.worldmodel.prefab
+assets/content/weapons/rock/effects/attack.prefab
+assets/content/weapons/rock/effects/deploy.prefab
+assets/content/weapons/rock/effects/holster.prefab
+assets/content/weapons/rock/effects/strike.prefab
+assets/content/weapons/rock/effects/strike_screenshake.prefab
 assets/content/weapons/rock/rock.entity.prefab
 assets/content/weapons/rock/rock.worldmodel.prefab
-assets/content/weapons/rock/rock/attack.prefab
-assets/content/weapons/rock/rock/deploy.prefab
-assets/content/weapons/rock/rock/holster.prefab
-assets/content/weapons/rock/rock/strike.prefab
-assets/content/weapons/rock/rock/strike_screenshake.prefab
 assets/content/weapons/rocketlauncher/effects/attack.prefab
 assets/content/weapons/rocketlauncher/effects/deploy.prefab
 assets/content/weapons/rocketlauncher/effects/fire.prefab
@@ -1245,10 +1286,20 @@ assets/content/weapons/smg/effects/eject_shell.prefab
 assets/content/weapons/smg/effects/reload_start.prefab
 assets/content/weapons/smg/smg.entity.prefab
 assets/content/weapons/smg/smg.worldmodel.prefab
+assets/content/weapons/stone hatchet/effects/attack_shake.prefab
+assets/content/weapons/stone hatchet/effects/deploy.prefab
+assets/content/weapons/stone hatchet/effects/holster.prefab
 assets/content/weapons/stone hatchet/effects/strike.prefab
 assets/content/weapons/stone hatchet/effects/strike_screenshake.prefab
+assets/content/weapons/stone hatchet/effects/swing.prefab
 assets/content/weapons/stone hatchet/hatchet_stone.worldmodel.prefab
 assets/content/weapons/stone hatchet/stonehatchet.entity.prefab
+assets/content/weapons/stone pickaxe/effects/attack.prefab
+assets/content/weapons/stone pickaxe/effects/deploy.prefab
+assets/content/weapons/stone pickaxe/effects/holster.prefab
+assets/content/weapons/stone pickaxe/effects/strike.prefab
+assets/content/weapons/stone pickaxe/effects/strike_screenshake.prefab
+assets/content/weapons/stone pickaxe/effects/swing.prefab
 assets/content/weapons/stone pickaxe/stone_pickaxe.entity.prefab
 assets/content/weapons/stone pickaxe/stone_pickaxe.worldmodel.prefab
 assets/content/weapons/stone spear/effects/2hand_deploy.prefab
@@ -1311,6 +1362,7 @@ assets/content/weapons/wooden spear/spear_wooden.entity.prefab
 assets/content/weapons/wooden spear/wooden_spear.worldmodel.prefab
 assets/third party/acousticguitar/guitar.prefab
 assigntofriend
+back
 barrel
 barrel_lod0
 barrel_lod1
@@ -1323,6 +1375,7 @@ barricade.stone/sockets/free
 barricade.wood/sockets/free
 barricade.woodwire/sockets/free
 base
+batched
 bear_lod0
 bear_lod1
 bear_lod2
@@ -1382,6 +1435,7 @@ cl_punch
 cl_receivefilepng
 clearlist
 clientloadingcomplete
+clientsetgib
 clientupdatesteaminventory
 closest
 cloth
@@ -1390,6 +1444,10 @@ clproject
 collision
 concrete
 corn.entity/sockets/terrain
+crossbow
+crossbow_lod0
+crossbow_lod01
+crossbow_lod02
 cube
 curve1
 curve2
@@ -1399,6 +1457,8 @@ curve5
 curve6
 curve7
 curve8
+damageeffects
+darken
 destroyui
 directionaldamage
 dirt
@@ -1415,13 +1475,17 @@ doresearch
 dorotation
 dothrow
 doupgradetograde
+engine_col
+enginedestroyed
 enterunlockcode
 eoka_pistol_bone
+explosion_v1
 extinguish
 eyetranform
 eyetransform
 finishloading
 fire_select
+firegun
 flesh
 flint
 floor.triangle/sockets/a/floor_a
@@ -1454,6 +1518,7 @@ floor/sockets/support-male
 floor/sockets/support-male 2
 floor_spikes/sockets/free
 forcepositionto
+fore
 forest
 foundation.steps/sockets/foundation_bottom
 foundation.steps/sockets/foundation_top
@@ -1483,6 +1548,31 @@ foundation/sockets/support/d
 foundation/sockets/terrain
 free
 fur
+gates.external.high.doorl.stone
+gates.external.high.doorl.stone_lod0
+gates.external.high.doorl.stone_lod1
+gates.external.high.doorr.stone
+gates.external.high.doorr.stone_lod0
+gates.external.high.doorr.stone_lod1
+gates.external.high.gate.doorl.wood
+gates.external.high.gate.doorl.wood_lod0
+gates.external.high.gate.doorl.wood_lod1
+gates.external.high.gate.doorr.wood
+gates.external.high.gate.doorr.wood_lod0
+gates.external.high.gate.doorr.wood_lod1
+gates.external.high.gate.lock.wood
+gates.external.high.gate.wood
+gates.external.high.gate.wood_lod0
+gates.external.high.gate.wood_lod1
+gates.external.high.gate.wood_lod2
+gates.external.high.lock.stone
+gates.external.high.stone
+gates.external.high.stone.skin
+gates.external.high.stone_lod0
+gates.external.high.stone_lod1
+gates.external.high.stone_lod2
+gates.external.high.wood.skin
+gates.external.high.wood/sockets/terrain
 generator.wind.scrap/sockets/a
 generic
 grass
@@ -1498,7 +1588,13 @@ group5
 group6
 group7
 guide_rod
+gun_left
+gun_left_muzzle
+gun_left_yaw
 gun_mesh
+gun_right
+gun_right_muzzle
+gun_right_yaw
 hand_mesh
 hand_mesh1
 hatch
@@ -1510,6 +1606,8 @@ head2
 head2_end
 hitnotify
 hold_lefthand
+holosight
+holosight.vm.attachment
 horse_mesh_lod0
 horse_mesh_lod1
 horse_mesh_lod2
@@ -1528,6 +1626,10 @@ inside 1
 inside 2
 inside 3
 inside 4
+ironsight
+ironsight_default
+ironsight_default_target
+ironsight_default_targetpoint
 itemcmd
 jaw
 jaw_connection
@@ -1648,6 +1750,7 @@ landmine/sockets/free
 large_furnace_deployed/sockets/free
 large_woodbox_deployed
 largestorage
+launcher
 left_arm_ik_handle
 left_arm_polevector
 left_arm_upvector
@@ -1672,6 +1775,7 @@ left_forearm
 left_hand
 left_hand_end
 left_leg_upvector
+left_light
 left_pelvis
 left_pelvis_pole
 left_shoulder
@@ -1686,6 +1790,7 @@ left_toes
 left_toes_eff
 left_toes_end
 left_toetip
+left_tube_rear
 left_ulna
 left_upper_thigh
 left_upperarm
@@ -1693,7 +1798,11 @@ left_upperarm_fatend
 left_upperarm_fatjiggle
 left_upperlip
 left_upperlip_end
+leftbulb
+light 1
+light 1 (1)
 light_flash
+lighthack
 lip_lower
 lip_lower_end
 lip_upper
@@ -1707,12 +1816,18 @@ magazine_lod0
 magazine_lod1
 main_body_rotate
 main_body_translate
+main_rotor
+main_rotor_blades
+main_rotor_blur
+main_rotor_col
+mainrotordamaged
 mane_5a
 mane_5b
 mane_5c
 max friction
 metal
 metalore
+mid
 mining_quarry/sockets/survey_crater_male
 model
 moveitem
@@ -1730,6 +1845,7 @@ neck_rotate
 neck1
 neck2
 neck3
+nightlights
 notinside 10
 notinside 2
 notinside 3
@@ -1762,6 +1878,8 @@ onrespawninformation
 parachute
 parachute_attach
 path
+patrol_helicopter
+patrolhelicopter
 pelvis
 pelvis_ctrl
 pelvis_joint
@@ -1775,6 +1893,7 @@ pistol_lod1
 player_model
 player_ragdoll
 playerattack
+port
 preventbuilding
 prop_1
 prop_2
@@ -1783,6 +1902,9 @@ prop_4
 pump_handle
 pumpjack/sockets/survey_crater_male
 pumpkin.entity/sockets/terrain
+quad
+quad (1)
+quad (2)
 r_ankle_scale
 r_arm_ikhandle
 r_arm_polevector
@@ -1868,6 +1990,10 @@ r_wing_feather5_0
 r_wing_feather5_1
 r_wing_feather5_end
 r_winglet
+rear_cover
+rear_rotor
+rear_rotor_blades
+rear_rotor_blur
 recievetexture
 refinery_small_deployed/sockets/free
 reload
@@ -1880,6 +2006,7 @@ research_table_lod1
 research_table_lod2
 research_table_lod3
 resourceupdate
+reticle
 rifle_root
 righ_arm_upvector
 right_arm_ik_handle
@@ -1905,6 +2032,7 @@ right_forearm
 right_hand
 right_hand_end
 right_leg_upvector
+right_light
 right_pelvis
 right_pelvis_pole
 right_shoulder
@@ -1918,6 +2046,7 @@ right_toes
 right_toes_eff
 right_toes_end
 right_toetip
+right_tube_rear
 right_ulna
 right_upper_thigh
 right_upperarm
@@ -1925,14 +2054,22 @@ right_upperarm_fatend
 right_upperarm_fatjiggle
 right_upperlip
 right_upperlip_end
+rightbulb
 rock
 rock_bone
+rocket
+rocket_launcher
+rocket_tip
+rocket_tube_left
+rocket_tube_right
 roof/sockets/floor_a
 roof/sockets/floor_female/1
 roof/sockets/floor_female/2
 roof/sockets/ground/a
 roof/sockets/ground/c
+root_rocketlauncher
 root_rotate
+rotorpivot
 rpc_arm
 rpc_assist
 rpc_changecode
@@ -1951,6 +2088,10 @@ rpc_pickfruit
 rpc_pickup
 rpc_takelock
 rpc_unlock
+rpg_lod0
+rpg2_lod0
+rpg3_lod0
+rpg4_lod0
 rustplayer
 rustplayer_head1
 rustplayer_l_clavicle
@@ -2017,6 +2158,7 @@ sawnoffshotgun_lod0
 sawnoffshotgun_lod1
 sawnoffshotgun_lod2
 sawnoffshotgun_mesh
+scope.attachment
 semi_auto_pistol
 semi_pistol_mesh
 settings
@@ -2066,6 +2208,8 @@ spine4_fatend
 spine4_fatjiggle
 spineend_rotate
 spinemid_rotate
+spotlight
+spotlight_pivot
 stag_mesh_lod0
 stag_mesh_lod1
 stag_mesh_lod2
@@ -2101,6 +2245,7 @@ tail_ctrl_3
 tail_eff
 tail_end
 tail_grp
+tail_rotor_col
 tail1
 tail1_ctrl
 tail2
@@ -2110,6 +2255,10 @@ tail3_ctrl
 tail4
 tail4_ctrl
 tail5
+taildamaged
+taildestroyed
+target
+targetpoint
 thompson.entity
 thompson_mesh
 tongue_1
@@ -2136,6 +2285,7 @@ v_ak47u
 v_bolt_rifle
 v_eoka_pistol
 v_eoka_rock
+v_rocketlauncher
 v_sawnoffshogun
 v_semi_pistol
 v_smg
@@ -2146,6 +2296,10 @@ v_waterpipe_shotgun_shell
 w_boltaction_rifle
 w_bota_bag
 w_eoka
+w_patrol_helicopter_body
+w_patrol_helicopter_glass
+w_patrol_helicopter_interior
+w_patrol_helicopter_rockets
 w_revolver
 w_storage_box
 w_thompson
@@ -2180,6 +2334,7 @@ wall/sockets/wall_m
 water
 water_catcher_large/sockets/free
 water_catcher_small/sockets/free
+windzone
 wolf_lod0
 wolf_lod1
 wolf_lod2
