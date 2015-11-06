@@ -29,7 +29,7 @@ namespace Dropper
             {
                 if (!dropped[droppedCount] && Vector3.Distance(transform.position, dropPoints[droppedCount]) <= 1f)
                 {
-                    BaseEntity baseEntity = GameManager.server.CreateEntity("assets/bundled/prefabs/items/supply_drop.prefab", transform.position);
+                    BaseEntity baseEntity = GameManager.server.CreateEntity("assets/prefabs/misc/supply drop/supply_drop.prefab", transform.position);
                     baseEntity.globalBroadcast = true;
                     baseEntity.Spawn();
                     if (showDropPos)
@@ -105,6 +105,10 @@ namespace Dropper
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "4.5";
+            About = "Custom planes, multiple drop function, plane turning, timed calls.";
+            
             Commands.Register("airdrop").setCallback(SpawnPlaneChatCMD);
             ServerConsoleCommands.Register("airdrop").setCallback(SpawnPlaneConsoleCMD);
             try
@@ -240,7 +244,7 @@ namespace Dropper
                     }
                 }
             }
-            BaseEntity baseEntity = GameManager.server.CreateEntity("assets/bundled/prefabs/events/cargo_plane.prefab", startingpos, Quaternion.LookRotation(droppingpoints[0]));
+            BaseEntity baseEntity = GameManager.server.CreateEntity("assets/prefabs/npc/cargo plane/cargo_plane.prefab", startingpos, Quaternion.LookRotation(droppingpoints[0]));
             baseEntity.Spawn();
             CargoPlane[] cp = baseEntity.GetComponents<CargoPlane>();
             foreach (CargoPlane each in cp)
