@@ -6,52 +6,40 @@ namespace Mappy
 {
     public class Mappy : CSharpPlugin
     {
+        bool chatEnabled = false;
+        string Link = string.Empty;
+        string LinkSize = string.Empty;
+        string LinkChat = string.Empty;
+
         public void On_PluginInit()
         {
             if (!Server.Loaded) return;
-            DataStore.Flush("Mappy");
-            IniParser ini = ConfigurationFile();
-            if (ini.GetSetting("Settings", "enabled") == "1")
-            {
-                ServerConsoleCommands.Register("mappy").setCallback(GetCommand);
-                string link = ini.GetSetting("Settings", "url");
-                if (ini.GetSetting("Settings", "SendChat") == "1")
-                {
-                    DataStore.Add("Mappy", "SendChat", 1);
-                    DataStore.Add("Mappy", "LinkChat", link + "chat.php");
-                }
-                else
-                {
-                    DataStore.Add("Mappy", "SendChat", 0);
-                }
-                DataStore.Add("Mappy", "Link", link + "server.php");
-                DataStore.Add("Mappy", "LinkSize", link + "size.php");
-                int mseconds = ToInt(ini.GetSetting("Settings", "Timer"));
-                StartPlugin(mseconds);
-            }
+            LoadPlugin();
         }
 
         public void On_ServerInit()
         {
-            DataStore.Flush("Mappy");
+            LoadPlugin();
+        }
+
+        private void LoadPlugin()
+        {
             IniParser ini = ConfigurationFile();
             if (ini.GetSetting("Settings", "enabled") == "1")
             {
-                ServerConsoleCommands.Register("mappy").setCallback(GetCommand);
                 string link = ini.GetSetting("Settings", "url");
+                ServerConsoleCommands.Register("mappy").setCallback(GetCommand);
                 if (ini.GetSetting("Settings", "SendChat") == "1")
                 {
-                    DataStore.Add("Mappy", "SendChat", 1);
-                    DataStore.Add("Mappy", "LinkChat", link + "chat.php");
+                    chatEnabled = true;
+                    LinkChat = link + "chat.php";
                 }
-                else
-                {
-                    DataStore.Add("Mappy", "SendChat", 0);
-                }
-                DataStore.Add("Mappy", "Link", link + "server.php");
-                DataStore.Add("Mappy", "LinkSize", link + "size.php");
+                Link = link + "server.php";
+                LinkSize = link + "size.php";
                 int mseconds = ToInt(ini.GetSetting("Settings", "Timer"));
-                StartPlugin(mseconds);
+                Plugin.CreateTimer("MappySend", mseconds).Start();
+                string WorldSize = string.Format("&worldsize={0}", global::World.Size.ToString());
+                Plugin.POST(LinkSize, WorldSize);
             }
         }
 
@@ -76,9 +64,9 @@ namespace Mappy
                         ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
-                            Pluton.Player player = Server.Players[sid];
-                            string message = String.Join(" ", args);
-                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            Player player = Server.Players[sid];
+                            string message = string.Join(" ", args);
+                            message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Kick(message);
                         }
                     }
@@ -91,9 +79,9 @@ namespace Mappy
                         ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
-                            Pluton.Player player = Server.Players[sid];
-                            string message = String.Join(" ", args);
-                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            Player player = Server.Players[sid];
+                            string message = string.Join(" ", args);
+                            message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Ban(message);
                         }
                     }
@@ -106,9 +94,9 @@ namespace Mappy
                         ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
-                            Pluton.Player player = Server.Players[sid];
-                            string message = String.Join(" ", args);
-                            message = String.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
+                            Player player = Server.Players[sid];
+                            string message = string.Join(" ", args);
+                            message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Message(message);
                         }
                     }
@@ -121,10 +109,10 @@ namespace Mappy
                         ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
-                            Pluton.Player player = Server.Players[sid];
+                            Player player = Server.Players[sid];
                             int count = ToInt(args[2]);
                             int item = 0;
-                            item = Pluton.InvItem.GetItemID(args[3]);
+                            item = InvItem.GetItemID(args[3]);
                             if (item == 0)
                                 return;
                             player.Inventory.Add(item, count);
@@ -139,9 +127,9 @@ namespace Mappy
                         ulong sid = UInt64.Parse(args[1]);
                         if (Server.Players.ContainsKey(sid))
                         {
-                            Pluton.Player player = Server.Players[sid];
-                            String x = args[2];
-                            String z = args[3];
+                            Player player = Server.Players[sid];
+                            string x = args[2];
+                            string z = args[3];
                             player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
                         }
                     }
@@ -154,7 +142,7 @@ namespace Mappy
                         float x = float.Parse(args[1]);
                         float z = float.Parse(args[2]);
                         string animalname = args[3];
-                        GameManager.server.CreateEntity("autospawn/animals/" + animalname, new UnityEngine.Vector3(x, World.GetGround(x, z), z)).Spawn(true);
+                        GameManager.server.CreateEntity("autospawn/animals/" + animalname, new Vector3(x, World.GetGround(x, z), z)).Spawn(true);
                     }
                 }
 
@@ -162,8 +150,8 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        string message = String.Join(" ", args);
-                        message = String.Format("{0}", message.Replace(args[0] + " ", ""));
+                        string message = string.Join(" ", args);
+                        message = string.Format("{0}", message.Replace(args[0] + " ", ""));
                         Server.Broadcast(message);
                     }
                 }
@@ -189,38 +177,22 @@ namespace Mappy
             return Plugin.GetIni("ConfigurationFile");
         }
 
-        private void StartPlugin(int ms)
+        public void MappySendCallback(TimedEvent timer)
         {
-            Plugin.CreateTimer("Send", ms).Start();
-            string link = (string)DataStore.Get("Mappy", "LinkSize");
-            string WorldSize = String.Format("&worldsize={0}", global::World.Size.ToString());
-            Plugin.POST(link, WorldSize);
-        }
-
-        public void SendCallback(TimedEvent timer)
-        {
-            string post = String.Format("&time={0}&sleepers={1}", World.Time.ToString(), Server.SleepingPlayers.Count.ToString());
-            if ((int)DataStore.Get("Mappy", "SendChat") == 1)
-            {
-                post = String.Format("{0}&showchat=true", post);
-            }
-            post = String.Format("{0}&players=::", post);
-            foreach (Pluton.Player player in Server.ActivePlayers)
-            {
-                post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
-            }
-            string link = (string)DataStore.Get("Mappy", "Link");
-            try { Plugin.POST(link, post); } catch { }
+            string post = string.Format("&time={0}&sleepers={1}", World.Time.ToString(), Server.SleepingPlayers.Count.ToString());
+            if (chatEnabled) post = string.Format("{0}&showchat=true", post);
+            post = string.Format("{0}&players=::", post);
+            foreach (Player player in Server.ActivePlayers) post = string.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
+            try { Plugin.POST(Link, post); } catch { }
         }
 
         public void On_Chat(Pluton.Events.ChatEvent Chat)
         {
-            if ((int)DataStore.Get("Mappy", "SendChat") == 1)
+            if (chatEnabled)
             {
-                Pluton.Player player = Chat.User;
-                string post = String.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
-                string link = (string)DataStore.Get("Mappy", "LinkChat");
-                try { Plugin.POST(link, post); } catch { }
+                Player player = Chat.User;
+                string post = string.Format("&chat={0}: {1}", Uri.EscapeDataString(player.Name), Uri.EscapeDataString(Chat.OriginalText));
+                try { Plugin.POST(LinkChat, post); } catch { }
             }
         }
 
