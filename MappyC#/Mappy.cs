@@ -6,8 +6,6 @@ namespace Mappy
 {
     public class Mappy : CSharpPlugin
     {
-        DateTime dt = DateTime.Now;
-
         public void On_PluginInit()
         {
             if (!Server.Loaded) return;
@@ -28,7 +26,7 @@ namespace Mappy
                 }
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
-                int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
+                int mseconds = ToInt(ini.GetSetting("Settings", "Timer"));
                 StartPlugin(mseconds);
             }
         }
@@ -52,7 +50,7 @@ namespace Mappy
                 }
                 DataStore.Add("Mappy", "Link", link + "server.php");
                 DataStore.Add("Mappy", "LinkSize", link + "size.php");
-                int mseconds = ini.GetSetting("Settings", "Timer").ToInt();
+                int mseconds = ToInt(ini.GetSetting("Settings", "Timer"));
                 StartPlugin(mseconds);
             }
         }
@@ -70,7 +68,7 @@ namespace Mappy
                         World.AirDropAt(float.Parse(x), 0, float.Parse(z));
                     }
                 }
-                
+
                 else if (args[0] == "kick")
                 {
                     if (args.Length >= 2)
@@ -100,7 +98,7 @@ namespace Mappy
                         }
                     }
                 }
-                
+
                 else if (args[0] == "message")
                 {
                     if (args.Length >= 3)
@@ -115,7 +113,7 @@ namespace Mappy
                         }
                     }
                 }
-                
+
                 else if (args[0] == "give")
                 {
                     if (args.Length >= 4)
@@ -124,7 +122,7 @@ namespace Mappy
                         if (Server.Players.ContainsKey(sid))
                         {
                             Pluton.Player player = Server.Players[sid];
-                            int count = args[2].ToInt();
+                            int count = ToInt(args[2]);
                             int item = 0;
                             item = Pluton.InvItem.GetItemID(args[3]);
                             if (item == 0)
@@ -133,7 +131,7 @@ namespace Mappy
                         }
                     }
                 }
-                
+
                 else if (args[0] == "teleport")
                 {
                     if (args.Length >= 4)
@@ -148,7 +146,7 @@ namespace Mappy
                         }
                     }
                 }
-                
+
                 else if (args[0] == "animal")
                 {
                     if (args.Length >= 4)
@@ -159,7 +157,7 @@ namespace Mappy
                         GameManager.server.CreateEntity("autospawn/animals/" + animalname, new UnityEngine.Vector3(x, World.GetGround(x, z), z)).Spawn(true);
                     }
                 }
-                
+
                 else if (args[0] == "broadcast")
                 {
                     if (args.Length >= 2)
@@ -191,7 +189,7 @@ namespace Mappy
             return Plugin.GetIni("ConfigurationFile");
         }
 
-        public void StartPlugin(int ms)
+        private void StartPlugin(int ms)
         {
             Plugin.CreateTimer("Send", ms).Start();
             string link = (string)DataStore.Get("Mappy", "LinkSize");
@@ -212,15 +210,7 @@ namespace Mappy
                 post = String.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
             }
             string link = (string)DataStore.Get("Mappy", "Link");
-            try { Plugin.POST(link, post); }
-            catch
-            {
-                if (dt.AddSeconds(30d) < DateTime.Now)
-                {
-                    dt = DateTime.Now;
-                    Debug.LogWarning("[MAPPY] Error occured while sending data! Make sure that web server and file is reachable!");
-                }
-            }
+            try { Plugin.POST(link, post); } catch { }
         }
 
         public void On_Chat(Pluton.Events.ChatEvent Chat)
@@ -232,6 +222,13 @@ namespace Mappy
                 string link = (string)DataStore.Get("Mappy", "LinkChat");
                 try { Plugin.POST(link, post); } catch { }
             }
+        }
+
+        private int ToInt(string obj)
+        {
+            int i;
+            int.TryParse(obj, out i);
+            return i;
         }
     }
 }
