@@ -1,4 +1,10 @@
-﻿using Pluton;
+﻿using System;
+using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Rust.PluginLoaders;
 
 namespace PingKick
 {
@@ -19,6 +25,10 @@ namespace PingKick
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
             IniParser ini = SettingsIni();
             string kickMsg = ini.GetSetting("Settings", "KickMessage");
             int maxPing = int.Parse(ini.GetSetting("Settings", "MaxPing"));
@@ -32,7 +42,7 @@ namespace PingKick
         {
             int maxPing = (int)DataStore.Get("PingCheck", "MaxPing");
             string kickMsg = (string)DataStore.Get("PingCheck", "KickMSG");
-            foreach(Player player in Server.ActivePlayers)
+            foreach(Player player in Server.Instance.ActivePlayers)
             {
                 if (Network.Net.sv.GetAveragePing(player.basePlayer.net.connection) > maxPing)
                 {

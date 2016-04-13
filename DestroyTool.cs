@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Pluton;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Rust.PluginLoaders;
 
 namespace DestroyTool
 {
@@ -11,6 +15,10 @@ namespace DestroyTool
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
             Commands.Register("destroy").setCallback(DestroyCommand);
             DataStore.Flush("DestroyTool");
             DataStore.Flush("DestroyAdmin");
@@ -67,7 +75,7 @@ namespace DestroyTool
             }
         }
 
-        public void On_CombatEntityHurt(Pluton.Events.CombatEntityHurtEvent cehe)
+        public void On_CombatEntityHurt(CombatEntityHurtEvent cehe)
         {
             if (cehe.Attacker == null) return;
             Player player = cehe.Attacker.ToPlayer();
@@ -77,7 +85,7 @@ namespace DestroyTool
                 {
                     if (Vector3.Distance(cehe.Victim.Location, player.Location) <= 4f)
                     {
-                        BasePlugin basePlugin = Plugin.GetPlugin("BuildingPartOwner");
+                        var basePlugin = Plugin.GetPlugin("BuildingPartOwner");
                         var bce = cehe.Victim.baseEntity.GetComponent<BaseCombatEntity>();
                         var bb = cehe.Victim.baseEntity.GetComponentInParent<BuildingBlock>();
                         if (basePlugin != null && bb != null)
@@ -175,7 +183,7 @@ namespace DestroyTool
             if (DataStore.ContainsKey("DestroyTool", steamID))
             {
                 DataStore.Remove("DestroyTool", steamID);
-                Player player = Server.Players[steamID];
+                Player player = Server.Instance.Players[steamID];
                 if (player != null) player.Message("Destroy tool was deactivated");
                 timer.Kill();
             }

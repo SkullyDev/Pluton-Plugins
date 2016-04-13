@@ -4,9 +4,13 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
-using Pluton;
-using Pluton.Events;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Core.Serialize;
+using Pluton.Rust.PluginLoaders;
 
 namespace StructureRecorder
 {
@@ -16,62 +20,73 @@ namespace StructureRecorder
 
         public void On_Command(CommandEvent cmd)
         {
-            Player player = cmd.User;
-            string command = cmd.Cmd;
-            string[] args = cmd.Args;
-            if (command == "srstart")
+            try
             {
-                if (args.Length == 0 || (args.Length == 1 && args[0] == ""))
+                Player player = cmd.User;
+                string command = cmd.Cmd;
+                string[] args = cmd.Args;
+                if (command == "srstart")
                 {
-                    player.Message("USAGE: /srstart StructureName");
-                    return;
+                    if (args.Length == 0 || (args.Length == 1 && args[0] == ""))
+                    {
+                        player.Message("USAGE: /srstart StructureName");
+                        return;
+                    }
+                    if (DataStore.ContainsKey("StructureRecorder", player.SteamID))
+                    {
+                        player.Message("Recording is already running");
+                        return;
+                    }
+                    string name = args[0];
+                    StartRecording(name, player.SteamID);
+                    player.Message("Recording was started on name \"" + name + "\"");
                 }
-                if (DataStore.ContainsKey("StructureRecorder", player.SteamID))
+                else if (command == "srstop")
                 {
-                    player.Message("Recording is already running");
-                    return;
+                    if (!DataStore.ContainsKey("StructureRecorder", player.SteamID))
+                    {
+                        player.Message("There is nothing to stop");
+                        player.Message("Start one using: /srstart StructureName");
+                        return;
+                    }
+                    string name = (string)DataStore.Get("StructureRecorder", player.SteamID);
+                    DataStore.Remove("StructureRecorder", player.SteamID);
+                    StopRecording(name);
+                    player.Message("Recording was stopped");
                 }
-                string name = args[0];
-                StartRecording(name, player.SteamID);
-                player.Message("Recording was started on name \"" + name + "\"");
+                else if (command == "srbuild")
+                {
+                    if (args.Length == 0 || (args.Length == 1 && args[0] == ""))
+                    {
+                        player.Message("USAGE: /srbuild StructureName");
+                        return;
+                    }
+                    Structure structure;
+                    Structures.TryGetValue(args[0], out structure);
+                    if (structure == null)
+                    {
+                        player.Message("Building wasn't found by name \"" + args[0] + "\"");
+                        return;
+                    }
+                    structure.Build(player.Location);
+                    player.Message("Building was spawned");
+                }
             }
-            else if (command == "srstop")
+            catch (Exception ex)
             {
-                if (!DataStore.ContainsKey("StructureRecorder", player.SteamID))
-                {
-                    player.Message("There is nothing to stop");
-                    player.Message("Start one using: /srstart StructureName");
-                    return;
-                }
-                string name = (string)DataStore.Get("StructureRecorder", player.SteamID);
-                DataStore.Remove("StructureRecorder", player.SteamID);
-                StopRecording(name);
-                player.Message("Recording was stopped");
-            }
-            else if (command == "srbuild")
-            {
-                if (args.Length == 0 || (args.Length == 1 && args[0] == ""))
-                {
-                    player.Message("USAGE: /srbuild StructureName");
-                    return;
-                }
-                Structure structure;
-                Structures.TryGetValue(args[0], out structure);
-                if (structure == null)
-                {
-                    player.Message("Building wasn't found by name \"" + args[0] + "\"");
-                    return;
-                }
-                structure.Build(player.Location);
-                player.Message("Building was spawned");
+                Pluton.Core.Logger.LogException(ex);
             }
         }
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
             DataStore.Flush("StructureRecorder");
             DataStore.Flush("StructureRecorderEveryone");
-            if (!Server.Loaded) return;
+            if (!Server.Instance.Loaded) return;
             Structures = new Dictionary<string, Structure>();
             LoadStructures();
         }
@@ -144,23 +159,12 @@ namespace StructureRecorder
 
         public void StartRecording(string name, string steamID = "")
         {
-            if (Structures.ContainsKey(name))
-            {
+            if (Structures.ContainsKey(name)) {
                 Structures.Remove(name);
-                string path = Path.Combine(Util.GetStructuresFolder(), name + ".sps");
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
-                }
+                if (File.Exists(name + ".sps")) File.Delete(name + ".sps");
             }
-            if (steamID == "")
-            {
-                DataStore.Add("StructureRecorderEveryone", "ON", name);
-            }
-            else
-            {
-                DataStore.Add("StructureRecorder", steamID, name);
-            }
+            if (steamID == "") DataStore.Add("StructureRecorderEveryone", "ON", name);
+            else DataStore.Add("StructureRecorder", steamID, name);
             Structure structure = CreateStructure(name);
             Structures.Add(name, structure);
         }
@@ -180,12 +184,7 @@ namespace StructureRecorder
 
         public void LoadStructures()
         {
-            string path = Util.GetStructuresFolder();
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            DirectoryInfo structuresPath = new DirectoryInfo(path);
+            DirectoryInfo structuresPath = new DirectoryInfo(Path.Combine(Plugin.GetPluginPath(), "StructureRecorder"));
             Structures.Clear();
             foreach (FileInfo file in structuresPath.GetFiles())
             {
@@ -486,7 +485,7 @@ namespace StructureRecorder
             StructureComponent component = new StructureComponent(bp, v3, q);
             if (component == null)
             {
-                Logger.LogDebug("[StructureRecorder] BuildingPart component is null!");
+                Pluton.Core.Logger.LogDebug("[StructureRecorder] BuildingPart component is null!");
                 return;
             }
             if (!StructureComponents.ContainsKey(component.ToString()))
@@ -510,7 +509,7 @@ namespace StructureRecorder
             DeployableComponent component = new DeployableComponent(deployable, v3, q);
             if (component == null)
             {
-                Logger.LogDebug("[StructureRecorder] Deployable component is null!");
+                Pluton.Core.Logger.LogDebug("[StructureRecorder] Deployable component is null!");
                 return;
             }
             if (!DeployableComponents.ContainsKey(component.ToString()))
@@ -534,7 +533,7 @@ namespace StructureRecorder
             SpawnableComponent component = new SpawnableComponent(spawnable, v3, q);
             if (component == null)
             {
-                Logger.LogDebug("[StructureRecorder] Deployable component is null!");
+                Pluton.Core.Logger.LogDebug("[StructureRecorder] Deployable component is null!");
                 return;
             }
             if (!SpawnableComponents.ContainsKey(component.ToString()))
@@ -580,7 +579,7 @@ namespace StructureRecorder
                     {
                         BaseEntity baseEntity = GameManager.server.CreateEntity("build/locks/lock.key", Vector3.zero, new Quaternion());
                         baseEntity.OnDeployed(bb);
-                        int code = component.LockCode.ToInt();
+                        int code = int.Parse(component.LockCode);
                         if ((code & 0x80) != 0)
                         {
                             KeyLock keyLock = baseEntity.GetComponent<KeyLock>();
@@ -599,8 +598,7 @@ namespace StructureRecorder
             foreach (DeployableComponent component in DeployableComponents.Values)
             {
                 Vector3 v3 = (component.LocalPosition.ToVector3() + spawnAt);
-                GameObject gameObject = GameManager.server.FindPrefab(component.Prefab);
-                BaseEntity ent = GameManager.server.CreateEntity(gameObject, v3, component.LocalRotation.ToQuaternion());
+                BaseEntity ent = GameManager.server.CreateEntity(component.Prefab, v3, component.LocalRotation.ToQuaternion());
                 ent.SpawnAsMapEntity();
                 if (component.HasOwner)
                 {
@@ -644,7 +642,7 @@ namespace StructureRecorder
                         {
                             BaseEntity baseEntity = GameManager.server.CreateEntity("build/locks/lock.key", Vector3.zero, new Quaternion());
                             baseEntity.OnDeployed(ent);
-                            int code = component.LockCode.ToInt();
+                            int code = int.Parse(component.LockCode);
                             if ((code & 0x80) != 0)
                             {
                                 KeyLock keyLock = baseEntity.GetComponent<KeyLock>();
@@ -686,8 +684,7 @@ namespace StructureRecorder
 
         public void Export()
         {
-            string path = Path.Combine(Util.GetStructuresFolder(), Name + ".sps");
-            using (FileStream stream = new FileStream(path, FileMode.Create))
+            using (FileStream stream = new FileStream(Name + ".sps", FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, this);

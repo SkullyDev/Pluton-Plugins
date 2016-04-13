@@ -1,6 +1,10 @@
 ﻿using System;
-using Pluton;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Rust.PluginLoaders;
 
 namespace AutoLanterns
 {
@@ -22,7 +26,11 @@ namespace AutoLanterns
 
         public void On_PluginInit()
         {
-            if (!Server.Loaded) return;
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
+            if (!Server.Instance.Loaded) return;
             IniParser ini = IniSettings();
             if (ini.GetSetting("Settings", "Enabled") == "1")
             {
@@ -51,13 +59,12 @@ namespace AutoLanterns
 
         public void CheckLanternsCallback(TimedEvent timer)
         {
-            if ((World.Time >= (float)DataStore.Get("AutoLanterns", "TurnOnTime") || World.Time <= (float)DataStore.Get("AutoLanterns", "TurnOffTime")) && !(bool)DataStore.Get("AutoLanterns", "Turned"))
+            float timeNow = TOD_Sky.Instance.Cycle.Hour;
+            if ((timeNow >= (float)DataStore.Get("AutoLanterns", "TurnOnTime") || timeNow <= (float)DataStore.Get("AutoLanterns", "TurnOffTime")) && !(bool)DataStore.Get("AutoLanterns", "Turned"))
             {
                 foreach (BaseOven baseOven in Component.FindObjectsOfType<BaseOven>()) if (baseOven.name.Contains("lantern")) baseOven.Invoke("StartCooking", 1f);
                 DataStore.Add("AutoLanterns", "Turned", true);
-            }
-            else if (World.Time <= (float)DataStore.Get("AutoLanterns", "TurnOnTime") && World.Time >= (float)DataStore.Get("AutoLanterns", "TurnOffTime") && (bool)DataStore.Get("AutoLanterns", "Turned"))
-            {
+            } else if (timeNow <= (float)DataStore.Get("AutoLanterns", "TurnOnTime") && timeNow >= (float)DataStore.Get("AutoLanterns", "TurnOffTime") && (bool)DataStore.Get("AutoLanterns", "Turned")) {
                 foreach (BaseOven baseOven in Component.FindObjectsOfType<BaseOven>()) if (baseOven.name.Contains("lantern")) baseOven.Invoke("StopCooking", 1f);
                 DataStore.Add("AutoLanterns", "Turned", false);
             }

@@ -4,9 +4,13 @@ using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
-using Pluton;
-using Pluton.Events;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Core.Serialize;
+using Pluton.Rust.PluginLoaders;
 
 namespace WhoLooted
 {
@@ -47,6 +51,10 @@ namespace WhoLooted
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
             DataStore.Flush("WhoLooted");
             IniParser ini = SettingsIni();
             enabled = ini.GetSetting("MainSettings", "Enabled") == "1" ? true : false;
@@ -54,7 +62,7 @@ namespace WhoLooted
             showTime = ini.GetSetting("MainSettings", "ShowTimeWhenLooted") == "1" ? true : false;
             if (!enabled) return;
             Commands.Register("wholooted").setCallback(WhoLootedCMD);
-            if (Server.Loaded) LoadLootedLoots();
+            if (Server.Instance.Loaded) LoadLootedLoots();
         }
 
         public void On_PluginDeinit()
@@ -96,7 +104,7 @@ namespace WhoLooted
                     }
                     else
                     {
-                        Player player = Server.Players[loot.lastLooter];
+                        Player player = Server.Instance.Players[loot.lastLooter];
                         if (player == null)
                         {
                             he.Player.Message("We have some data but we don't remember his name! Sorry!");

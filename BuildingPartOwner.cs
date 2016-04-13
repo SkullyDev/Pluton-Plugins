@@ -1,10 +1,14 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
-using Pluton;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Core.Serialize;
+using Pluton.Rust.PluginLoaders;
 
 namespace BuildingPartOwner
 {
@@ -14,31 +18,22 @@ namespace BuildingPartOwner
 
         public void On_PluginInit()
         {
-            if (!Server.Loaded) return;
-            LoadSave();
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
+            if (Server.Instance.Loaded) LoadSave();
         }
 
-        public void On_ServerInit()
-        {
-            LoadSave();
-        }
+        public void On_ServerInit() { LoadSave(); }
 
-        public void On_ServerShutdown()
-        {
-            SaveAll();
-        }
+        public void On_ServerShutdown() { SaveAll(); }
 
-        public void On_PluginDeinit()
-        {
-            SaveAll();
-        }
+        public void On_PluginDeinit() { SaveAll(); }
 
-        public void On_ServerSaved()
-        {
-            SaveAll();
-        }
+        public void On_ServerSaved() { SaveAll(); }
 
-        public void On_Placement(Pluton.Events.BuildingEvent be)
+        public void On_Placement(BuildingEvent be)
         {
             var newSeralized = new SerializedBuildingBlock(be.BuildingPart.buildingBlock, be.Builder.GameID);
             OwnedBuildingBlocks.Add(newSeralized);
@@ -47,7 +42,7 @@ namespace BuildingPartOwner
         public void On_NetworkableKill(BaseNetworkable bn)
 
         {
-            BuildingBlock bb = bn.GetComponent<BuildingBlock>();
+            var bb = bn.GetComponent<BuildingBlock>();
             if (bb != null) RemoveFromDB(bb);
         }
 
@@ -59,10 +54,10 @@ namespace BuildingPartOwner
             if (!File.Exists(path)) return;
             try
             {
-                FileInfo file = new FileInfo(path);
-                using (FileStream stream = new FileStream(file.FullName, FileMode.Open))
+                var file = new FileInfo(path);
+                using (var stream = new FileStream(file.FullName, FileMode.Open))
                 {
-                    BinaryFormatter formatter = new BinaryFormatter();
+                    var formatter = new BinaryFormatter();
                     OwnedBuildingBlocks = (List<SerializedBuildingBlock>)formatter.Deserialize(stream);
                 }
             }
@@ -77,9 +72,9 @@ namespace BuildingPartOwner
         private void SaveAll()
         {
             string path = Path.Combine(Util.GetPluginsFolder(), "BuildingPartOwner\\BuildingBlocks.bbsv");
-            using (FileStream stream = new FileStream(path, FileMode.Create))
+            using (var stream = new FileStream(path, FileMode.Create))
             {
-                BinaryFormatter formatter = new BinaryFormatter();
+                var formatter = new BinaryFormatter();
                 formatter.Serialize(stream, OwnedBuildingBlocks);
             }
         }
@@ -87,7 +82,7 @@ namespace BuildingPartOwner
         public bool RemoveFromDB(BuildingBlock bb)
         {
             if (bb == null) return false;
-            foreach (SerializedBuildingBlock sbb in OwnedBuildingBlocks)
+            foreach (var sbb in OwnedBuildingBlocks)
             {
                 if (sbb.AreEqual(bb))
                 {
@@ -102,7 +97,7 @@ namespace BuildingPartOwner
         {
             if (bb != null)
             {
-                foreach (SerializedBuildingBlock sbb in OwnedBuildingBlocks)
+                foreach (var sbb in OwnedBuildingBlocks)
                 {
                     if (sbb.AreEqual(bb))
                     {
@@ -118,9 +113,9 @@ namespace BuildingPartOwner
             if (steamID < 70000000000000000uL) return null;
             BuildingBlock[] bBlocks = UnityEngine.Object.FindObjectsOfType<BuildingBlock>();
             List<BuildingPart> BlockList = new List<BuildingPart>();
-            foreach (SerializedBuildingBlock sbb in OwnedBuildingBlocks)
+            foreach (var sbb in OwnedBuildingBlocks)
             {
-                foreach (BuildingBlock bb in bBlocks)
+                foreach (var bb in bBlocks)
                 {
                     if (sbb.AreEqual(bb))
                     {
@@ -139,7 +134,7 @@ namespace BuildingPartOwner
         {
             if (steamID >= 70000000000000000uL && bb != null)
             {
-                foreach (SerializedBuildingBlock sbb in OwnedBuildingBlocks)
+                foreach (var sbb in OwnedBuildingBlocks)
                 {
                     if (sbb.AreEqual(bb))
                     {
@@ -157,12 +152,12 @@ namespace BuildingPartOwner
     [Serializable]
     internal class SerializedBuildingBlock
     {
-        public ulong ownerID;
-        public string prefabName;
-        public SerializedVector3 pos;
-        public SerializedQuaternion rot;
+        internal ulong ownerID;
+        internal string prefabName;
+        internal SerializedVector3 pos;
+        internal SerializedQuaternion rot;
 
-        public SerializedBuildingBlock(BuildingBlock bb, ulong owner)
+        internal SerializedBuildingBlock(BuildingBlock bb, ulong owner)
         {
             ownerID = owner;
             prefabName = bb.LookupPrefabName();
@@ -170,13 +165,13 @@ namespace BuildingPartOwner
             rot = new SerializedQuaternion(bb.transform.rotation);
         }
 
-        public bool AreEqual(BuildingBlock bb)
+        internal bool AreEqual(BuildingBlock bb)
         {
-            if (this.prefabName == bb.LookupPrefabName())
+            if (prefabName == bb.LookupPrefabName())
             {
-                if (this.pos.ToVector3() == bb.transform.position)
+                if (pos.ToVector3() == bb.transform.position)
                 {
-                    if (this.rot.ToQuaternion() == bb.transform.rotation)
+                    if (rot.ToQuaternion() == bb.transform.rotation)
                     {
                         return true;
                     }

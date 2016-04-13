@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Timers;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using Rust;
-using Pluton;
-using Pluton.Events;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Rust.PluginLoaders;
 
 namespace ColoredChat
 {
@@ -17,6 +17,10 @@ namespace ColoredChat
 
         public void On_PluginInit()
         {
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
             playerColor = new Dictionary<ulong, string>();
             Commands.Register("ccolor").setCallback(ColorCommand);
 

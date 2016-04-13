@@ -1,6 +1,10 @@
 ﻿using System;
-using Pluton;
 using UnityEngine;
+using Pluton.Core;
+using Pluton.Rust;
+using Pluton.Rust.Events;
+using Pluton.Rust.Objects;
+using Pluton.Rust.PluginLoaders;
 
 namespace Mappy
 {
@@ -13,7 +17,11 @@ namespace Mappy
 
         public void On_PluginInit()
         {
-            if (!Server.Loaded) return;
+            Author = "SkullyDev";
+            Version = "1.0";
+            About = "";
+
+            if (!Server.Instance.Loaded) return;
             LoadPlugin();
         }
 
@@ -61,10 +69,10 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        ulong sid = UInt64.Parse(args[1]);
-                        if (Server.Players.ContainsKey(sid))
+                        ulong sid = ulong.Parse(args[1]);
+                        if (Server.Instance.Players.ContainsKey(sid))
                         {
-                            Player player = Server.Players[sid];
+                            Player player = Server.Instance.Players[sid];
                             string message = string.Join(" ", args);
                             message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Kick(message);
@@ -76,10 +84,10 @@ namespace Mappy
                 {
                     if (args.Length >= 2)
                     {
-                        ulong sid = UInt64.Parse(args[1]);
-                        if (Server.Players.ContainsKey(sid))
+                        ulong sid = ulong.Parse(args[1]);
+                        if (Server.Instance.Players.ContainsKey(sid))
                         {
-                            Player player = Server.Players[sid];
+                            Player player = Server.Instance.Players[sid];
                             string message = string.Join(" ", args);
                             message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Ban(message);
@@ -91,10 +99,10 @@ namespace Mappy
                 {
                     if (args.Length >= 3)
                     {
-                        ulong sid = UInt64.Parse(args[1]);
-                        if (Server.Players.ContainsKey(sid))
+                        ulong sid = ulong.Parse(args[1]);
+                        if (Server.Instance.Players.ContainsKey(sid))
                         {
-                            Player player = Server.Players[sid];
+                            Player player = Server.Instance.Players[sid];
                             string message = string.Join(" ", args);
                             message = string.Format("{0}", message.Replace(args[0] + " " + args[1] + " ", ""));
                             player.Message(message);
@@ -106,15 +114,14 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        ulong sid = UInt64.Parse(args[1]);
-                        if (Server.Players.ContainsKey(sid))
+                        ulong sid = ulong.Parse(args[1]);
+                        if (Server.Instance.Players.ContainsKey(sid))
                         {
-                            Player player = Server.Players[sid];
+                            Player player = Server.Instance.Players[sid];
                             int count = ToInt(args[2]);
                             int item = 0;
                             item = InvItem.GetItemID(args[3]);
-                            if (item == 0)
-                                return;
+                            if (item == 0) return;
                             player.Inventory.Add(item, count);
                         }
                     }
@@ -124,10 +131,10 @@ namespace Mappy
                 {
                     if (args.Length >= 4)
                     {
-                        ulong sid = UInt64.Parse(args[1]);
-                        if (Server.Players.ContainsKey(sid))
+                        ulong sid = ulong.Parse(args[1]);
+                        if (Server.Instance.Players.ContainsKey(sid))
                         {
-                            Player player = Server.Players[sid];
+                            Player player = Server.Instance.Players[sid];
                             string x = args[2];
                             string z = args[3];
                             player.Teleport(float.Parse(x), World.GetGround(float.Parse(x), float.Parse(z)), float.Parse(z));
@@ -152,14 +159,14 @@ namespace Mappy
                     {
                         string message = string.Join(" ", args);
                         message = string.Format("{0}", message.Replace(args[0] + " ", ""));
-                        Server.Broadcast(message);
+                        Server.Instance.Broadcast(message);
                     }
                 }
             }
             else
             {
-                Logger.Log("MAPPY PLUGIN & MAP CODE MADE BY Skully (SkullyDev)");
-                Logger.Log("Proud member of Pluton-Team.ORG");
+                Pluton.Core.Logger.Log("MAPPY PLUGIN & MAP CODE MADE BY Skully (SkullyDev)");
+                Pluton.Core.Logger.Log("Proud member of Pluton-Team.ORG");
             }
         }
 
@@ -179,14 +186,14 @@ namespace Mappy
 
         public void MappySendCallback(TimedEvent timer)
         {
-            string post = string.Format("&time={0}&sleepers={1}", World.Time.ToString(), Server.SleepingPlayers.Count.ToString());
+            string post = string.Format("&time={0}&sleepers={1}", TOD_Sky.Instance.Cycle.Hour.ToString(), Server.Instance.SleepingPlayers.Count.ToString());
             if (chatEnabled) post = string.Format("{0}&showchat=true", post);
             post = string.Format("{0}&players=::", post);
-            foreach (Player player in Server.ActivePlayers) post = string.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
+            foreach (Player player in Server.Instance.ActivePlayers) post = string.Format("{0};{1}:{2}:{3}:{4}", post, Uri.EscapeDataString(player.Name), player.X, player.Z, player.SteamID);
             try { Plugin.POST(Link, post); } catch { }
         }
 
-        public void On_Chat(Pluton.Events.ChatEvent Chat)
+        public void On_Chat(ChatEvent Chat)
         {
             if (chatEnabled)
             {
