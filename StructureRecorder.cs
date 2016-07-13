@@ -375,9 +375,9 @@ namespace StructureRecorder
                 foreach (Item item in storageContainer.inventory.itemList)
                 {
                     Dictionary<string, object> itemData = new Dictionary<string, object>();
-                    itemData.Add("blueprint", item.IsBlueprint());
                     itemData.Add("id", item.info.itemid);
                     itemData.Add("amount", item.amount);
+                    itemData.Add("skin", item.skin);
                     ItemList.Add(itemData);
                 }
                 if (storageContainer.HasSlot(BaseEntity.Slot.Lock))
@@ -617,7 +617,7 @@ namespace StructureRecorder
                     var items = component.ItemList;
                     foreach (var item in items)
                     {
-                        Item newItem = ItemManager.CreateByItemID((int)item["id"], (int)item["amount"], (bool)item["blueprint"]);
+                        Item newItem = ItemManager.CreateByItemID((int)item["id"], (int)item["amount"], (int)item["skin"]);
                         newItem.MoveToContainer(storageContainer.inventory);
                     }
                     if (ent.HasSlot(BaseEntity.Slot.Lock))

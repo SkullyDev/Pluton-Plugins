@@ -4,11 +4,37 @@ assets/bundled/prefabs/autospawn/animals/chicken.prefab
 assets/bundled/prefabs/autospawn/animals/horse.prefab
 assets/bundled/prefabs/autospawn/animals/stag.prefab
 assets/bundled/prefabs/autospawn/animals/wolf.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_1.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_2.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_3.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_4.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_5.prefab
+assets/bundled/prefabs/autospawn/canyon/canyon_6.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-arctic/bush-a-1-snow.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-arid/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-arid/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-temperate/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-temperate/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-tundra/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/beach-tundra/bush-a-2.prefab
 assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-1.prefab
 assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-2.prefab
 assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-3.prefab
 assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-4.prefab
 assets/bundled/prefabs/autospawn/clutter/driftwood/driftwood-5.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arctic/bush-a-1-snow.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arid/azalea-1.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arid/azalea-2.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arid/azalea-3.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arid/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-arid/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-temperate/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-temperate/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-tundra/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/fields-tundra/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-arctic/bush-a-1-snow.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-arid/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-arid/bush-a-2.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-a-1.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-a-2.prefab
 assets/bundled/prefabs/autospawn/clutter/forestferns/fern-b-1.prefab
@@ -17,6 +43,10 @@ assets/bundled/prefabs/autospawn/clutter/forestflowers/flowers-white.prefab
 assets/bundled/prefabs/autospawn/clutter/forestflowers/flowers-yellow.prefab
 assets/bundled/prefabs/autospawn/clutter/forestmediumgrowth/bush-snakeweed-1.prefab
 assets/bundled/prefabs/autospawn/clutter/forestmediumgrowth/bush-snakeweed-2.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-temperate/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-temperate/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-tundra/bush-a-1.prefab
+assets/bundled/prefabs/autospawn/clutter/forest-tundra/bush-a-2.prefab
 assets/bundled/prefabs/autospawn/clutter/forestweeds/knapweed.prefab
 assets/bundled/prefabs/autospawn/clutter/forestweeds/knapweed-flower.prefab
 assets/bundled/prefabs/autospawn/clutter/grassflowers/flowers-red.prefab
@@ -39,74 +69,60 @@ assets/bundled/prefabs/autospawn/clutter/ocean/underwater-coral.prefab
 assets/bundled/prefabs/autospawn/clutter/ocean/underwater-coral-pink.prefab
 assets/bundled/prefabs/autospawn/clutter/ocean/underwater-sponge.prefab
 assets/bundled/prefabs/autospawn/clutter/ocean/underwater-weed.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-beachside-small/rock_small_a.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-beachside-small/rock_small_b.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-beachside-small/rock_small_c.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-field-small/rock_small_a.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-field-small/rock_small_b.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-field-small/rock_small_c.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-underwater-small/rock_small_a.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-underwater-small/rock_small_b.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-underwater-small/rock_small_c.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-waterside-small/rock_small_a.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-waterside-small/rock_small_b.prefab
+assets/bundled/prefabs/autospawn/clutter/rock-waterside-small/rock_small_c.prefab
+assets/bundled/prefabs/autospawn/clutter/shore/elephant-grass.prefab
 assets/bundled/prefabs/autospawn/clutter/wavesounds/wave-sound-emitter.prefab
-assets/bundled/prefabs/autospawn/collectable/hemp/hemp.prefab
+assets/bundled/prefabs/autospawn/collectable/corn/corn-collectable.prefab
+assets/bundled/prefabs/autospawn/collectable/hemp/hemp-collectable.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-1.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-2.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-3.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-4.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-5.prefab
 assets/bundled/prefabs/autospawn/collectable/mushrooms/mushroom-cluster-6.prefab
-assets/bundled/prefabs/autospawn/collectable/stone/metalore-2.prefab
-assets/bundled/prefabs/autospawn/collectable/stone/stone-1.prefab
-assets/bundled/prefabs/autospawn/collectable/stone/sulfurore-3.prefab
-assets/bundled/prefabs/autospawn/collectable/stone/wood.prefab
-assets/bundled/prefabs/autospawn/decor/beach-arctic/bush-a-1-snow.prefab
-assets/bundled/prefabs/autospawn/decor/beach-arid/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/beach-arid/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/beach-temperate/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/beach-temperate/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/beach-tundra/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/beach-tundra/bush-a-2.prefab
+assets/bundled/prefabs/autospawn/collectable/pumpkin/pumpkin-collectable.prefab
+assets/bundled/prefabs/autospawn/collectable/stone/metal-collectable.prefab
+assets/bundled/prefabs/autospawn/collectable/stone/stone-collectable.prefab
+assets/bundled/prefabs/autospawn/collectable/stone/sulfur-collectable.prefab
+assets/bundled/prefabs/autospawn/collectable/stone/wood-collectable.prefab
 assets/bundled/prefabs/autospawn/decor/bridge/bridge.prefab
-assets/bundled/prefabs/autospawn/decor/cliff/cliff_1.prefab
-assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_10.prefab
-assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_9.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arctic/bush-a-1-snow.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arid/azalea-1.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arid/azalea-2.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arid/azalea-3.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arid/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/fields-arid/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/fields-temperate/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/fields-temperate/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/fields-tundra/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/fields-tundra/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/forest-arctic/bush-a-1-snow.prefab
-assets/bundled/prefabs/autospawn/decor/forest-arid/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/forest-arid/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/forest-temperate/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/forest-temperate/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/forest-tundra/bush-a-1.prefab
-assets/bundled/prefabs/autospawn/decor/forest-tundra/bush-a-2.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-bottom/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-bottom/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-bottom/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-forest/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-forest/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-forest/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_1.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_2.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_3.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_7.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-mountainsides/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-mountainsides/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-mountainsides/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/rock_08.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/stone_21.prefab
-assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/stone_23.prefab
+assets/bundled/prefabs/autospawn/decor/cliff/rock_cliff_b_1.prefab
+assets/bundled/prefabs/autospawn/decor/cliff/rock_cliff_b_2.prefab
+assets/bundled/prefabs/autospawn/decor/cliff/rock_cliff_b_3.prefab
+assets/bundled/prefabs/autospawn/decor/cliff/rock_cliff_b_4.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_a_1.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_a_2.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_a_3.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_a_4.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_c_1.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_c_2.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_c_3.prefab
+assets/bundled/prefabs/autospawn/decor/cliff-micro/rock_cliff_c_4.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_med_a.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_med_b.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-medium/rock_med_c.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/rock_small_a.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/rock_small_b.prefab
+assets/bundled/prefabs/autospawn/decor/hapis-rocks-small/rock_small_c.prefab
 assets/bundled/prefabs/autospawn/decor/iceberg/iceberg_1.prefab
 assets/bundled/prefabs/autospawn/decor/iceberg/iceberg_2.prefab
 assets/bundled/prefabs/autospawn/decor/iceberg/iceberg_3.prefab
-assets/bundled/prefabs/autospawn/decor/overhang/overhang_1.prefab
-assets/bundled/prefabs/autospawn/decor/powerline/powerline.prefab
+assets/bundled/prefabs/autospawn/decor/powerline/powerline_a.prefab
+assets/bundled/prefabs/autospawn/decor/powerline/powerline_b.prefab
+assets/bundled/prefabs/autospawn/decor/powerline/powerline_c.prefab
+assets/bundled/prefabs/autospawn/decor/powerline/powerline_d.prefab
 assets/bundled/prefabs/autospawn/decor/powerline-small/powerline.prefab
-assets/bundled/prefabs/autospawn/decor/river/stone_21.prefab
-assets/bundled/prefabs/autospawn/decor/river/stone_22.prefab
-assets/bundled/prefabs/autospawn/decor/river/stone_23.prefab
 assets/bundled/prefabs/autospawn/decor/riverdrain/splash.prefab
 assets/bundled/prefabs/autospawn/decor/riversound/river_sound.prefab
 assets/bundled/prefabs/autospawn/decor/riversource/source.prefab
@@ -124,35 +140,32 @@ assets/bundled/prefabs/autospawn/decor/roadside/roadsign6.prefab
 assets/bundled/prefabs/autospawn/decor/roadside/roadsign7.prefab
 assets/bundled/prefabs/autospawn/decor/roadside/roadsign8.prefab
 assets/bundled/prefabs/autospawn/decor/roadside/roadsign9.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_1.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_13.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_7.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_8.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/rock-field/rock_1.prefab
-assets/bundled/prefabs/autospawn/decor/rock-field/rock_2.prefab
-assets/bundled/prefabs/autospawn/decor/rock-field/rock_3.prefab
-assets/bundled/prefabs/autospawn/decor/rock-field/rock_7.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_1.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_2.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_3.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_7.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_8.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_1.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_12.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_2.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_3.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_7.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_8.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_a.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_b.prefab
-assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_c.prefab
-assets/bundled/prefabs/autospawn/decor/shore/elephant-grass.prefab
+assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_med_a.prefab
+assets/bundled/prefabs/autospawn/decor/rock-beachside/rock_med_c.prefab
+assets/bundled/prefabs/autospawn/decor/rock-field/rock_med_a.prefab
+assets/bundled/prefabs/autospawn/decor/rock-field/rock_med_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-field/rock_med_c.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_a.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_c.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_d.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_e.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_f.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_g.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_h.prefab
+assets/bundled/prefabs/autospawn/decor/rock-formation/rock_formation_i.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_a.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_a_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_b_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_c.prefab
+assets/bundled/prefabs/autospawn/decor/rock-underwater/rock_med_c_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_a.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_a_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_b_b.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_c.prefab
+assets/bundled/prefabs/autospawn/decor/rock-waterside/rock_med_c_b.prefab
 assets/bundled/prefabs/autospawn/monument/cave/cave_small.prefab
 assets/bundled/prefabs/autospawn/monument/large/airfield_1.prefab
 assets/bundled/prefabs/autospawn/monument/large/military_tunnel_1.prefab
@@ -160,12 +173,15 @@ assets/bundled/prefabs/autospawn/monument/large/powerplant_1.prefab
 assets/bundled/prefabs/autospawn/monument/large/trainyard_1.prefab
 assets/bundled/prefabs/autospawn/monument/large/water_treatment_plant_1.prefab
 assets/bundled/prefabs/autospawn/monument/lighthouse/lighthouse.prefab
-assets/bundled/prefabs/autospawn/monument/mining/warehouse.prefab
-assets/bundled/prefabs/autospawn/monument/production/satellite_dish.prefab
-assets/bundled/prefabs/autospawn/monument/production/sphere_tank.prefab
-assets/bundled/prefabs/autospawn/monument/small/radtown_small_3.prefab
+assets/bundled/prefabs/autospawn/monument/medium/radtown_small_3.prefab
+assets/bundled/prefabs/autospawn/monument/small/satellite_dish.prefab
+assets/bundled/prefabs/autospawn/monument/small/sphere_tank.prefab
+assets/bundled/prefabs/autospawn/monument/small/warehouse.prefab
 assets/bundled/prefabs/autospawn/mountain/mountain_1.prefab
 assets/bundled/prefabs/autospawn/mountain/mountain_2.prefab
+assets/bundled/prefabs/autospawn/mountain/mountain_3.prefab
+assets/bundled/prefabs/autospawn/mountain/mountain_4.prefab
+assets/bundled/prefabs/autospawn/mountain/mountain_5.prefab
 assets/bundled/prefabs/autospawn/resource/beachside-deadtrees/deadtree-1.prefab
 assets/bundled/prefabs/autospawn/resource/beachside-deadtrees/deadtree-2.prefab
 assets/bundled/prefabs/autospawn/resource/beachside-deadtrees/field-bare-1.prefab
@@ -182,6 +198,12 @@ assets/bundled/prefabs/autospawn/resource/crystals/crystal1c.prefab
 assets/bundled/prefabs/autospawn/resource/crystals/crystal2.prefab
 assets/bundled/prefabs/autospawn/resource/crystals/crystal2b.prefab
 assets/bundled/prefabs/autospawn/resource/crystals/crystal2c.prefab
+assets/bundled/prefabs/autospawn/resource/field-arctic/pinesnow-1.prefab
+assets/bundled/prefabs/autospawn/resource/field-arctic/pinesnow-2.prefab
+assets/bundled/prefabs/autospawn/resource/field-arctic/pinesnowtall-1.prefab
+assets/bundled/prefabs/autospawn/resource/field-arid/palm-1.prefab
+assets/bundled/prefabs/autospawn/resource/field-arid/palm-2.prefab
+assets/bundled/prefabs/autospawn/resource/field-arid/palm-3.prefab
 assets/bundled/prefabs/autospawn/resource/field-temperate/field-1.prefab
 assets/bundled/prefabs/autospawn/resource/field-temperate/field-2.prefab
 assets/bundled/prefabs/autospawn/resource/field-temperate/field-3.prefab
@@ -201,13 +223,13 @@ assets/bundled/prefabs/autospawn/resource/forest-temperate/oak-1.prefab
 assets/bundled/prefabs/autospawn/resource/forest-temperate/oak-2.prefab
 assets/bundled/prefabs/autospawn/resource/forest-tundra/pine-1.prefab
 assets/bundled/prefabs/autospawn/resource/forest-tundra/pine-2.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-commons/pine-3.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-commons/pine-4.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-rares/pinebare-1.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-rares/pinebare-2.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-rares/pinetall-1.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-rares/pinetall-2.prefab
-assets/bundled/prefabs/autospawn/resource/forest-tundra-rares/pinetall-3.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pine-3.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pine-4.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pinebare-1.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pinebare-2.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pinetall-1.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pinetall-2.prefab
+assets/bundled/prefabs/autospawn/resource/forest-tundra/pinetall-3.prefab
 assets/bundled/prefabs/autospawn/resource/loot/loot-barrel-1.prefab
 assets/bundled/prefabs/autospawn/resource/loot/loot-barrel-2.prefab
 assets/bundled/prefabs/autospawn/resource/loot/trash-pile-1.prefab
@@ -216,6 +238,13 @@ assets/bundled/prefabs/autospawn/resource/ores/stone-ore.prefab
 assets/bundled/prefabs/autospawn/resource/ores/sulfur-ore.prefab
 assets/bundled/prefabs/autospawn/resource/roadside/hollywood-juniper-1.prefab
 assets/bundled/prefabs/autospawn/resource/roadside/hollywood-juniper-2.prefab
+assets/bundled/prefabs/clothing/hands/skin_hands.prefab
+assets/bundled/prefabs/clothing/head/skin_head.prefab
+assets/bundled/prefabs/clothing/legs/hazmat_pants.prefab
+assets/bundled/prefabs/clothing/torso/hazmat_jacket.prefab
+assets/bundled/prefabs/clothing/torso/hide_poncho.prefab
+assets/bundled/prefabs/clothing/torso/hide_vest.prefab
+assets/bundled/prefabs/clothing/torso/tshirt.long.prefab
 assets/bundled/prefabs/fireball.prefab
 assets/bundled/prefabs/fireball_small.prefab
 assets/bundled/prefabs/fx/animals/bear/attack1.prefab
@@ -468,7 +497,9 @@ assets/bundled/prefabs/fx/fire_explosion.prefab
 assets/bundled/prefabs/fx/firebomb.prefab
 assets/bundled/prefabs/fx/gas_explosion_small.prefab
 assets/bundled/prefabs/fx/gestures/cameratakescreenshot.prefab
+assets/bundled/prefabs/fx/gestures/cut_meat.prefab
 assets/bundled/prefabs/fx/gestures/drink_generic.prefab
+assets/bundled/prefabs/fx/gestures/drink_vomit.prefab
 assets/bundled/prefabs/fx/gestures/eat_candybar.prefab
 assets/bundled/prefabs/fx/gestures/eat_celery.prefab
 assets/bundled/prefabs/fx/gestures/eat_chewy_meat.prefab
@@ -513,12 +544,24 @@ assets/bundled/prefabs/fx/impacts/bullet/snow/snow1.prefab
 assets/bundled/prefabs/fx/impacts/bullet/tundra/bullet_impact_tundra.prefab
 assets/bundled/prefabs/fx/impacts/bullet/water/water1.prefab
 assets/bundled/prefabs/fx/impacts/bullet/wood/wood1.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/concrete/bear_footstep_concrete.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/dirt/bear_footstep_dirt.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/forest/bear_footstep_forest.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/grass/bear_footstep_grass.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/rock/bear_footstep_rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/bear/sand/bear_footstep_sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/bear/snow/bear_footstep_snow.prefab
 assets/bundled/prefabs/fx/impacts/footstep/bear/water/bear_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/bear/wood/bear_footstep_wood.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/concrete/boar_footstep_concrete.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/dirt/boar_footstep_dirt.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/forest/boar_footstep_forest.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/grass/boar_footstep_grass.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/rock/boar_footstep_rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boar/sand/boar_footstep_sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boar/snow/boar_footstep_snow.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boar/water/boar_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/boar/wood/boar_footstep_wood.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/concrete/footstep-concrete.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/dirt/footstep-dirt.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/forest/footstep-forest.prefab
@@ -528,19 +571,36 @@ assets/bundled/prefabs/fx/impacts/footstep/boot/metal/footstep-metal.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/rock/footstep-rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/sand/footstep-sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/snow/human_footstep_snow.prefab
-assets/bundled/prefabs/fx/impacts/footstep/boot/tundra/footstep-tundra.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/water/boot_footstep_water.prefab
 assets/bundled/prefabs/fx/impacts/footstep/boot/wood/footstep-wood.prefab
 assets/bundled/prefabs/fx/impacts/footstep/crouch/water/boot_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/concrete/horse_footstep_concrete.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/dirt/horse_footstep_dirt.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/forest/horse_footstep_forest.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/grass/horse_footstep_grass.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/rock/horse_footstep_rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/horse/sand/horse_footstep_sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/horse/snow/horse_footstep_snow.prefab
 assets/bundled/prefabs/fx/impacts/footstep/horse/water/horse_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/horse/wood/horse_footstep_wood.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/concrete/stag_footstep_concrete.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/dirt/stag_footstep_dirt.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/forest/stag_footstep_forest.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/grass/stag_footstep_grass.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/rock/stag_footstep_rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/stag/sand/stag_footstep_sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/stag/snow/stag_footstep_snow.prefab
 assets/bundled/prefabs/fx/impacts/footstep/stag/water/stag_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/stag/wood/stag_footstep_wood.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/concrete/wolf_footstep_concrete.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/dirt/wolf_footstep_dirt.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/forest/wolf_footstep_forest.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/grass/wolf_footstep_grass.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/rock/wolf_footstep_rock.prefab
 assets/bundled/prefabs/fx/impacts/footstep/wolf/sand/wolf_footstep_sand.prefab
 assets/bundled/prefabs/fx/impacts/footstep/wolf/snow/wolf_footstep_snow.prefab
 assets/bundled/prefabs/fx/impacts/footstep/wolf/water/wolf_footstep_water.prefab
+assets/bundled/prefabs/fx/impacts/footstep/wolf/wood/wolf_footstep_wood.prefab
 assets/bundled/prefabs/fx/impacts/jump-land/concrete/jump-land-concrete.prefab
 assets/bundled/prefabs/fx/impacts/jump-land/dirt/jump-land-dirt.prefab
 assets/bundled/prefabs/fx/impacts/jump-land/forest/jump-land-forest.prefab
@@ -564,6 +624,33 @@ assets/bundled/prefabs/fx/impacts/jump-start/snow/jump-start-snow.prefab
 assets/bundled/prefabs/fx/impacts/jump-start/tundra/jump-start-tundra.prefab
 assets/bundled/prefabs/fx/impacts/jump-start/water/jump_start_water.prefab
 assets/bundled/prefabs/fx/impacts/jump-start/wood/jump-start-wood.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-meat-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-meat-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-meat-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-can-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-can-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-can-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-hollow-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-hollow-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-hollow-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-medium-rattley-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-medium-rattley-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-medium-rattley-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-thin-hollow-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-thin-hollow-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-metal-thin-hollow-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-stone-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-stone-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-stone-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-tool-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-tool-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-tool-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-small-hard.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-small-med.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-small-soft.prefab
+assets/bundled/prefabs/fx/impacts/physics/phys-impact-wood-soft.prefab
 assets/bundled/prefabs/fx/impacts/slash/blood12slash_1.prefab
 assets/bundled/prefabs/fx/impacts/slash/blood12slash_2.prefab
 assets/bundled/prefabs/fx/impacts/slash/blood13slash.prefab
@@ -662,6 +749,16 @@ assets/bundled/prefabs/radtown/loot_barrel_2.prefab
 assets/bundled/prefabs/radtown/loot_trash.prefab
 assets/bundled/prefabs/radtown/oil_barrel.prefab
 assets/bundled/prefabs/static/campfire_static.prefab
+assets/bundled/prefabs/static/door.hinged.garage_a.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_a.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_b.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_c.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_d.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_e.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_f.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_g.prefab
+assets/bundled/prefabs/static/door.hinged.industrial_a_h.prefab
+assets/bundled/prefabs/static/door_test_static.prefab
 assets/bundled/prefabs/static/furnace_static.prefab
 assets/bundled/prefabs/static/miningquarry_static.prefab
 assets/bundled/prefabs/static/pumpjack-static.prefab
@@ -677,10 +774,8 @@ assets/bundled/prefabs/system/server.prefab
 assets/bundled/prefabs/system/server/community.prefab
 assets/bundled/prefabs/system/server/resourcedepositmanager.prefab
 assets/bundled/prefabs/system/server_console.prefab
-assets/bundled/prefabs/system/server_schedule.prefab
 assets/bundled/prefabs/system/steam.prefab
 assets/bundled/prefabs/system/steam_client.prefab
-assets/bundled/prefabs/ui/dialogs/piemenu.prefab
 assets/bundled/prefabs/ui/dialogs/ui.dialog.assigntofriend.prefab
 assets/bundled/prefabs/ui/dialogs/ui.dialog.sign.update.prefab
 assets/bundled/prefabs/ui/dialogs/ui.dialog.sleepingbag.rename.prefab
@@ -702,14 +797,13 @@ assets/bundled/prefabs/ui/lootpanels/lootpanel.smallwoodbox.prefab
 assets/bundled/prefabs/ui/lootpanels/lootpanel.watercatcher.prefab
 assets/bundled/prefabs/world/ai.prefab
 assets/bundled/prefabs/world/ambience.prefab
+assets/bundled/prefabs/world/batching.prefab
 assets/bundled/prefabs/world/climate.prefab
-assets/bundled/prefabs/world/colliders.prefab
-assets/bundled/prefabs/world/decor.prefab
-assets/bundled/prefabs/world/grass.prefab
+assets/bundled/prefabs/world/event_airdrop.prefab
+assets/bundled/prefabs/world/event_helicopter.prefab
 assets/bundled/prefabs/world/lod.prefab
 assets/bundled/prefabs/world/rain.prefab
 assets/bundled/prefabs/world/snow.prefab
-assets/bundled/prefabs/world/spawn.prefab
 assets/bundled/prefabs/world/underwater.prefab
 assets/bundled/prefabs/world/wind.prefab
 assets/bundled/prefabs/world/worker.prefab
@@ -793,54 +887,15 @@ assets/content/nature/plants/mushroom/singles/mushroom_03_d_lod_01.prefab
 assets/content/nature/plants/mushroom/singles/mushroom_04_a.prefab
 assets/content/nature/plants/mushroom/singles/mushroom_04_b.prefab
 assets/content/nature/plants/mushroom/singles/mushroom_04_c.prefab
-assets/content/nature/rocksprefabs/boulders/rock_01.prefab
-assets/content/nature/rocksprefabs/boulders/rock_02.prefab
-assets/content/nature/rocksprefabs/boulders/rock_03.prefab
-assets/content/nature/rocksprefabs/boulders/rock_07.prefab
-assets/content/nature/rocksprefabs/boulders/rock_08.prefab
-assets/content/nature/rocksprefabs/boulders/rock_a1.prefab
-assets/content/nature/rocksprefabs/boulders/rock_a2.prefab
-assets/content/nature/rocksprefabs/boulders/rock_b.prefab
-assets/content/nature/rocksprefabs/boulders/rock_c.prefab
-assets/content/nature/rocksprefabs/boulders/stone_21.prefab
-assets/content/nature/rocksprefabs/boulders/stone_22.prefab
-assets/content/nature/rocksprefabs/boulders/stone_23.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_01.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_02.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_03.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_07.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_08.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_a1.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_a2.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_b.prefab
-assets/content/nature/rocksprefabs/bouldersforest/rock_c.prefab
-assets/content/nature/rocksprefabs/bouldersforest/stone_21.prefab
-assets/content/nature/rocksprefabs/bouldersforest/stone_22.prefab
-assets/content/nature/rocksprefabs/bouldersforest/stone_23.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_01.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_02.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_03.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_07.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_08.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_a1.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_a2.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_b.prefab
-assets/content/nature/rocksprefabs/boulderssnow/rock_c.prefab
-assets/content/nature/rocksprefabs/boulderssnow/stone_21.prefab
-assets/content/nature/rocksprefabs/boulderssnow/stone_22.prefab
-assets/content/nature/rocksprefabs/boulderssnow/stone_23.prefab
-assets/content/nature/rocksprefabs/cliffs/cliff_block.prefab
-assets/content/nature/rocksprefabs/cliffs/cliff_overhang.prefab
-assets/content/nature/rocksprefabs/cliffs/rock_09.prefab
-assets/content/nature/rocksprefabs/cliffs/rock_10.prefab
-assets/content/nature/rocksprefabs/cliffsforest/cliff_block.prefab
-assets/content/nature/rocksprefabs/cliffsforest/cliff_overhang.prefab
-assets/content/nature/rocksprefabs/cliffsforest/rock_09.prefab
-assets/content/nature/rocksprefabs/cliffsforest/rock_10.prefab
-assets/content/nature/rocksprefabs/cliffssnow/cliff_block.prefab
-assets/content/nature/rocksprefabs/cliffssnow/cliff_overhang.prefab
-assets/content/nature/rocksprefabs/cliffssnow/rock_09.prefab
-assets/content/nature/rocksprefabs/cliffssnow/rock_10.prefab
+assets/content/nature/rocks/rock_cliff_a.prefab
+assets/content/nature/rocks/rock_cliff_b.prefab
+assets/content/nature/rocks/rock_cliff_c.prefab
+assets/content/nature/rocks/rock_med_a.prefab
+assets/content/nature/rocks/rock_med_b.prefab
+assets/content/nature/rocks/rock_med_c.prefab
+assets/content/nature/rocks/rock_small_a.prefab
+assets/content/nature/rocks/rock_small_b.prefab
+assets/content/nature/rocks/rock_small_c.prefab
 assets/content/nature/terrain/misc/shading_procmap.prefab
 assets/content/nature/terrain/misc/shading_testlevel.prefab
 assets/content/nature/treesprefabs/test/custom-1.prefab
@@ -891,13 +946,20 @@ assets/content/nature/treesprefabs/undergrowth/fern-a-2.prefab
 assets/content/nature/treesprefabs/undergrowth/fern-b-1.prefab
 assets/content/nature/treesprefabs/undergrowth/fern-b-2.prefab
 assets/content/nature/treesprefabs/undergrowth/knapweed.prefab
+assets/content/nature/treesprefabs/undergrowth/knapweed-flower.prefab
 assets/content/nature/treesprefabs/undergrowth/snakeweed-1.prefab
 assets/content/nature/treesprefabs/undergrowth/snakeweed-2.prefab
+assets/content/nature/treesprefabs/undergrowth/snakeweed-flower-1.prefab
+assets/content/nature/treesprefabs/undergrowth/snakeweed-flower-2.prefab
+assets/content/nature/treesprefabs/undergrowth/underwater-coral.prefab
+assets/content/nature/treesprefabs/undergrowth/underwater-coral-pink.prefab
+assets/content/nature/treesprefabs/undergrowth/underwater-sponge.prefab
 assets/content/nature/treesprefabs/undergrowth/underwater-weed.prefab
 assets/content/nature/treesprefabs/undergrowth/weed.prefab
-assets/content/player/clothing/skin/fem_test/fem_test.prefab
-assets/content/player/clothing/special/wolf head dress/wolfheaddress.item.prefab
+assets/content/player/animations_new/playermodel_test.prefab
+assets/content/player/clothing/special/wolf head dress/hat.wolf.item.prefab
 assets/content/player/clothing/special/wolf head dress/wolfheaddress.wearable.prefab
+assets/content/props/jerrycan/jerrycan.prefab
 assets/content/skinnable/ak47/preview.prefab
 assets/content/skinnable/balaclava/preview.prefab
 assets/content/skinnable/bandana/preview.prefab
@@ -930,7 +992,9 @@ assets/content/sound/ambience/lifeambienceemitter.prefab
 assets/content/sound/ambience/rainambienceemitter.prefab
 assets/content/sound/templates/ambience.sound-template.prefab
 assets/content/sound/templates/bullet-flyby.prefab
+assets/content/sound/templates/dangerous-npc-footstep.prefab
 assets/content/sound/templates/default.prefab
+assets/content/sound/templates/default-important.prefab
 assets/content/sound/templates/event.prefab
 assets/content/sound/templates/event-distance.prefab
 assets/content/sound/templates/explosion.prefab
@@ -948,9 +1012,123 @@ assets/content/sound/templates/small-sound.prefab
 assets/content/sound/templates/surface-ambience.prefab
 assets/content/sound/templates/tiny-local-ambience.prefab
 assets/content/sound/templates/tiny-sound.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_3x3.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_6x6.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x3.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x3_fade_a.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x3_fade_b.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x3_fade_c.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x9.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x9_corner.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x9_corner_sharp.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x9_impact.prefab
+assets/content/structures/concrete_slabs/concrete_slabs_9x9_path.prefab
+assets/content/structures/conveyor_belt/conveyor_belt_end_wall.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_300.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_300_lw.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_600.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_600_lw.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_900.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_900_lw.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_corner_600.prefab
+assets/content/structures/dirt_accum/dirt_accum_dbl_corner_900.prefab
+assets/content/structures/dirt_accum/dirt_accum_pillar_50x50.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_300.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_600.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_900.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_corner_inner_600.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_corner_inner_900.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_corner_outer_600.prefab
+assets/content/structures/dirt_accum/dirt_accum_single_corner_outer_900.prefab
 assets/content/structures/fence_chainlink/fencetriplets.prefab
+assets/content/structures/fences_walls/chainlink_fence_3x3.prefab
+assets/content/structures/fences_walls/chainlink_fence_3x3_gate.prefab
+assets/content/structures/fences_walls/chainlink_fence_3x9.prefab
+assets/content/structures/fences_walls/chainlink_fence_3x9_end.prefab
+assets/content/structures/fences_walls/chainlink_fence_gate.prefab
+assets/content/structures/fences_walls/wall_125_end.prefab
+assets/content/structures/fences_walls/wall_125_pillar.prefab
+assets/content/structures/fences_walls/wall_125x300.prefab
+assets/content/structures/fences_walls/wall_125x600.prefab
+assets/content/structures/fences_walls/wall_125x900.prefab
+assets/content/structures/fences_walls/wall_125x900_razed.prefab
+assets/content/structures/fences_walls/wall_300_pillar.prefab
+assets/content/structures/fences_walls/wall_300x150_end.prefab
+assets/content/structures/fences_walls/wall_300x300.prefab
+assets/content/structures/fences_walls/wall_300x600.prefab
+assets/content/structures/fences_walls/wall_300x900.prefab
+assets/content/structures/fences_walls/wall_300x900_collapsed.prefab
+assets/content/structures/fences_walls/wall_300x900_end.prefab
+assets/content/structures/fences_walls/wall_300x900_razed.prefab
+assets/content/structures/fences_walls/wall_300x900_unstable.prefab
+assets/content/structures/fences_walls/wall_conc_300x300.prefab
+assets/content/structures/fences_walls/wall_conc_300x600.prefab
+assets/content/structures/fences_walls/wall_conc_300x900.prefab
+assets/content/structures/fences_walls/wall_conc_300x900_end.prefab
+assets/content/structures/fences_walls/wall_plaster_125_end.prefab
+assets/content/structures/fences_walls/wall_plaster_125_pillar.prefab
+assets/content/structures/fences_walls/wall_plaster_125x600.prefab
+assets/content/structures/fences_walls/wall_plaster_125x900.prefab
+assets/content/structures/fences_walls/wall_plaster_300_pillar.prefab
+assets/content/structures/fences_walls/wall_plaster_300x150_end.prefab
+assets/content/structures/fences_walls/wall_plaster_300x300.prefab
+assets/content/structures/fences_walls/wall_plaster_300x600.prefab
+assets/content/structures/fences_walls/wall_plaster_300x900.prefab
+assets/content/structures/fences_walls/wall_plaster_300x900_collapsed.prefab
+assets/content/structures/fences_walls/wall_plaster_300x900_end.prefab
+assets/content/structures/fences_walls/wall_plaster_300x900_unstable.prefab
+assets/content/structures/garage_doors/garage_door_large_a.prefab
+assets/content/structures/garage_doors/garage_door_large_b.prefab
+assets/content/structures/garage_doors/garage_door_large_c.prefab
+assets/content/structures/garage_doors/garage_door_large_d.prefab
+assets/content/structures/garage_doors/garage_door_powerplant.prefab
 assets/content/structures/hapistunnels/hapistunnel1_long.prefab
 assets/content/structures/hapistunnels/lightfumes.prefab
+assets/content/structures/industrial_structures/cooling_tower_collapsed_bits_a.prefab
+assets/content/structures/industrial_structures/cooling_tower_collapsed_bits_b.prefab
+assets/content/structures/industrial_structures/cooling_tower_collapsed_bits_c.prefab
+assets/content/structures/industrial_structures/cooling_tower_collapsed_bits_pile.prefab
+assets/content/structures/industrial_structures/cooling_tower_core.prefab
+assets/content/structures/industrial_structures/cooling_tower_exterior_collapsed.prefab
+assets/content/structures/industrial_structures/cooling_tower_exterior_intact.prefab
+assets/content/structures/industrial_structures/cooling_tower_exterior_pillars.prefab
+assets/content/structures/industrial_structures/industrial_bld_a.prefab
+assets/content/structures/industrial_structures/industrial_bld_b.prefab
+assets/content/structures/industrial_structures/industrial_bld_c.prefab
+assets/content/structures/industrial_structures/industrial_bld_d.prefab
+assets/content/structures/industrial_structures/industrial_bld_e.prefab
+assets/content/structures/industrial_structures/industrial_bld_f.prefab
+assets/content/structures/industrial_structures/industrial_bld_g.prefab
+assets/content/structures/industrial_structures/industrial_bld_h.prefab
+assets/content/structures/industrial_structures/industrial_bld_i.prefab
+assets/content/structures/industrial_structures/industrial_bld_j.prefab
+assets/content/structures/industrial_structures/industrial_bld_ruin_a.prefab
+assets/content/structures/industrial_structures/industrial_bld_ruin_b.prefab
+assets/content/structures/industrial_structures/industrial_sewage_tank.prefab
+assets/content/structures/industrial_structures/industrial_sewage_tank_broken.prefab
+assets/content/structures/industrial_structures/industrial_storage_tank_a.prefab
+assets/content/structures/industrial_structures/overpass_a.prefab
+assets/content/structures/industrial_structures/overpass_b.prefab
+assets/content/structures/industrial_structures/overpass_c.prefab
+assets/content/structures/industrial_structures/pigeon_nest_industrial.prefab
+assets/content/structures/industrial_structures/silo_a.prefab
+assets/content/structures/industrial_structures/silo_b.prefab
+assets/content/structures/industrial_structures/silo_beak.prefab
+assets/content/structures/industrial_structures/silo_c.prefab
+assets/content/structures/industrial_structures/watch_tower_a.prefab
+assets/content/structures/industrial_structures/watch_tower_b.prefab
+assets/content/structures/industrial_structures/watch_tower_c.prefab
+assets/content/structures/industrial_structures/watch_tower_d.prefab
+assets/content/structures/industrial_structures/water_tower_industrial.prefab
+assets/content/structures/ladder_set/ladder_300.prefab
+assets/content/structures/ladder_set/ladder_300_top.prefab
+assets/content/structures/ladder_set/ladder_600.prefab
+assets/content/structures/ladder_set/ladder_industrial_300.prefab
+assets/content/structures/ladder_set/ladder_industrial_300_top.prefab
+assets/content/structures/ladder_set/ladder_industrial_600.prefab
+assets/content/structures/large_industrial_props/large_industrial_prop_d_a.prefab
+assets/content/structures/large_industrial_props/large_industrial_prop_d_b.prefab
+assets/content/structures/large_industrial_props/large_industrial_prop_d_c.prefab
 assets/content/structures/light_fixtures/industrial.ceiling.lamp.compact.off.prefab
 assets/content/structures/light_fixtures/industrial.ceiling.lamp.compact.on.prefab
 assets/content/structures/light_fixtures/industrial.ceiling.lamp.off.prefab
@@ -960,9 +1138,167 @@ assets/content/structures/light_fixtures/industrial.wall.lamp.on.prefab
 assets/content/structures/minors/barricade_concrete_solo.prefab
 assets/content/structures/minors/light_barrel_station.prefab
 assets/content/structures/minors/scrap_ceilinglight.prefab
+assets/content/structures/misc_dressing_props/barricade_concrete.prefab
+assets/content/structures/misc_dressing_props/barricade_sandbags.prefab
+assets/content/structures/misc_dressing_props/cargo_pack.prefab
+assets/content/structures/misc_dressing_props/container_cargo.prefab
+assets/content/structures/misc_dressing_props/lamppost.prefab
+assets/content/structures/misc_dressing_props/water_drum_a.prefab
+assets/content/structures/office_buildings/office_bld_a.prefab
+assets/content/structures/office_buildings/office_bld_base_a.prefab
+assets/content/structures/office_buildings/office_l_stair_a.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_corner.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_end.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_gradient_150.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_gradient_300.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_hole_a.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_hole_b.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_s_150.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_s_600.prefab
+assets/content/structures/perimeter_walls/perimeter_wall_straight.prefab
 assets/content/structures/pipe_a/pipe_a_prefab.prefab
+assets/content/structures/pipelines/pipeline_100x300.prefab
+assets/content/structures/pipelines/pipeline_100x300_bend.prefab
+assets/content/structures/pipelines/pipeline_100x300_up600.prefab
+assets/content/structures/pipelines/pipeline_100x600.prefab
+assets/content/structures/pipelines/pipeline_100x600_end.prefab
+assets/content/structures/pipelines/pipeline_100x600_sshape.prefab
+assets/content/structures/pipelines/pipeline_100x900.prefab
+assets/content/structures/pipelines/pipeline_200x300.prefab
+assets/content/structures/pipelines/pipeline_200x300_bend.prefab
+assets/content/structures/pipelines/pipeline_200x300_up300.prefab
+assets/content/structures/pipelines/pipeline_200x300_up600.prefab
+assets/content/structures/pipelines/pipeline_200x600.prefab
+assets/content/structures/pipelines/pipeline_200x600_end.prefab
+assets/content/structures/pipelines/pipeline_200x600_sshape.prefab
+assets/content/structures/pipelines/pipeline_200x900.prefab
+assets/content/structures/pipelines/pipeline_300x300.prefab
+assets/content/structures/pipelines/pipeline_300x300_bend.prefab
+assets/content/structures/pipelines/pipeline_300x600_end.prefab
+assets/content/structures/pipelines/pipeline_300x600_up1500.prefab
+assets/content/structures/pipelines/pipeline_300x600_up300.prefab
+assets/content/structures/pipelines/pipeline_300x600_up300_gnd.prefab
+assets/content/structures/pipelines/pipeline_300x900.prefab
+assets/content/structures/pipelines/pipeline_300x900_blocked.prefab
+assets/content/structures/pipelines/pipeline_300x900_hole.prefab
+assets/content/structures/pipelines/pipeline_pylon_150x600.prefab
+assets/content/structures/pipelines/pipeline_pylon_300x1200.prefab
+assets/content/structures/pipelines/pipeline_pylon_300x300.prefab
+assets/content/structures/pipelines/pipeline_pylon_300x600.prefab
+assets/content/structures/pipelines/pipeline_pylon_300x900.prefab
+assets/content/structures/radiation/radiationsphere.prefab
+assets/content/structures/remnant_container/remnant_container_6x4.prefab
+assets/content/structures/roads/carpark_a.prefab
+assets/content/structures/roads/road_18x15.prefab
+assets/content/structures/roads/road_27x15.prefab
+assets/content/structures/roads/road_36x15.prefab
+assets/content/structures/roads/road_9x15.prefab
+assets/content/structures/roads/road_9x15_end.prefab
+assets/content/structures/roads/road_9x15_railway.prefab
+assets/content/structures/roads/road_9x18_broken.prefab
+assets/content/structures/roads/road_bend_15x15.prefab
+assets/content/structures/roads/road_junction_15x15.prefab
+assets/content/structures/roads/road_junctiont_15x15.prefab
+assets/content/structures/rubble_piles/brick_pile_1x6.prefab
+assets/content/structures/rubble_piles/brick_pile_3x3.prefab
+assets/content/structures/rubble_piles/brick_pile_3x6.prefab
+assets/content/structures/rubble_piles/brick_pile_6x6.prefab
+assets/content/structures/rubble_piles/coal_pile_18x18.prefab
+assets/content/structures/rubble_piles/coal_pile_3x3.prefab
+assets/content/structures/rubble_piles/coal_pile_6x6.prefab
+assets/content/structures/rubble_piles/conc_pile_18x9.prefab
+assets/content/structures/rubble_piles/conc_pile_3x6.prefab
+assets/content/structures/rubble_piles/conc_pile_6x6.prefab
+assets/content/structures/rubble_piles/conc_pile_9x9.prefab
+assets/content/structures/rubble_piles/rubble_pile_18x9.prefab
+assets/content/structures/rubble_piles/rubble_pile_3x3.prefab
+assets/content/structures/rubble_piles/rubble_pile_6x6.prefab
+assets/content/structures/rubble_piles/rubble_pile_9x9.prefab
+assets/content/structures/runway/runway_a_a.prefab
+assets/content/structures/runway/runway_a_b.prefab
+assets/content/structures/runway/runway_a_c.prefab
+assets/content/structures/satellite dish/dish_base.prefab
+assets/content/structures/satellite dish/dish_optical_lens.prefab
+assets/content/structures/satellite dish/dish_radio.prefab
+assets/content/structures/satellite dish/dish_rotary_support.prefab
+assets/content/structures/satellite dish/dish_supports.prefab
+assets/content/structures/sewers/sewer_drainwall_1800.prefab
+assets/content/structures/sewers/sewer_drainwall_1800_s.prefab
+assets/content/structures/sewers/sewer_drainwall_1800_shrink.prefab
+assets/content/structures/sewers/sewer_drainwall_300.prefab
+assets/content/structures/sewers/sewer_drainwall_600.prefab
+assets/content/structures/sewers/sewer_drainwall_600_bridge.prefab
+assets/content/structures/sewers/sewer_drainwall_corner_1200x1200.prefab
+assets/content/structures/sewers/sewer_drainwall_corner_1200x1200_out.prefab
+assets/content/structures/sewers/sewer_drainwall_entrance.prefab
+assets/content/structures/sewers/sewer_tunnel_1500up600.prefab
+assets/content/structures/sewers/sewer_tunnel_300.prefab
+assets/content/structures/sewers/sewer_tunnel_300_ladder.prefab
+assets/content/structures/sewers/sewer_tunnel_600.prefab
+assets/content/structures/sewers/sewer_tunnel_600_end.prefab
+assets/content/structures/sewers/sewer_tunnel_900.prefab
+assets/content/structures/sewers/sewer_tunnel_bend_600x600.prefab
+assets/content/structures/sewers/sewer_tunnel_junction_600x600.prefab
+assets/content/structures/sewers/sewer_tunnel_tjunction_600x600.prefab
+assets/content/structures/sewers/sewer_wall_2400.prefab
+assets/content/structures/sewers/sewer_wall_600.prefab
+assets/content/structures/sewers/sewer_wall_corner_600x600.prefab
+assets/content/structures/sewers/sewer_wall_cornerout_600x600.prefab
+assets/content/structures/spherical tank/evac_pipes.prefab
+assets/content/structures/spherical tank/exterior_crane.prefab
+assets/content/structures/spherical tank/models/spheretank_storage_tank.prefab
+assets/content/structures/spherical tank/pipes_exterior.prefab
 assets/content/structures/spherical tank/prefab.prefab
+assets/content/structures/spherical tank/pumping_station.prefab
+assets/content/structures/spherical tank/sphere_exterior.prefab
+assets/content/structures/spherical tank/sphere_interior.prefab
+assets/content/structures/spherical tank/sphere_interior_core.prefab
+assets/content/structures/spherical tank/sphere_interior_ropes.prefab
+assets/content/structures/spherical tank/sphere_pillars.prefab
+assets/content/structures/spherical tank/spheretank_storage_tank.prefab
+assets/content/structures/spherical tank/spheretank_walkway_a.prefab
+assets/content/structures/spherical tank/spheretank_walkway_b.prefab
+assets/content/structures/spherical tank/spheretank_walkway_c.prefab
+assets/content/structures/spherical tank/spheretank_walkway_d.prefab
+assets/content/structures/spherical tank/spheretank_walkway_e.prefab
+assets/content/structures/spherical tank/spheretank_walkway_f.prefab
+assets/content/structures/spherical tank/top_walkways.prefab
+assets/content/structures/stairs_scaffoldings/staircase_600x600.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x600.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x600_dbl.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x600_single.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x600b.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x900.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x900_dbl.prefab
+assets/content/structures/stairs_scaffoldings/stairs_300x900_single.prefab
+assets/content/structures/stairs_scaffoldings/stairs_barrier_150.prefab
+assets/content/structures/stairs_scaffoldings/stairs_barrier_300.prefab
+assets/content/structures/stairs_scaffoldings/stairs_barrier_450.prefab
+assets/content/structures/stairs_scaffoldings/stairs_barrier_600.prefab
+assets/content/structures/stairs_scaffoldings/stairs_barrier_900.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_150x150_corner.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_150x300.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_150x900.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_300x300_corner.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_300x600.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_300x900.prefab
+assets/content/structures/stairs_scaffoldings/stairs_overhang_600x600.prefab
 assets/content/structures/storm drain/storm_drain.prefab
+assets/content/structures/train_crane/train_crane_a.prefab
+assets/content/structures/train_tracks/crane_track_150x900.prefab
+assets/content/structures/train_tracks/crane_track_150x900_end.prefab
+assets/content/structures/train_tracks/train_track_3x18.prefab
+assets/content/structures/train_tracks/train_track_3x3_end.prefab
+assets/content/structures/train_tracks/train_track_3x36.prefab
+assets/content/structures/train_tracks/train_track_3x9.prefab
+assets/content/structures/train_tracks/train_track_bend_45.prefab
+assets/content/structures/train_tracks/train_track_sleft_3x027.prefab
+assets/content/structures/train_tracks/train_track_sright_3x27.prefab
+assets/content/structures/train_wagons/train_wagon_a.prefab
+assets/content/structures/train_wagons/train_wagon_b.prefab
+assets/content/structures/train_wagons/train_wagon_c.prefab
+assets/content/structures/train_wagons/train_wagon_d.prefab
+assets/content/structures/train_wagons/train_wagon_e.prefab
 assets/content/ui/developer/networkgraph.prefab
 assets/content/ui/ingame/craftingqueue.icon.prefab
 assets/content/ui/ingame/ui.blueprint.button.prefab
@@ -972,32 +1308,26 @@ assets/content/ui/ingame/ui.chat.item.prefab
 assets/content/ui/ingame/ui.deathscreen.respawn.prefab
 assets/content/ui/ingame/ui.deathscreen.respawn.sleepingbag.prefab
 assets/content/ui/ingame/ui.icon.skin.prefab
-assets/content/ui/ingame/ui.ingame.death.prefab
-assets/content/ui/ingame/ui.ingame.hud.prefab
-assets/content/ui/ingame/ui.ingame.sleeping.prefab
 assets/content/ui/ingame/ui.ingame.wounded.prefab
 assets/content/ui/ingame/ui.item.dropped.prefab
 assets/content/ui/ingame/ui.item.icon.prefab
 assets/content/ui/ingame/ui.item.option.prefab
 assets/content/ui/ingame/ui.item.pickup.prefab
-assets/content/ui/ingame/ui.menu.options.prefab
 assets/content/ui/ingame/ui.overlay.map.prefab
 assets/content/ui/ingame/ui.protection.panel.prefab
+assets/content/ui/ingame/ui.quickcraft.prefab
 assets/content/ui/ingame/ui.vital.prefab
 assets/content/ui/ingame/ui.vital.warning.prefab
-assets/content/ui/ingame/ui.voice.prefab
 assets/content/ui/ingame/underlays/ui.damage.directional.prefab
 assets/content/ui/menu/steaminventory/ui.steaminventory.category.prefab
 assets/content/ui/menu/steaminventory/ui.steaminventory.item.prefab
 assets/content/ui/menu/ui.loading.prefab
-assets/content/ui/menu/ui.mainmenu.prefab
 assets/content/ui/menu/ui.menu.friend.prefab
 assets/content/ui/menu/ui.menu.headerbutton.prefab
 assets/content/ui/menu/ui.menu.history.button.prefab
 assets/content/ui/menu/ui.options.keybind.prefab
 assets/content/ui/menu/ui.serverbrowser.category.prefab
 assets/content/ui/menu/ui.serverbrowser.list.prefab
-assets/content/ui/menu/ui.serverbrowser.prefab
 assets/content/ui/menu/ui.tweaks.dropdown.prefab
 assets/content/ui/menu/ui.tweaks.multiselect.prefab
 assets/content/ui/menu/ui.tweaks.slider.prefab
@@ -1006,6 +1336,7 @@ assets/content/ui/menu/ui.tweaks.togglelayer.prefab
 assets/content/ui/misc/dialogbackground.prefab
 assets/content/ui/misc/steamuserbutton.prefab
 assets/content/ui/paint/paintbox.prefab
+assets/content/ui/popups/genericpopup.prefab
 assets/content/unimplemented/fishing_rod/fishing_rod.worldmodel.prefab
 assets/content/unimplemented/fishing_rod/vm_fishing_rod/catch_empty.prefab
 assets/content/unimplemented/fishing_rod/vm_fishing_rod/catch_fish.prefab
@@ -1026,24 +1357,12 @@ assets/content/unimplemented/flashlight/vm_flashlight/attack_end.prefab
 assets/content/unimplemented/flashlight/vm_flashlight/attack_hit.prefab
 assets/content/unimplemented/flashlight/vm_flashlight/deploy.prefab
 assets/content/unimplemented/flashlight/vm_flashlight/holster.prefab
-assets/content/unimplemented/weapon mods/flashlight/flashlight.entity.prefab
-assets/content/unimplemented/weapon mods/flashlight/flashlight.viewmodel.prefab
-assets/content/unimplemented/weapon mods/flashlight/flashlight.worldmodel.prefab
-assets/content/unimplemented/weapon mods/flashlight/pistol_flashlight.entity.prefab
-assets/content/unimplemented/weapon mods/flashlight/pistol_flashlight.viewmodel.prefab
-assets/content/unimplemented/weapon mods/flashlight/pistol_flashlight.worldmodel.prefab
-assets/content/unimplemented/weapon mods/holosight/holosight.entity.prefab
-assets/content/unimplemented/weapon mods/holosight/holosight.viewmodel.prefab
-assets/content/unimplemented/weapon mods/holosight/holosight.worldmodel.prefab
-assets/content/unimplemented/weapon mods/lasersight/lasersight.entity.prefab
-assets/content/unimplemented/weapon mods/lasersight/lasersight.viewmodel.prefab
-assets/content/unimplemented/weapon mods/lasersight/lasersight.worldmodel.prefab
-assets/content/unimplemented/weapon mods/reddot/reddot.entity.prefab
-assets/content/unimplemented/weapon mods/reddot/reddot.viewmodel.prefab
-assets/content/unimplemented/weapon mods/reddot/reddot.worldmodel.prefab
-assets/content/unimplemented/weapon mods/silencer/silencer.entity.prefab
-assets/content/unimplemented/weapon mods/silencer/silencer.viewmodel.prefab
-assets/content/unimplemented/weapon mods/silencer/silencer.worldmodel.prefab
+assets/content/vehicles/sedan_a/sedan_a_black.prefab
+assets/content/vehicles/sedan_a/sedan_a_blue.prefab
+assets/content/vehicles/sedan_a/sedan_a_green.prefab
+assets/content/vehicles/sedan_a/sedan_a_red.prefab
+assets/content/vehicles/sedan_a/sedan_a_white.prefab
+assets/content/vehicles/sedan_a/sedan_a_yellow.prefab
 assets/content/weapons/_gestures/effects/drink.prefab
 assets/content/weapons/_gestures/effects/eat_1hand_celery.prefab
 assets/content/weapons/_gestures/effects/eat_2hand_chewymeat.prefab
@@ -1082,6 +1401,12 @@ assets/prefabs/ammo/shotgun/ammo_shotgun.item.prefab
 assets/prefabs/ammo/shotgun/ammo_shotgun_slug.item.prefab
 assets/prefabs/ammo/shotgun/shotgunbullet.prefab
 assets/prefabs/ammo/shotgun/shotgunslug.prefab
+assets/prefabs/building core/floor.frame/floor.frame.metal.prefab
+assets/prefabs/building core/floor.frame/floor.frame.prefab
+assets/prefabs/building core/floor.frame/floor.frame.stone.prefab
+assets/prefabs/building core/floor.frame/floor.frame.toptier.prefab
+assets/prefabs/building core/floor.frame/floor.frame.twig.prefab
+assets/prefabs/building core/floor.frame/floor.frame.wood.prefab
 assets/prefabs/building core/floor.triangle/floor.triangle.metal.prefab
 assets/prefabs/building core/floor.triangle/floor.triangle.prefab
 assets/prefabs/building core/floor.triangle/floor.triangle.stone.prefab
@@ -1142,6 +1467,12 @@ assets/prefabs/building core/wall.doorway/wall.doorway.stone.prefab
 assets/prefabs/building core/wall.doorway/wall.doorway.toptier.prefab
 assets/prefabs/building core/wall.doorway/wall.doorway.twig.prefab
 assets/prefabs/building core/wall.doorway/wall.doorway.wood.prefab
+assets/prefabs/building core/wall.frame/wall.frame.metal.prefab
+assets/prefabs/building core/wall.frame/wall.frame.prefab
+assets/prefabs/building core/wall.frame/wall.frame.stone.prefab
+assets/prefabs/building core/wall.frame/wall.frame.toptier.prefab
+assets/prefabs/building core/wall.frame/wall.frame.twig.prefab
+assets/prefabs/building core/wall.frame/wall.frame.wood.prefab
 assets/prefabs/building core/wall.low/wall.low.metal.prefab
 assets/prefabs/building core/wall.low/wall.low.prefab
 assets/prefabs/building core/wall.low/wall.low.stone.prefab
@@ -1160,6 +1491,18 @@ assets/prefabs/building core/wall/wall.stone.prefab
 assets/prefabs/building core/wall/wall.toptier.prefab
 assets/prefabs/building core/wall/wall.twig.prefab
 assets/prefabs/building core/wall/wall.wood.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.metal.item.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.metal.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.toptier.item.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.toptier.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.wood.item.prefab
+assets/prefabs/building/door.double.hinged/door.double.hinged.wood.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-metal-close-end.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-metal-close-start.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-metal-open-start.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-wood-close-end.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-wood-close-start.prefab
+assets/prefabs/building/door.double.hinged/effects/door-double-wood-open-start.prefab
 assets/prefabs/building/door.hinged/door.hinged.metal.item.prefab
 assets/prefabs/building/door.hinged/door.hinged.metal.prefab
 assets/prefabs/building/door.hinged/door.hinged.toptier.item.prefab
@@ -1186,27 +1529,52 @@ assets/prefabs/building/door.hinged/effects/gate-external-wood-close-end.prefab
 assets/prefabs/building/door.hinged/effects/gate-external-wood-close-start.prefab
 assets/prefabs/building/door.hinged/effects/gate-external-wood-open-end.prefab
 assets/prefabs/building/door.hinged/effects/gate-external-wood-open-start.prefab
+assets/prefabs/building/floor.grill/floor.grill.item.prefab
+assets/prefabs/building/floor.grill/floor.grill.prefab
+assets/prefabs/building/floor.ladder.hatch/effects/door-ladder-hatch-close-end.prefab
+assets/prefabs/building/floor.ladder.hatch/effects/door-ladder-hatch-close-start.prefab
+assets/prefabs/building/floor.ladder.hatch/effects/door-ladder-hatch-open-start.prefab
+assets/prefabs/building/floor.ladder.hatch/floor.ladder.hatch.item.prefab
+assets/prefabs/building/floor.ladder.hatch/floor.ladder.hatch.prefab
 assets/prefabs/building/gates.external.high/gates.external.high.stone/gates.external.high.stone.item.prefab
 assets/prefabs/building/gates.external.high/gates.external.high.stone/gates.external.high.stone.prefab
 assets/prefabs/building/gates.external.high/gates.external.high.wood/gates.external.high.wood.item.prefab
 assets/prefabs/building/gates.external.high/gates.external.high.wood/gates.external.high.wood.prefab
 assets/prefabs/building/ladder.wall.wood/ladder.wooden.wall.item.prefab
 assets/prefabs/building/ladder.wall.wood/ladder.wooden.wall.prefab
+assets/prefabs/building/ladder.wall.wood/ladder_prop.prefab
 assets/prefabs/building/wall.external.high.stone/wall.external.high.stone.item.prefab
 assets/prefabs/building/wall.external.high.stone/wall.external.high.stone.prefab
-assets/prefabs/building/wall.external.high.stone/wall.external.high.stone.skin.prefab
 assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.item.prefab
 assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.prefab
-assets/prefabs/building/wall.external.high.wood/wall.external.high.wood.skin.prefab
+assets/prefabs/building/wall.frame.cell/effects/door-cell-metal-close-end.prefab
+assets/prefabs/building/wall.frame.cell/effects/door-cell-metal-close-start.prefab
+assets/prefabs/building/wall.frame.cell/effects/door-cell-metal-open-start.prefab
+assets/prefabs/building/wall.frame.cell/wall.frame.cell.gate.item.prefab
+assets/prefabs/building/wall.frame.cell/wall.frame.cell.gate.prefab
+assets/prefabs/building/wall.frame.cell/wall.frame.cell.item.prefab
+assets/prefabs/building/wall.frame.cell/wall.frame.cell.prefab
+assets/prefabs/building/wall.frame.fence/effects/chain-link-impact.prefab
+assets/prefabs/building/wall.frame.fence/effects/door-fence-metal-close-end.prefab
+assets/prefabs/building/wall.frame.fence/effects/door-fence-metal-close-start.prefab
+assets/prefabs/building/wall.frame.fence/effects/door-fence-metal-open-end.prefab
+assets/prefabs/building/wall.frame.fence/effects/door-fence-metal-open-start.prefab
+assets/prefabs/building/wall.frame.fence/wall.frame.fence.gate.item.prefab
+assets/prefabs/building/wall.frame.fence/wall.frame.fence.gate.prefab
+assets/prefabs/building/wall.frame.fence/wall.frame.fence.item.prefab
+assets/prefabs/building/wall.frame.fence/wall.frame.fence.prefab
+assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-close-end.prefab
+assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-close-start.prefab
+assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-open-end.prefab
+assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-open-start.prefab
+assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.item.prefab
+assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.metal.item.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.metal.prefab
-assets/prefabs/building/wall.window.bars/wall.window.bars.metal.skin.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.toptier.item.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.toptier.prefab
-assets/prefabs/building/wall.window.bars/wall.window.bars.toptier.skin.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.wood.item.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.wood.prefab
-assets/prefabs/building/wall.window.bars/wall.window.bars.wood.skin.prefab
 assets/prefabs/building/wall.window.embrasure/shutter.metal.embrasure.a.item.prefab
 assets/prefabs/building/wall.window.embrasure/shutter.metal.embrasure.a.prefab
 assets/prefabs/building/wall.window.embrasure/shutter.metal.embrasure.b.item.prefab
@@ -1221,6 +1589,8 @@ assets/prefabs/clothes/gloves.burlap/burlap_gloves.item.prefab
 assets/prefabs/clothes/gloves.burlap/burlap_gloves.prefab
 assets/prefabs/clothes/gloves.hazmat/hazmat_gloves.item.prefab
 assets/prefabs/clothes/gloves.hazmat/hazmat_gloves.prefab
+assets/prefabs/clothes/halterneck.hide/hide_halterneck.prefab
+assets/prefabs/clothes/halterneck.hide/hidehalterneck.item.prefab
 assets/prefabs/clothes/hat.beenie/base/hat.beenie.item.prefab
 assets/prefabs/clothes/hat.beenie/hat.beenie.prefab
 assets/prefabs/clothes/hat.boonie/hat.boonie.item.prefab
@@ -1265,7 +1635,7 @@ assets/prefabs/clothes/pants.bonearmor/bonearmor_pants.prefab
 assets/prefabs/clothes/pants.burlap/burlap_trousers.item.prefab
 assets/prefabs/clothes/pants.burlap/burlap_trousers.prefab
 assets/prefabs/clothes/pants.hazmat/hazmat_pants.item.prefab
-assets/prefabs/clothes/pants.hide/hazmat_pants.prefab
+assets/prefabs/clothes/pants.hazmat/hazmat_pants.prefab
 assets/prefabs/clothes/pants.hide/hide_pants.prefab
 assets/prefabs/clothes/pants.hide/hidepants.item.prefab
 assets/prefabs/clothes/pants.patchwork/pants.patchwork.base.prefab
@@ -1276,6 +1646,7 @@ assets/prefabs/clothes/pants.woodarmor/wood_armor_pants.item.prefab
 assets/prefabs/clothes/pants.woodarmor/woodarmor_pants.prefab
 assets/prefabs/clothes/pants/cargo/pants.cargo.item.prefab
 assets/prefabs/clothes/pants/pants.generic.prefab
+assets/prefabs/clothes/poncho.hide/hide_poncho 1.prefab
 assets/prefabs/clothes/poncho.hide/hide_poncho.prefab
 assets/prefabs/clothes/poncho.hide/hideponcho.item.prefab
 assets/prefabs/clothes/shirt.burlap/burlap_shirt.item.prefab
@@ -1297,6 +1668,9 @@ assets/prefabs/clothes/skin/skin_hands.prefab
 assets/prefabs/clothes/skin/skin_head.prefab
 assets/prefabs/clothes/skin/skin_legs.prefab
 assets/prefabs/clothes/skin/skin_torso.prefab
+assets/prefabs/clothes/skirt.hide/hide_skirt.prefab
+assets/prefabs/clothes/skirt.hide/hideskirt.item.prefab
+assets/prefabs/clothes/tshirt.long/tshirt.long 1.prefab
 assets/prefabs/clothes/tshirt.long/tshirt.long.blue.item.prefab
 assets/prefabs/clothes/tshirt.long/tshirt.long.prefab
 assets/prefabs/clothes/tshirt/tshirt.green.item.prefab
@@ -1324,6 +1698,18 @@ assets/prefabs/deployable/bed/bed.item.prefab
 assets/prefabs/deployable/bed/bed_deployed.prefab
 assets/prefabs/deployable/campfire/campfire.item.prefab
 assets/prefabs/deployable/campfire/campfire.prefab
+assets/prefabs/deployable/ceiling light/ceilinglight.deployed.prefab
+assets/prefabs/deployable/ceiling light/ceilinglight.item.prefab
+assets/prefabs/deployable/ceiling light/ceilinglight.worldmodel.prefab
+assets/prefabs/deployable/covers/cover_a.prefab
+assets/prefabs/deployable/covers/cover_b.prefab
+assets/prefabs/deployable/covers/cover_c.prefab
+assets/prefabs/deployable/covers/cover_d.prefab
+assets/prefabs/deployable/covers/cover_e.prefab
+assets/prefabs/deployable/door barricades/door_barricade_a.prefab
+assets/prefabs/deployable/door barricades/door_barricade_b.prefab
+assets/prefabs/deployable/door barricades/door_barricade_dbl_a.prefab
+assets/prefabs/deployable/door barricades/door_barricade_dbl_b.prefab
 assets/prefabs/deployable/floor spikes/spikes.floor.item.prefab
 assets/prefabs/deployable/floor spikes/spikes.floor.prefab
 assets/prefabs/deployable/furnace.large/furnace.large.item.prefab
@@ -1349,6 +1735,8 @@ assets/prefabs/deployable/lantern/model/vm_lantern/deploy.prefab
 assets/prefabs/deployable/lantern/model/vm_lantern/holster.prefab
 assets/prefabs/deployable/large wood storage/box.wooden.large.item.prefab
 assets/prefabs/deployable/large wood storage/box.wooden.large.prefab
+assets/prefabs/deployable/liquidbarrel/waterbarrel.item.prefab
+assets/prefabs/deployable/liquidbarrel/waterbarrel.prefab
 assets/prefabs/deployable/oil jack/crudeoutput.prefab
 assets/prefabs/deployable/oil jack/engineswitch.prefab
 assets/prefabs/deployable/oil jack/fuelstorage.prefab
@@ -1357,11 +1745,21 @@ assets/prefabs/deployable/oil jack/mining.pumpjack.prefab
 assets/prefabs/deployable/oil refinery/refinery_large_deployed.prefab
 assets/prefabs/deployable/oil refinery/refinery_small_deployed.prefab
 assets/prefabs/deployable/oil refinery/small_oil_refinery.item.prefab
+assets/prefabs/deployable/planters/large_planter.prefab
+assets/prefabs/deployable/planters/small_planter.prefab
 assets/prefabs/deployable/quarry/engineswitch.prefab
 assets/prefabs/deployable/quarry/fuelstorage.prefab
 assets/prefabs/deployable/quarry/hopperoutput.prefab
 assets/prefabs/deployable/quarry/mining.quarry.item.prefab
 assets/prefabs/deployable/quarry/mining_quarry.prefab
+assets/prefabs/deployable/reactive target/effects/bullseye.prefab
+assets/prefabs/deployable/reactive target/effects/snd_hit.prefab
+assets/prefabs/deployable/reactive target/effects/snd_knockdown.prefab
+assets/prefabs/deployable/reactive target/effects/snd_reset.prefab
+assets/prefabs/deployable/reactive target/effects/tire_smokepuff.prefab
+assets/prefabs/deployable/reactive target/reactivetarget.item.prefab
+assets/prefabs/deployable/reactive target/reactivetarget.prefab
+assets/prefabs/deployable/reactive target/reactivetarget_deployed.prefab
 assets/prefabs/deployable/repair bench/repair_bench.item.prefab
 assets/prefabs/deployable/repair bench/repairbench_deployed.prefab
 assets/prefabs/deployable/research table/research_table.item.prefab
@@ -1404,22 +1802,30 @@ assets/prefabs/deployable/signs/sign.wooden.large.item.prefab
 assets/prefabs/deployable/signs/sign.wooden.medium.item.prefab
 assets/prefabs/deployable/signs/sign.wooden.small.item.prefab
 assets/prefabs/deployable/sleeping bag/sleepingbag.item.prefab
-assets/prefabs/deployable/sleeping bag/sleepingbag_deployed.prefab
 assets/prefabs/deployable/sleeping bag/sleepingbag_leather_deployed.prefab
 assets/prefabs/deployable/sleeping bag/sleepingbag_leather_occupied.prefab
 assets/prefabs/deployable/small stash/small_stash.item.prefab
 assets/prefabs/deployable/small stash/small_stash_deployed.prefab
+assets/prefabs/deployable/survivalfishtrap/effects/fish_caught.prefab
+assets/prefabs/deployable/survivalfishtrap/survivalfishtrap.deployed.prefab
+assets/prefabs/deployable/survivalfishtrap/survivalfishtrap.item.prefab
 assets/prefabs/deployable/tool cupboard/cupboard.tool.deployed.prefab
 assets/prefabs/deployable/tool cupboard/cupboard.tool.item.prefab
+assets/prefabs/deployable/tuna can wall lamp/tunacan_walllight.prefab
+assets/prefabs/deployable/water barrel/water_barrel.prefab
 assets/prefabs/deployable/water catcher/w_tank_big.prefab
 assets/prefabs/deployable/water catcher/w_tank_small.prefab
 assets/prefabs/deployable/water catcher/water_catcher_large.item.prefab
 assets/prefabs/deployable/water catcher/water_catcher_large.prefab
 assets/prefabs/deployable/water catcher/water_catcher_small.item.prefab
 assets/prefabs/deployable/water catcher/water_catcher_small.prefab
+assets/prefabs/deployable/water desalinator/water_desalinator.prefab
+assets/prefabs/deployable/water well/water_well_deployable.prefab
+assets/prefabs/deployable/waterpurifier/waterpurifier.deployed.prefab
+assets/prefabs/deployable/waterpurifier/waterpurifier.item.prefab
+assets/prefabs/deployable/waterpurifier/waterstorage.prefab
 assets/prefabs/deployable/windmill/generator.wind.scrap.item.prefab
 assets/prefabs/deployable/windmill/generator.wind.scrap.prefab
-assets/prefabs/deployable/windmill/generator.wind.scrap.skin.prefab
 assets/prefabs/deployable/windmill/windmill.prefab
 assets/prefabs/deployable/wooden loot crates/wooden_crate_1.prefab
 assets/prefabs/deployable/wooden loot crates/wooden_crate_2.prefab
@@ -1453,6 +1859,10 @@ assets/prefabs/food/bota bag/bota_bag.worldmodel.prefab
 assets/prefabs/food/can of beans/can_beans.item.prefab
 assets/prefabs/food/can of tuna/can_tuna.item.prefab
 assets/prefabs/food/chocholate/chocholate.item.prefab
+assets/prefabs/food/fish/fish_cooked.item.prefab
+assets/prefabs/food/fish/fish_raw.item.prefab
+assets/prefabs/food/fish/minnows.item.prefab
+assets/prefabs/food/fish/smalltrout.item.prefab
 assets/prefabs/food/granola bar/granolabar.item.prefab
 assets/prefabs/food/meat/bearmeat.worldmodel.prefab
 assets/prefabs/food/meat/chicken_burned.item.prefab
@@ -1471,6 +1881,8 @@ assets/prefabs/food/meat/humanmeat_burned.item.prefab
 assets/prefabs/food/meat/humanmeat_cooked.item.prefab
 assets/prefabs/food/meat/humanmeat_raw.item.prefab
 assets/prefabs/food/meat/humanmeat_spoiled.item.prefab
+assets/prefabs/food/meat/meat.bear.burned.item.prefab
+assets/prefabs/food/meat/meat.bear.cooked.item.prefab
 assets/prefabs/food/meat/meat.bear.raw.item.prefab
 assets/prefabs/food/meat/meat.wolf.burned.item.prefab
 assets/prefabs/food/meat/meat.wolf.burned.worldmodel.prefab
@@ -1505,6 +1917,7 @@ assets/prefabs/food/meat/pork/meat.pork.raw.item.prefab
 assets/prefabs/food/meat/pork/meat.pork.raw.worldmodel.prefab
 assets/prefabs/food/mushroom/mushroom.item.prefab
 assets/prefabs/food/small water bottle/smallwaterbottle.item.prefab
+assets/prefabs/food/water jug/waterjug.item.prefab
 assets/prefabs/instruments/guitar/effects/guitarpluck.prefab
 assets/prefabs/instruments/guitar/effects/guitarstrum.prefab
 assets/prefabs/instruments/guitar/guitar.item.prefab
@@ -1514,25 +1927,27 @@ assets/prefabs/locks/keylock/lock.key.item.prefab
 assets/prefabs/locks/keylock/lock.key.prefab
 assets/prefabs/locks/keypad/effects/lock.code.denied.prefab
 assets/prefabs/locks/keypad/effects/lock.code.lock.prefab
+assets/prefabs/locks/keypad/effects/lock.code.shock.prefab
 assets/prefabs/locks/keypad/effects/lock.code.unlock.prefab
 assets/prefabs/locks/keypad/effects/lock.code.updated.prefab
 assets/prefabs/locks/keypad/lock.code.item.prefab
 assets/prefabs/locks/keypad/lock.code.prefab
 assets/prefabs/locks/keypad/model/keypad.prefab
 assets/prefabs/locks/keypad/ui/ui.dialog.lock.code.prefab
-assets/prefabs/misc/blueprint/blueprint_book.item.prefab
-assets/prefabs/misc/blueprint/blueprint_fragment.item.prefab
-assets/prefabs/misc/blueprint/blueprint_library.item.prefab
-assets/prefabs/misc/blueprint/blueprint_page.item.prefab
-assets/prefabs/misc/blueprint/effects/blueprint_fail.prefab
-assets/prefabs/misc/blueprint/effects/blueprint_reveal.prefab
-assets/prefabs/misc/blueprint/effects/blueprint_success.prefab
 assets/prefabs/misc/burlap sack/burlap sack.prefab
+assets/prefabs/misc/burlap sack/effects/phys-impact-hard.prefab
+assets/prefabs/misc/burlap sack/effects/phys-impact-med.prefab
+assets/prefabs/misc/burlap sack/effects/phys-impact-soft.prefab
 assets/prefabs/misc/burlap sack/generic_world.prefab
 assets/prefabs/misc/note/note.item.prefab
+assets/prefabs/misc/note/notepanel.prefab
 assets/prefabs/misc/parachute/parachute.prefab
 assets/prefabs/misc/skull/skull.prefab
 assets/prefabs/misc/skull/skull_human.item.prefab
+assets/prefabs/misc/small ration float/chickendinner.prefab
+assets/prefabs/misc/small ration float/mashpotato.prefab
+assets/prefabs/misc/small ration float/rationboxfloat.prefab
+assets/prefabs/misc/small ration float/waterbottle.prefab
 assets/prefabs/misc/supply drop/supply_drop.prefab
 assets/prefabs/misc/xmas/christmas_props/assets/prefabs/box_1.prefab
 assets/prefabs/misc/xmas/christmas_props/assets/prefabs/box_2.prefab
@@ -1576,12 +1991,12 @@ assets/prefabs/misc/xmas/wearable/santahat/santahat.worldmodel.prefab
 assets/prefabs/misc/xmas/xmasrefill.prefab
 assets/prefabs/npc/autoturret/autoturret.item.prefab
 assets/prefabs/npc/autoturret/autoturret_deployed.prefab
+assets/prefabs/npc/autoturret/effects/offline.prefab
+assets/prefabs/npc/autoturret/effects/online.prefab
+assets/prefabs/npc/autoturret/effects/targetacquired.prefab
+assets/prefabs/npc/autoturret/effects/targetlost.prefab
 assets/prefabs/npc/autoturret/muzzleflash_test.prefab
-assets/prefabs/npc/autoturret/offline.prefab
-assets/prefabs/npc/autoturret/online.prefab
 assets/prefabs/npc/autoturret/sentrybullet.prefab
-assets/prefabs/npc/autoturret/targetacquired.prefab
-assets/prefabs/npc/autoturret/targetlost.prefab
 assets/prefabs/npc/bear/bear_collision.prefab
 assets/prefabs/npc/bear/bear_corpse.prefab
 assets/prefabs/npc/bear/bear_ragdoll.prefab
@@ -1637,6 +2052,13 @@ assets/prefabs/plants/corn/corn.skin.3.mature.prefab
 assets/prefabs/plants/corn/corn.skin.4.fruiting.prefab
 assets/prefabs/plants/corn/corn.skin.5.dying.prefab
 assets/prefabs/plants/corn/corn_seed.item.prefab
+assets/prefabs/plants/hemp/hemp.entity.prefab
+assets/prefabs/plants/hemp/hemp.skin.1.seedling.prefab
+assets/prefabs/plants/hemp/hemp.skin.2.sapling.prefab
+assets/prefabs/plants/hemp/hemp.skin.3.mature.prefab
+assets/prefabs/plants/hemp/hemp.skin.4.fruiting.prefab
+assets/prefabs/plants/hemp/hemp.skin.5.dying.prefab
+assets/prefabs/plants/hemp/hemp_seed.item.prefab
 assets/prefabs/plants/plantharvest.effect.prefab
 assets/prefabs/plants/plantseed.effect.prefab
 assets/prefabs/plants/pumpkin/pumpkin.entity.prefab
@@ -1668,6 +2090,7 @@ assets/prefabs/resource/cctv_camera.item.prefab
 assets/prefabs/resource/charcoal.item.prefab
 assets/prefabs/resource/cloth.item.prefab
 assets/prefabs/resource/crude_oil.item.prefab
+assets/prefabs/resource/crude_oil.worldmodel.prefab
 assets/prefabs/resource/explosives.item.prefab
 assets/prefabs/resource/fat.animal.item.prefab
 assets/prefabs/resource/fuel.lowgrade.item.prefab
@@ -1729,15 +2152,42 @@ assets/prefabs/tools/surveycharge/survey_crater.prefab
 assets/prefabs/tools/surveycharge/survey_crater_oil.prefab
 assets/prefabs/tools/surveycharge/surveycharge.item.prefab
 assets/prefabs/tools/surveycharge/surveycharge.prefab
+assets/prefabs/visualization/sphere.prefab
+assets/prefabs/weapon mods/flashlight/flashlight.entity.prefab
+assets/prefabs/weapon mods/flashlight/flashlight.vm.attachment.prefab
+assets/prefabs/weapon mods/flashlight/flashlight.worldmodel.prefab
+assets/prefabs/weapon mods/flashlight/flashlightmod.item.prefab
+assets/prefabs/weapon mods/flashlight/lighteffect_1p.prefab
+assets/prefabs/weapon mods/flashlight/lighteffect_3p.prefab
+assets/prefabs/weapon mods/flashlight/pistol_flashlight.entity.prefab
+assets/prefabs/weapon mods/flashlight/pistol_flashlight.viewmodel.prefab
+assets/prefabs/weapon mods/flashlight/pistol_flashlight.worldmodel.prefab
 assets/prefabs/weapon mods/holosight/holosight.entity.prefab
 assets/prefabs/weapon mods/holosight/holosight.item.prefab
 assets/prefabs/weapon mods/holosight/holosight.vm.attachment.prefab
+assets/prefabs/weapon mods/lasersight/lasereffect_1p.prefab
+assets/prefabs/weapon mods/lasersight/lasereffect_3p.prefab
+assets/prefabs/weapon mods/lasersight/lasersight.entity.prefab
+assets/prefabs/weapon mods/lasersight/lasersight.item.prefab
+assets/prefabs/weapon mods/lasersight/lasersight.vm.attachment.prefab
+assets/prefabs/weapon mods/lasersight/lasersight.worldmodel.prefab
 assets/prefabs/weapon mods/mod_attach.fx.prefab
+assets/prefabs/weapon mods/muzzleboost/muzzleboost.entity.prefab
+assets/prefabs/weapon mods/muzzleboost/muzzleboost.vm.attachment.prefab
+assets/prefabs/weapon mods/muzzleboost/muzzlebooster.item.prefab
+assets/prefabs/weapon mods/muzzlebrake/muzzlebrake.entity.prefab
+assets/prefabs/weapon mods/muzzlebrake/muzzlebrake.item.prefab
+assets/prefabs/weapon mods/muzzlebrake/muzzlebrake.vm.attachment.prefab
+assets/prefabs/weapon mods/scope/scope.prefab
 assets/prefabs/weapon mods/silencers/effects/silencedshot_default.prefab
 assets/prefabs/weapon mods/silencers/effects/silencer_attach.fx.prefab
 assets/prefabs/weapon mods/silencers/silencer.entity.prefab
 assets/prefabs/weapon mods/silencers/silencer.item.prefab
 assets/prefabs/weapon mods/silencers/silencer.vm.attachment.prefab
+assets/prefabs/weapon mods/smallscope/scope.small.item.prefab
+assets/prefabs/weapon mods/smallscope/smallscope.entity.prefab
+assets/prefabs/weapon mods/smallscope/smallscope.vm.attachment.prefab
+assets/prefabs/weapon mods/smallscope/smallscope.worldmodel.prefab
 assets/prefabs/weapons/ak47u/ak47u.entity.prefab
 assets/prefabs/weapons/ak47u/ak47u.item.prefab
 assets/prefabs/weapons/ak47u/ak47u.viewmodel.prefab
@@ -1751,8 +2201,13 @@ assets/prefabs/weapons/ak47u/effects/eject_rifle_shell.prefab
 assets/prefabs/weapons/ak47u/effects/grab_magazine.prefab
 assets/prefabs/weapons/ak47u/effects/holster.prefab
 assets/prefabs/weapons/ak47u/effects/insert_magazine.prefab
+assets/prefabs/weapons/ak47u/effects/phys-impact-hard.prefab
+assets/prefabs/weapons/ak47u/effects/phys-impact-med.prefab
+assets/prefabs/weapons/ak47u/effects/phys-impact-soft.prefab
 assets/prefabs/weapons/ak47u/effects/reload_boltaction.prefab
 assets/prefabs/weapons/ak47u/effects/reload_start.prefab
+assets/prefabs/weapons/ak47u/effects/w_drop_magazine.prefab
+assets/prefabs/weapons/ak47u/effects/w_eject_rifle_shell.prefab
 assets/prefabs/weapons/arms/effects/drop_item.prefab
 assets/prefabs/weapons/arms/effects/hook_hit-1.prefab
 assets/prefabs/weapons/arms/effects/hook_hit-2.prefab
@@ -1772,6 +2227,7 @@ assets/prefabs/weapons/arms/food_gestures.viewmodel.prefab
 assets/prefabs/weapons/bandage/bandage.entity.prefab
 assets/prefabs/weapons/bandage/bandage.item.prefab
 assets/prefabs/weapons/bandage/bandage.viewmodel.prefab
+assets/prefabs/weapons/bandage/bandage_worldmodel.prefab
 assets/prefabs/weapons/bandage/effects/deploy.prefab
 assets/prefabs/weapons/bandage/effects/wraparm.prefab
 assets/prefabs/weapons/bandage/effects/wraphead.prefab
@@ -1797,6 +2253,7 @@ assets/prefabs/weapons/bolt rifle/effects/deploy.prefab
 assets/prefabs/weapons/bolt rifle/effects/dryfire.prefab
 assets/prefabs/weapons/bolt rifle/effects/holster.prefab
 assets/prefabs/weapons/bolt rifle/effects/insertbullet.prefab
+assets/prefabs/weapons/bolt rifle/effects/w_eject_rifle_shell.prefab
 assets/prefabs/weapons/bone club/bone_club.entity.prefab
 assets/prefabs/weapons/bone club/bone_club.item.prefab
 assets/prefabs/weapons/bone club/bone_club.viewmodel.prefab
@@ -1822,6 +2279,11 @@ assets/prefabs/weapons/bone knife/effects/throw.prefab
 assets/prefabs/weapons/bone knife/knife_bone.entity.prefab
 assets/prefabs/weapons/bone knife/knife_bone.item.prefab
 assets/prefabs/weapons/bone knife/knife_bone.viewmodel.prefab
+assets/prefabs/weapons/bow/arrow heads/bone_arrowhead.prefab
+assets/prefabs/weapons/bow/arrow heads/fire_arrowhead.prefab
+assets/prefabs/weapons/bow/arrow heads/metal_arrowhead.prefab
+assets/prefabs/weapons/bow/arrow heads/poison_arrowhead.prefab
+assets/prefabs/weapons/bow/arrow heads/stone_arrowhead.prefab
 assets/prefabs/weapons/bow/bow.worldmodel.prefab
 assets/prefabs/weapons/bow/bow_hunting.entity.prefab
 assets/prefabs/weapons/bow/bow_hunting.item.prefab
@@ -1839,8 +2301,10 @@ assets/prefabs/weapons/cleaver big/effects/attack-3.prefab
 assets/prefabs/weapons/cleaver big/effects/deploy.prefab
 assets/prefabs/weapons/cleaver big/effects/hit.prefab
 assets/prefabs/weapons/cleaver big/effects/hit-soft.prefab
+assets/prefabs/weapons/cleaver big/effects/throw.prefab
 assets/prefabs/weapons/cleaver big/salvaged_cleaver.entity.prefab
 assets/prefabs/weapons/cleaver big/salvaged_cleaver.item.prefab
+assets/prefabs/weapons/cleaver big/salvaged_cleaver.projectile.prefab
 assets/prefabs/weapons/cleaver big/salvaged_cleaver.viewmodel.prefab
 assets/prefabs/weapons/crossbow/crossbow.entity.prefab
 assets/prefabs/weapons/crossbow/crossbow.item.prefab
@@ -1876,6 +2340,23 @@ assets/prefabs/weapons/f1 grenade/grenade.f1.entity.prefab
 assets/prefabs/weapons/f1 grenade/grenade.f1.item.prefab
 assets/prefabs/weapons/f1 grenade/grenade.f1.viewmodel.prefab
 assets/prefabs/weapons/f1 grenade/grenade.f1.worldmodel.prefab
+assets/prefabs/weapons/flamethrower/effects/deploy.prefab
+assets/prefabs/weapons/flamethrower/effects/flame_explosion 1.prefab
+assets/prefabs/weapons/flamethrower/effects/flame_explosion.prefab
+assets/prefabs/weapons/flamethrower/effects/flame_explosion_dist 1.prefab
+assets/prefabs/weapons/flamethrower/effects/flame_explosion_dist.prefab
+assets/prefabs/weapons/flamethrower/effects/flametest.prefab
+assets/prefabs/weapons/flamethrower/effects/gas_release.prefab
+assets/prefabs/weapons/flamethrower/effects/gascan_in.prefab
+assets/prefabs/weapons/flamethrower/effects/gascan_out.prefab
+assets/prefabs/weapons/flamethrower/effects/toggle_flame.prefab
+assets/prefabs/weapons/flamethrower/effects/valve_open.prefab
+assets/prefabs/weapons/flamethrower/flamethrower.entity.prefab
+assets/prefabs/weapons/flamethrower/flamethrower.item.prefab
+assets/prefabs/weapons/flamethrower/flamethrower.prefab
+assets/prefabs/weapons/flamethrower/flamethrower.viewmodel.prefab
+assets/prefabs/weapons/flamethrower/flamethrower.worldmodel.prefab
+assets/prefabs/weapons/flamethrower/flamethrower_fireball.prefab
 assets/prefabs/weapons/hacksaw/effects/attack-1.prefab
 assets/prefabs/weapons/hacksaw/effects/attack-2.prefab
 assets/prefabs/weapons/hacksaw/effects/hit.prefab
@@ -1887,6 +2368,7 @@ assets/prefabs/weapons/hammer/effects/deploy.prefab
 assets/prefabs/weapons/hammer/effects/holster.prefab
 assets/prefabs/weapons/hammer/effects/strike.prefab
 assets/prefabs/weapons/hammer/effects/strike_screenshake.prefab
+assets/prefabs/weapons/hammer/effects/throw.prefab
 assets/prefabs/weapons/hammer/hammer.entity.prefab
 assets/prefabs/weapons/hammer/hammer.item.prefab
 assets/prefabs/weapons/hammer/hammer.viewmodel.prefab
@@ -1896,6 +2378,7 @@ assets/prefabs/weapons/hatchet/effects/deploy.prefab
 assets/prefabs/weapons/hatchet/effects/holster.prefab
 assets/prefabs/weapons/hatchet/effects/strike.prefab
 assets/prefabs/weapons/hatchet/effects/strike_screenshake.prefab
+assets/prefabs/weapons/hatchet/effects/strike-muted.prefab
 assets/prefabs/weapons/hatchet/effects/strike-soft.prefab
 assets/prefabs/weapons/hatchet/effects/swing.prefab
 assets/prefabs/weapons/hatchet/effects/throw.prefab
@@ -1915,10 +2398,13 @@ assets/prefabs/weapons/m249/effects/bolt_forward.prefab
 assets/prefabs/weapons/m249/effects/chainbelt.prefab
 assets/prefabs/weapons/m249/effects/deploy.prefab
 assets/prefabs/weapons/m249/effects/dryfire.prefab
+assets/prefabs/weapons/m249/effects/eject_beltlink.prefab
 assets/prefabs/weapons/m249/effects/eject_rifle_shell.prefab
 assets/prefabs/weapons/m249/effects/place_bullets.prefab
 assets/prefabs/weapons/m249/effects/topcover_close.prefab
 assets/prefabs/weapons/m249/effects/topcover_open.prefab
+assets/prefabs/weapons/m249/effects/w_drop_magazine.prefab
+assets/prefabs/weapons/m249/effects/w_eject_rifle_shell.prefab
 assets/prefabs/weapons/m249/m249.entity.prefab
 assets/prefabs/weapons/m249/m249.item.prefab
 assets/prefabs/weapons/m249/m249.viewmodel.prefab
@@ -1927,8 +2413,10 @@ assets/prefabs/weapons/mace/effects/attack-1.prefab
 assets/prefabs/weapons/mace/effects/attack-2.prefab
 assets/prefabs/weapons/mace/effects/deploy.prefab
 assets/prefabs/weapons/mace/effects/hit.prefab
+assets/prefabs/weapons/mace/effects/throw.prefab
 assets/prefabs/weapons/mace/mace.entity.prefab
 assets/prefabs/weapons/mace/mace.item.prefab
+assets/prefabs/weapons/mace/mace.projectile.prefab
 assets/prefabs/weapons/mace/mace.viewmodel.prefab
 assets/prefabs/weapons/mace/mace.worldmodel.prefab
 assets/prefabs/weapons/machete/effects/attack-1.prefab
@@ -1936,6 +2424,7 @@ assets/prefabs/weapons/machete/effects/attack-2.prefab
 assets/prefabs/weapons/machete/effects/attack-3.prefab
 assets/prefabs/weapons/machete/effects/deploy.prefab
 assets/prefabs/weapons/machete/effects/hit.prefab
+assets/prefabs/weapons/machete/effects/hit-muted.prefab
 assets/prefabs/weapons/machete/effects/hit-soft.prefab
 assets/prefabs/weapons/machete/effects/throw.prefab
 assets/prefabs/weapons/machete/machete.item.prefab
@@ -1943,11 +2432,13 @@ assets/prefabs/weapons/machete/machete.projectile.prefab
 assets/prefabs/weapons/machete/machete.viewmodel.prefab
 assets/prefabs/weapons/machete/machete.weapon.prefab
 assets/prefabs/weapons/machete/machete.worldmodel.prefab
+assets/prefabs/weapons/mortar/mortar.prefab
 assets/prefabs/weapons/pickaxe/effects/attack.prefab
 assets/prefabs/weapons/pickaxe/effects/deploy.prefab
 assets/prefabs/weapons/pickaxe/effects/holster.prefab
 assets/prefabs/weapons/pickaxe/effects/strike.prefab
 assets/prefabs/weapons/pickaxe/effects/strike_screenshake.prefab
+assets/prefabs/weapons/pickaxe/effects/strike-muted.prefab
 assets/prefabs/weapons/pickaxe/effects/strike-soft.prefab
 assets/prefabs/weapons/pickaxe/effects/throw.prefab
 assets/prefabs/weapons/pickaxe/pickaxe.entity.prefab
@@ -2029,6 +2520,7 @@ assets/prefabs/weapons/salvaged_axe/effects/deploy.prefab
 assets/prefabs/weapons/salvaged_axe/effects/holster.prefab
 assets/prefabs/weapons/salvaged_axe/effects/strike.prefab
 assets/prefabs/weapons/salvaged_axe/effects/strike_screenshake.prefab
+assets/prefabs/weapons/salvaged_axe/effects/strike-muted.prefab
 assets/prefabs/weapons/salvaged_axe/effects/strike-soft.prefab
 assets/prefabs/weapons/salvaged_axe/effects/tap.prefab
 assets/prefabs/weapons/salvaged_axe/effects/throw.prefab
@@ -2050,6 +2542,7 @@ assets/prefabs/weapons/salvaged_icepick/effects/deploy.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/holster.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/strike.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/strike_screenshake.prefab
+assets/prefabs/weapons/salvaged_icepick/effects/strike-muted.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/strike-soft.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/tap.prefab
 assets/prefabs/weapons/salvaged_icepick/effects/throw.prefab
@@ -2069,6 +2562,7 @@ assets/prefabs/weapons/sawnoff_shotgun/effects/flipover.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/insert_shell.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/pump_forward.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/reload_start.prefab
+assets/prefabs/weapons/sawnoff_shotgun/effects/w_eject_shotgun_shell.prefab
 assets/prefabs/weapons/sawnoff_shotgun/sawnoffshotgun.worldmodel.prefab
 assets/prefabs/weapons/sawnoff_shotgun/shotgun_pump.entity.prefab
 assets/prefabs/weapons/sawnoff_shotgun/shotgun_pump.item.prefab
@@ -2084,12 +2578,31 @@ assets/prefabs/weapons/semi auto pistol/effects/grab_clip.prefab
 assets/prefabs/weapons/semi auto pistol/effects/insert_clip.prefab
 assets/prefabs/weapons/semi auto pistol/effects/slide_back.prefab
 assets/prefabs/weapons/semi auto pistol/effects/slide_shut.prefab
+assets/prefabs/weapons/semi auto pistol/effects/w_drop_mag.prefab
+assets/prefabs/weapons/semi auto pistol/effects/w_eject_pistol_shell.prefab
 assets/prefabs/weapons/semi auto pistol/pistol_semiauto.entity.prefab
 assets/prefabs/weapons/semi auto pistol/pistol_semiauto.item.prefab
 assets/prefabs/weapons/semi auto pistol/pistol_semiauto.viewmodel.prefab
-assets/prefabs/weapons/semi auto pistol/semi_auto_pistol.prefab
-assets/prefabs/weapons/semi auto pistol/semi_pistol.worldmodel.prefab
 assets/prefabs/weapons/semi auto pistol/semiauto.worldmodel.prefab
+assets/prefabs/weapons/semi auto rifle/effects/attack.prefab
+assets/prefabs/weapons/semi auto rifle/effects/attack_shake.prefab
+assets/prefabs/weapons/semi auto rifle/effects/attack_shake_ads.prefab
+assets/prefabs/weapons/semi auto rifle/effects/attack_silenced.prefab
+assets/prefabs/weapons/semi auto rifle/effects/bolt_back.prefab
+assets/prefabs/weapons/semi auto rifle/effects/bolt_forward.prefab
+assets/prefabs/weapons/semi auto rifle/effects/clip_in.prefab
+assets/prefabs/weapons/semi auto rifle/effects/clip_out.prefab
+assets/prefabs/weapons/semi auto rifle/effects/clip_slap.prefab
+assets/prefabs/weapons/semi auto rifle/effects/deploy.prefab
+assets/prefabs/weapons/semi auto rifle/effects/deploy_grab_forearm.prefab
+assets/prefabs/weapons/semi auto rifle/effects/dryfire.prefab
+assets/prefabs/weapons/semi auto rifle/effects/eject_rifle_shell.prefab
+assets/prefabs/weapons/semi auto rifle/effects/w_drop_magazine.prefab
+assets/prefabs/weapons/semi auto rifle/effects/w_eject_rifle_shell.prefab
+assets/prefabs/weapons/semi auto rifle/semi_auto_rifle.entity.prefab
+assets/prefabs/weapons/semi auto rifle/semi_auto_rifle.item.prefab
+assets/prefabs/weapons/semi auto rifle/semi_auto_rifle.viewmodel.prefab
+assets/prefabs/weapons/semi auto rifle/semi_auto_rifle.worldmodel.prefab
 assets/prefabs/weapons/smg/barrel_sights.prefab
 assets/prefabs/weapons/smg/effects/attack.prefab
 assets/prefabs/weapons/smg/effects/attack_shake.prefab
@@ -2103,6 +2616,8 @@ assets/prefabs/weapons/smg/effects/deploy.prefab
 assets/prefabs/weapons/smg/effects/dryfire.prefab
 assets/prefabs/weapons/smg/effects/eject_shell.prefab
 assets/prefabs/weapons/smg/effects/reload_start.prefab
+assets/prefabs/weapons/smg/effects/w_drop_magazine.prefab
+assets/prefabs/weapons/smg/effects/w_eject_pistol_shell.prefab
 assets/prefabs/weapons/smg/grip.prefab
 assets/prefabs/weapons/smg/magazine.prefab
 assets/prefabs/weapons/smg/smg.entity.prefab
@@ -2116,6 +2631,7 @@ assets/prefabs/weapons/stone hatchet/effects/deploy.prefab
 assets/prefabs/weapons/stone hatchet/effects/holster.prefab
 assets/prefabs/weapons/stone hatchet/effects/strike.prefab
 assets/prefabs/weapons/stone hatchet/effects/strike_screenshake.prefab
+assets/prefabs/weapons/stone hatchet/effects/strike-muted.prefab
 assets/prefabs/weapons/stone hatchet/effects/strike-soft.prefab
 assets/prefabs/weapons/stone hatchet/effects/swing.prefab
 assets/prefabs/weapons/stone hatchet/effects/throw.prefab
@@ -2129,6 +2645,7 @@ assets/prefabs/weapons/stone pickaxe/effects/deploy.prefab
 assets/prefabs/weapons/stone pickaxe/effects/holster.prefab
 assets/prefabs/weapons/stone pickaxe/effects/strike.prefab
 assets/prefabs/weapons/stone pickaxe/effects/strike_screenshake.prefab
+assets/prefabs/weapons/stone pickaxe/effects/strike-muted.prefab
 assets/prefabs/weapons/stone pickaxe/effects/strike-soft.prefab
 assets/prefabs/weapons/stone pickaxe/effects/swing.prefab
 assets/prefabs/weapons/stone pickaxe/effects/throw.prefab
@@ -2144,6 +2661,7 @@ assets/prefabs/weapons/stone spear/effects/holster.prefab
 assets/prefabs/weapons/stone spear/effects/pull_out.prefab
 assets/prefabs/weapons/stone spear/effects/strike_screenshake.prefab
 assets/prefabs/weapons/stone spear/effects/strike_stone.prefab
+assets/prefabs/weapons/stone spear/effects/strike_stone-muted.prefab
 assets/prefabs/weapons/stone spear/effects/strike_stone-soft.prefab
 assets/prefabs/weapons/stone spear/effects/throw.prefab
 assets/prefabs/weapons/stone spear/spear_stone.entity.prefab
@@ -2157,15 +2675,19 @@ assets/prefabs/weapons/sword big/effects/attack-2.prefab
 assets/prefabs/weapons/sword big/effects/attack-3.prefab
 assets/prefabs/weapons/sword big/effects/deploy.prefab
 assets/prefabs/weapons/sword big/effects/hit.prefab
+assets/prefabs/weapons/sword big/effects/hit-muted.prefab
 assets/prefabs/weapons/sword big/effects/hit-soft.prefab
+assets/prefabs/weapons/sword big/effects/throw.prefab
 assets/prefabs/weapons/sword big/longsword.entity.prefab
 assets/prefabs/weapons/sword big/longsword.item.prefab
+assets/prefabs/weapons/sword big/longsword.projectile.prefab
 assets/prefabs/weapons/sword big/longsword.viewmodel.prefab
 assets/prefabs/weapons/sword/effects/attack-1.prefab
 assets/prefabs/weapons/sword/effects/attack-2.prefab
 assets/prefabs/weapons/sword/effects/attack-3.prefab
 assets/prefabs/weapons/sword/effects/deploy.prefab
 assets/prefabs/weapons/sword/effects/hit.prefab
+assets/prefabs/weapons/sword/effects/hit-muted.prefab
 assets/prefabs/weapons/sword/effects/hit-soft.prefab
 assets/prefabs/weapons/sword/effects/throw.prefab
 assets/prefabs/weapons/sword/salvaged_sword.entity.prefab
@@ -2186,6 +2708,8 @@ assets/prefabs/weapons/thompson/effects/insert_clip.prefab
 assets/prefabs/weapons/thompson/effects/reload_begin.prefab
 assets/prefabs/weapons/thompson/effects/remove_clip.prefab
 assets/prefabs/weapons/thompson/effects/safety_off.prefab
+assets/prefabs/weapons/thompson/effects/w_drop_magazine.prefab
+assets/prefabs/weapons/thompson/effects/w_eject_pistol_shell.prefab
 assets/prefabs/weapons/thompson/thompson.entity.prefab
 assets/prefabs/weapons/thompson/thompson.item.prefab
 assets/prefabs/weapons/thompson/thompson.viewmodel.prefab
@@ -2203,9 +2727,14 @@ assets/prefabs/weapons/torch/torch.item.prefab
 assets/prefabs/weapons/torch/torch.viewmodel.prefab
 assets/prefabs/weapons/torch/torch.worldmodel.prefab
 assets/prefabs/weapons/unarmed.viewmodel.prefab
-assets/prefabs/weapons/waterbucket/effects/fillbucket.prefab
+assets/prefabs/weapons/waterbucket/bucket.item.prefab
+assets/prefabs/weapons/waterbucket/effects/fillbucket_fromcontainer.prefab
+assets/prefabs/weapons/waterbucket/effects/fillbucket_fromworld.prefab
 assets/prefabs/weapons/waterbucket/effects/waterbucket_splash.prefab
+assets/prefabs/weapons/waterbucket/effects/waterimpact_explosion.prefab
 assets/prefabs/weapons/waterbucket/effects/waterthrow.prefab
+assets/prefabs/weapons/waterbucket/effects/waterthrow3p.prefab
+assets/prefabs/weapons/waterbucket/waterball.prefab
 assets/prefabs/weapons/waterbucket/waterbucket.entity.prefab
 assets/prefabs/weapons/waterbucket/waterbucket.viewmodel.prefab
 assets/prefabs/weapons/waterbucket/waterbucket.worldmodel.prefab
@@ -2216,6 +2745,7 @@ assets/prefabs/weapons/wooden spear/effects/holster.prefab
 assets/prefabs/weapons/wooden spear/effects/pull_out.prefab
 assets/prefabs/weapons/wooden spear/effects/strike_screenshake.prefab
 assets/prefabs/weapons/wooden spear/effects/strike_wood.prefab
+assets/prefabs/weapons/wooden spear/effects/strike_wood-muted.prefab
 assets/prefabs/weapons/wooden spear/effects/strike_wood-soft.prefab
 assets/prefabs/weapons/wooden spear/effects/throw.prefab
 assets/prefabs/weapons/wooden spear/spear_wooden.entity.prefab
@@ -2223,8 +2753,17 @@ assets/prefabs/weapons/wooden spear/spear_wooden.item.prefab
 assets/prefabs/weapons/wooden spear/spear_wooden.viewmodel.prefab
 assets/prefabs/weapons/wooden spear/wooden_spear.projectile.prefab
 assets/prefabs/weapons/wooden spear/wooden_spear.worldmodel.prefab
+assets/prefabs/world/decor.barren.prefab
+assets/prefabs/world/decor.default.prefab
+assets/prefabs/world/grass.default.prefab
+assets/prefabs/world/spawn.barren.prefab
+assets/prefabs/world/spawn.default.prefab
+assets/scenes/test/material_zoo/neutral_dungeon_lighting.prefab
+assets/scenes/test/playermodel/sceneplayermodel.prefab
+assets/scripts/ui/particle/xpparticle.prefab
+assets/scripts/ui/particle/xpupdateparticle.prefab
 assets/scripts/ui/piemenu/pieoption.prefab
-assets/standard assets/third party/acousticguitar/guitar.prefab
+assets/scripts/ui/tooltip/tooltip.prefab
 assets/standard assets/third party/camelotvfx_ fire&smoke/prefabs/explosion_v1.prefab
 assets/standard assets/third party/camelotvfx_ fire&smoke/prefabs/fire_v1.prefab
 assets/standard assets/third party/camelotvfx_ fire&smoke/prefabs/fire_v2.prefab
@@ -3035,5 +3574,3 @@ assets/standard assets/third party/storm effects/2 - particles/prefabs/wind heav
 assets/standard assets/third party/storm effects/2 - particles/prefabs/wind light.prefab
 assets/standard assets/third party/storm effects/2 - particles/prefabs/wind medium.prefab
 assets/standard assets/third party/time of day/prefabs/sky dome.prefab
-assets/third party/water/prefabs/water.prefab
-
