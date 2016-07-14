@@ -107,7 +107,7 @@ namespace DestroyTool
                         else
                         {
                             int hasPrivlidge = 0;
-                            List<BuildingPrivlidge> cupboards = (List<BuildingPrivlidge>)player.basePlayer.GetFieldValue("buildingPrivlidges");
+                            List<BuildingPrivlidge> cupboards = (List<BuildingPrivlidge>)player.basePlayer.GetFieldValue("buildingPrivilege");
                             foreach (BuildingPrivlidge privlidge in cupboards) if (privlidge.IsAuthed(player.basePlayer)) hasPrivlidge++;
                             if (cupboards.Count == 0)
                             {
