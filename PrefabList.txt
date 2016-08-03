@@ -768,6 +768,7 @@ assets/bundled/prefabs/static/small_refinery_static.prefab
 assets/bundled/prefabs/system/client.prefab
 assets/bundled/prefabs/system/debug/debug_camera.prefab
 assets/bundled/prefabs/system/manager_cursor.prefab
+assets/bundled/prefabs/system/music.prefab
 assets/bundled/prefabs/system/net_env.prefab
 assets/bundled/prefabs/system/performance.prefab
 assets/bundled/prefabs/system/server.prefab
@@ -1335,6 +1336,7 @@ assets/content/ui/menu/ui.tweaks.toggle.prefab
 assets/content/ui/menu/ui.tweaks.togglelayer.prefab
 assets/content/ui/misc/dialogbackground.prefab
 assets/content/ui/misc/steamuserbutton.prefab
+assets/content/ui/netgraph/netgraphrow.prefab
 assets/content/ui/paint/paintbox.prefab
 assets/content/ui/popups/genericpopup.prefab
 assets/content/unimplemented/fishing_rod/fishing_rod.worldmodel.prefab
@@ -1568,6 +1570,7 @@ assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-close-start
 assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-open-end.prefab
 assets/prefabs/building/wall.frame.shopfront/effects/door-small-wood-open-start.prefab
 assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.item.prefab
+assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.metal.prefab
 assets/prefabs/building/wall.frame.shopfront/wall.frame.shopfront.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.metal.item.prefab
 assets/prefabs/building/wall.window.bars/wall.window.bars.metal.prefab
@@ -1585,6 +1588,11 @@ assets/prefabs/building/wall.window.shutter/effects/shutters-wood-open-end.prefa
 assets/prefabs/building/wall.window.shutter/effects/shutters-wood-open-start.prefab
 assets/prefabs/building/wall.window.shutter/shutter.wood.a.item.prefab
 assets/prefabs/building/wall.window.shutter/shutter.wood.a.prefab
+assets/prefabs/clothes/collider/collider_feet.prefab
+assets/prefabs/clothes/collider/collider_hands.prefab
+assets/prefabs/clothes/collider/collider_head.prefab
+assets/prefabs/clothes/collider/collider_legs.prefab
+assets/prefabs/clothes/collider/collider_torso.prefab
 assets/prefabs/clothes/gloves.burlap/burlap_gloves.item.prefab
 assets/prefabs/clothes/gloves.burlap/burlap_gloves.prefab
 assets/prefabs/clothes/gloves.hazmat/hazmat_gloves.item.prefab
@@ -1646,7 +1654,6 @@ assets/prefabs/clothes/pants.woodarmor/wood_armor_pants.item.prefab
 assets/prefabs/clothes/pants.woodarmor/woodarmor_pants.prefab
 assets/prefabs/clothes/pants/cargo/pants.cargo.item.prefab
 assets/prefabs/clothes/pants/pants.generic.prefab
-assets/prefabs/clothes/poncho.hide/hide_poncho 1.prefab
 assets/prefabs/clothes/poncho.hide/hide_poncho.prefab
 assets/prefabs/clothes/poncho.hide/hideponcho.item.prefab
 assets/prefabs/clothes/shirt.burlap/burlap_shirt.item.prefab
@@ -1670,7 +1677,6 @@ assets/prefabs/clothes/skin/skin_legs.prefab
 assets/prefabs/clothes/skin/skin_torso.prefab
 assets/prefabs/clothes/skirt.hide/hide_skirt.prefab
 assets/prefabs/clothes/skirt.hide/hideskirt.item.prefab
-assets/prefabs/clothes/tshirt.long/tshirt.long 1.prefab
 assets/prefabs/clothes/tshirt.long/tshirt.long.blue.item.prefab
 assets/prefabs/clothes/tshirt.long/tshirt.long.prefab
 assets/prefabs/clothes/tshirt/tshirt.green.item.prefab
@@ -2315,6 +2321,19 @@ assets/prefabs/weapons/crossbow/effects/attack.prefab
 assets/prefabs/weapons/crossbow/effects/deploy.prefab
 assets/prefabs/weapons/crossbow/effects/dryfire.prefab
 assets/prefabs/weapons/crossbow/effects/reload.prefab
+assets/prefabs/weapons/doubleshotgun/double_shotgun.viewmodel.prefab
+assets/prefabs/weapons/doubleshotgun/effects/attack.prefab
+assets/prefabs/weapons/doubleshotgun/effects/attack_shake.prefab
+assets/prefabs/weapons/doubleshotgun/effects/attack_shake_ads.prefab
+assets/prefabs/weapons/doubleshotgun/effects/bolt_back.prefab
+assets/prefabs/weapons/doubleshotgun/effects/bolt_shut.prefab
+assets/prefabs/weapons/doubleshotgun/effects/close_barrel.prefab
+assets/prefabs/weapons/doubleshotgun/effects/deploy.prefab
+assets/prefabs/weapons/doubleshotgun/effects/dump_shells.prefab
+assets/prefabs/weapons/doubleshotgun/effects/insert_shells.prefab
+assets/prefabs/weapons/doubleshotgun/effects/open_barrel.prefab
+assets/prefabs/weapons/doubleshotgun/effects/pfx_bolt_shut_sparks.prefab
+assets/prefabs/weapons/doubleshotgun/effects/pfx_open_barrel_smoke.prefab
 assets/prefabs/weapons/eoka pistol/effects/attack.prefab
 assets/prefabs/weapons/eoka pistol/effects/attack_shake.prefab
 assets/prefabs/weapons/eoka pistol/effects/deploy.prefab
