@@ -2321,7 +2321,9 @@ assets/prefabs/weapons/crossbow/effects/attack.prefab
 assets/prefabs/weapons/crossbow/effects/deploy.prefab
 assets/prefabs/weapons/crossbow/effects/dryfire.prefab
 assets/prefabs/weapons/crossbow/effects/reload.prefab
+assets/prefabs/weapons/doubleshotgun/double_shotgun.entity.prefab
 assets/prefabs/weapons/doubleshotgun/double_shotgun.viewmodel.prefab
+assets/prefabs/weapons/doubleshotgun/double_shotgun.worldmodel.prefab
 assets/prefabs/weapons/doubleshotgun/effects/attack.prefab
 assets/prefabs/weapons/doubleshotgun/effects/attack_shake.prefab
 assets/prefabs/weapons/doubleshotgun/effects/attack_shake_ads.prefab
@@ -2329,11 +2331,13 @@ assets/prefabs/weapons/doubleshotgun/effects/bolt_back.prefab
 assets/prefabs/weapons/doubleshotgun/effects/bolt_shut.prefab
 assets/prefabs/weapons/doubleshotgun/effects/close_barrel.prefab
 assets/prefabs/weapons/doubleshotgun/effects/deploy.prefab
+assets/prefabs/weapons/doubleshotgun/effects/dryfire.prefab
 assets/prefabs/weapons/doubleshotgun/effects/dump_shells.prefab
 assets/prefabs/weapons/doubleshotgun/effects/insert_shells.prefab
 assets/prefabs/weapons/doubleshotgun/effects/open_barrel.prefab
 assets/prefabs/weapons/doubleshotgun/effects/pfx_bolt_shut_sparks.prefab
 assets/prefabs/weapons/doubleshotgun/effects/pfx_open_barrel_smoke.prefab
+assets/prefabs/weapons/doubleshotgun/shotgun_double.item.prefab
 assets/prefabs/weapons/eoka pistol/effects/attack.prefab
 assets/prefabs/weapons/eoka pistol/effects/attack_shake.prefab
 assets/prefabs/weapons/eoka pistol/effects/deploy.prefab
@@ -2570,6 +2574,10 @@ assets/prefabs/weapons/salvaged_icepick/icepick_salvaged.item.prefab
 assets/prefabs/weapons/salvaged_icepick/icepick_salvaged.projectile.prefab
 assets/prefabs/weapons/salvaged_icepick/icepick_salvaged.viewmodel.prefab
 assets/prefabs/weapons/salvaged_icepick/salvaged_icepick.worldmodel.prefab
+assets/prefabs/weapons/satchelcharge/explosive.satchel.deployed.prefab
+assets/prefabs/weapons/satchelcharge/explosive.satchel.entity.prefab
+assets/prefabs/weapons/satchelcharge/explosive.satchel.item.prefab
+assets/prefabs/weapons/satchelcharge/satchelcharge.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/attack.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/attack_pumpaction.prefab
 assets/prefabs/weapons/sawnoff_shotgun/effects/attack_shake.prefab
