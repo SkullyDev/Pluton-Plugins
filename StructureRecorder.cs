@@ -279,10 +279,10 @@ namespace StructureRecorder
         public StructureComponent(BuildingPart bp, SerializedVector3 v3, SerializedQuaternion q)
         {
             Grade = bp.buildingBlock.grade;
-            Prefab = bp.buildingBlock.LookupPrefabName();
+            Prefab = bp.buildingBlock.PrefabName;
             LocalPosition = v3;
             LocalRotation = q;
-            Health = (float)((int)Math.Floor((double)(bp.Health / 85)) * 85);
+            Health = ((int)Math.Floor(bp.Health / 85) * 85);
             if (bp.buildingBlock.HasSlot(BaseEntity.Slot.Lock))
             {
                 BaseLock baseLock = bp.buildingBlock.GetSlot(BaseEntity.Slot.Lock) as BaseLock;
@@ -344,7 +344,7 @@ namespace StructureRecorder
 
         public DeployableComponent(Deployable deployable, SerializedVector3 v3, SerializedQuaternion q)
         {
-            Prefab = deployable.GetComponent<BaseNetworkable>().LookupPrefabName();
+            Prefab = deployable.GetComponent<BaseNetworkable>().PrefabName;
             LocalPosition = v3;
             LocalRotation = q;
             if (deployable.GetComponent<SleepingBag>())
@@ -433,7 +433,7 @@ namespace StructureRecorder
 
         public override string ToString()
         {
-            return String.Format("{0} [pos:{1}, rot:{2}]", Prefab, LocalPosition, LocalRotation);
+            return string.Format("{0} [pos:{1}, rot:{2}]", Prefab, LocalPosition, LocalRotation);
         }
     }
 
@@ -446,14 +446,14 @@ namespace StructureRecorder
 
         public SpawnableComponent(Spawnable spawnable, SerializedVector3 v3, SerializedQuaternion q)
         {
-            Prefab = spawnable.GetComponent<BaseNetworkable>().LookupPrefabName();
+            Prefab = spawnable.GetComponent<BaseNetworkable>().PrefabName;
             LocalPosition = v3;
             LocalRotation = q;
         }
 
         public override string ToString()
         {
-            return String.Format("{0} [pos:{1}, rot:{2}]", Prefab, LocalPosition, LocalRotation);
+            return string.Format("{0} [pos:{1}, rot:{2}]", Prefab, LocalPosition, LocalRotation);
         }
     }
 
@@ -572,7 +572,7 @@ namespace StructureRecorder
                         }
                         baseEntity.gameObject.Identity();
                         baseEntity.SetParent(bb, "lock");
-                        baseEntity.Spawn(true);
+                        baseEntity.Spawn();
                         bb.SetSlot(BaseEntity.Slot.Lock, baseEntity);
                     }
                     else if (component.HasKeyLock)
@@ -589,7 +589,7 @@ namespace StructureRecorder
                         }
                         baseEntity.gameObject.Identity();
                         baseEntity.SetParent(bb, "lock");
-                        baseEntity.Spawn(true);
+                        baseEntity.Spawn();
                         bb.SetSlot(BaseEntity.Slot.Lock, baseEntity);
                     }
                 }
@@ -635,7 +635,7 @@ namespace StructureRecorder
                             }
                             baseEntity.gameObject.Identity();
                             baseEntity.SetParent(ent, "lock");
-                            baseEntity.Spawn(true);
+                            baseEntity.Spawn();
                             ent.SetSlot(BaseEntity.Slot.Lock, baseEntity);
                         }
                         else if (component.HasKeyLock)
@@ -652,7 +652,7 @@ namespace StructureRecorder
                             }
                             baseEntity.gameObject.Identity();
                             baseEntity.SetParent(ent, "lock");
-                            baseEntity.Spawn(true);
+                            baseEntity.Spawn();
                             ent.SetSlot(BaseEntity.Slot.Lock, baseEntity);
                         }
                     }
@@ -663,7 +663,8 @@ namespace StructureRecorder
                     if (component.Painting != null)
                     {
                         byte[] painting = component.Painting;
-                        signage.textureID = FileStorage.server.Store(painting, FileStorage.Type.png, signage.net.ID);
+                        MemoryStream stream = new MemoryStream(painting);
+                        signage.textureID = FileStorage.server.Store(stream, FileStorage.Type.png, signage.net.ID);
                     }
                     if (component.PaintingLocked)
                     {

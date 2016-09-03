@@ -130,7 +130,7 @@ namespace DestroyTool
                                 }
                                 else
                                 {
-                                    string prefabName = cehe.Victim.baseEntity.LookupShortPrefabName();
+                                    string prefabName = cehe.Victim.baseEntity.ShortPrefabName;
                                     player.Inventory.Add(prefabName, 1);
                                 }
                                 bce.Die(cehe._info);

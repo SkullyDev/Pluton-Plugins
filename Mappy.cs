@@ -149,7 +149,7 @@ namespace Mappy
                         float x = float.Parse(args[1]);
                         float z = float.Parse(args[2]);
                         string animalname = args[3];
-                        GameManager.server.CreateEntity("autospawn/animals/" + animalname, new Vector3(x, World.GetGround(x, z), z)).Spawn(true);
+                        GameManager.server.CreateEntity("autospawn/animals/" + animalname, new Vector3(x, World.GetGround(x, z), z)).Spawn();
                     }
                 }
 

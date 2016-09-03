@@ -83,7 +83,7 @@ namespace WhoLooted
         public void On_LootingEntity(EntityLootEvent le)
         {
             if (!enabled) return;
-            if (allowedLoots.Contains(le.Target.baseEntity.LookupShortPrefabName()))
+            if (allowedLoots.Contains(le.Target.baseEntity.ShortPrefabName))
             {
                 LootedLoot lootedLoot = new LootedLoot(le.Target.baseEntity, le.Looter.GameID);
                 lootedLoots.Add(lootedLoot);
@@ -93,7 +93,7 @@ namespace WhoLooted
         public void On_BeingHammered(HammerEvent he)
         {
             if (!enabled || (adminOnly && !he.Player.Admin)) return;
-            if (allowedLoots.Contains(he.Victim.baseEntity.LookupShortPrefabName()) && DataStore.ContainsKey("WhoLooted", he.Player.GameID))
+            if (allowedLoots.Contains(he.Victim.baseEntity.ShortPrefabName) && DataStore.ContainsKey("WhoLooted", he.Player.GameID))
             {
                 LootedLoot loot = TryToGetLoot(he.Victim.baseEntity);
                 if (loot != null)
@@ -198,14 +198,14 @@ namespace WhoLooted
         {
             lastLooter = steamID;
             timeWhen = DateTime.Now;
-            prefabName = be.LookupShortPrefabName();
+            prefabName = be.ShortPrefabName;
             pos = new SerializedVector3(be.transform.position);
             rot = new SerializedQuaternion(be.transform.rotation);
         }
 
         public bool AreEqual(BaseEntity be)
         {
-            if (this.prefabName == be.LookupShortPrefabName())
+            if (this.prefabName == be.ShortPrefabName)
             {
                 if (this.pos.ToVector3() == be.transform.position)
                 {

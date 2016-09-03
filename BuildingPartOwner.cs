@@ -160,14 +160,14 @@ namespace BuildingPartOwner
         internal SerializedBuildingBlock(BuildingBlock bb, ulong owner)
         {
             ownerID = owner;
-            prefabName = bb.LookupPrefabName();
+            prefabName = bb.PrefabName;
             pos = new SerializedVector3(bb.transform.position);
             rot = new SerializedQuaternion(bb.transform.rotation);
         }
 
         internal bool AreEqual(BuildingBlock bb)
         {
-            if (prefabName == bb.LookupPrefabName())
+            if (prefabName == bb.PrefabName)
             {
                 if (pos.ToVector3() == bb.transform.position)
                 {

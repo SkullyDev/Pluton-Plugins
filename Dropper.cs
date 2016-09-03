@@ -39,7 +39,7 @@ namespace Dropper
                     baseEntity.Spawn();
                     if (showDropPos) {
                         string posmsg = string.Format("X: {0} Z: {1}", ((int)(transform.position.x)).ToString(), ((int)(transform.position.z)).ToString());
-                        ConsoleSystem.Broadcast("chat.add", 0, string.Format("{0}: {1} {2}", sysName.ColorText("fa5"), dropPosMsg, posmsg));
+                        ConsoleNetwork.BroadcastToAllClients("chat.add", 0, string.Format("{0}: {1} {2}", sysName.ColorText("fa5"), dropPosMsg, posmsg));
                     }
                     dropped[droppedCount] = true;
                     if (dropped[dropCountTotal]) {
